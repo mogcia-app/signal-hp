@@ -1,5 +1,4 @@
 "use client";
-"use client";
 export default function ContactPage() {
   return (
     <main className="max-w-2xl mx-auto p-8">
@@ -7,10 +6,10 @@ export default function ContactPage() {
       <p className="mb-4 text-gray-600">
         ご質問やご相談は以下のフォームからお気軽にお送りください。
       </p>
-      <div className="shadow-lg rounded-lg overflow-hidden">
+      <div className="rounded-lg overflow-hidden">
         <iframe
           src="https://form.run/embed/@marina-ishida-8PSsDnkMfFs4zKFWzhze?embed=direct"
-          style={{ width: '100%', height: '600px', border: 'none' }}
+          style={{ width: '100%', minHeight: '900px', border: 'none' }}
           frameBorder="0"
         ></iframe>
       </div>
