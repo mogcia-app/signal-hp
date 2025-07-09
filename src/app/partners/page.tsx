@@ -25,7 +25,7 @@ export default function PartnerPage() {
             <img 
               src="/images/0000.svg" 
               alt="パートナー制度イメージ"
-              className="w-[500px] max-w-full h-auto rounded-lg"
+              className="w-full sm:w-96 md:w-[500px] h-auto rounded-lg"
             />
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function PartnerPage() {
     <img
       src="/images/1111.svg"
       alt="紹介制度イメージ"
-      className="w-[400px] max-w-full h-auto rounded-lg"
+      className="w-1/3 sm:w-2/3 md:w-[400px] h-auto rounded-lg"
     />
   </div>
 
@@ -73,7 +73,7 @@ export default function PartnerPage() {
       <img 
         src="/images/2222.svg" 
         alt="販売パートナー制度"
-        className="w-[500px] max-w-full h-auto rounded-lg"
+        className="w-1/3 sm:w-2/3 md:w-[400px] h-auto rounded-lg"
       />
     </div>
 
@@ -131,7 +131,7 @@ export default function PartnerPage() {
       <img
         src="/images/3333.svg"
         alt="パートナー提携イメージ"
-        className="w-[500px] max-w-full h-auto rounded-lg"
+         className="w-1/3 sm:w-2/3 md:w-[400px] h-auto rounded-lg"
       />
     </div>
 
