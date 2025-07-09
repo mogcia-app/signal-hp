@@ -15,6 +15,19 @@ export default function Home() {
         </Link>
       </div>
 
+{/* ================== SEOキーワードセクション ================== */}
+<section className="max-w-4xl mx-auto text-center text-gray-500 text-sm my-8 leading-relaxed">
+  SNS運用・AIマーケティングならSignal.。
+  Instagram、TikTok、X（旧Twitter）、YouTubeを活用し、
+  KPI逆算型PDCAで集客・売上アップを実現。
+  ECやギフト、高単価商品のブランド構築、
+  中小企業・スタートアップのSNS戦略まで
+  Signal.がトータルでサポートします。
+</section>
+
+
+
+
  {/* ================== ファーストビュー ================== */}
 
 <section className="w-full  bg-white pt-32 pb-24">

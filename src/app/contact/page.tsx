@@ -106,7 +106,7 @@ export default function ContactPage() {
             <input
               name="公式SNSアカウント"
               type="text"
-              placeholder="https://"
+              placeholder="@"
               className="w-full border rounded p-2"
             />
           </div>
@@ -123,7 +123,6 @@ export default function ContactPage() {
               <option value="Google検索">Google検索</option>
               <option value="SNS（X / Instagramなど）">SNS（X / Instagramなど）</option>
               <option value="知人の紹介">知人の紹介</option>
-              <option value="イベント/セミナー">イベント/セミナー</option>
               <option value="その他">その他</option>
             </select>
             <div
