@@ -3,33 +3,33 @@ export default function PartnerPage() {
     <div className="w-full">
 
       {/* ========== メインビュー ========== */}
-      <section className="w-full bg-[#fff3ea] py-[80px] md:py-[100px] px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          {/* 左：テキスト */}
-          <div>
-            <h1 className="text-3xl font-bold mb-8">パートナー制度</h1>
-            <p className="text-gray-600 mb-12">
-              Signal.では様々なパートナー制度をご用意しています。<br />
-              クライアントのSNS運用課題を、Signal.で解決しませんか？
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-[#ff8a15] text-white px-8 py-4 rounded-full font-bold hover:bg-orange-500 transition"
-            >
-              資料請求・お問い合わせ
-            </a>
-          </div>
+     <section className="w-full bg-[#fff3ea] py-[80px] md:py-[100px] px-6">
+  <div className="max-w-7xl mx-auto flex flex-row flex-wrap md:flex-nowrap gap-12 items-center">
+    {/* 左：テキスト */}
+    <div className="flex-1 min-w-[280px]">
+      <h1 className="text-3xl font-bold mb-8">パートナー制度</h1>
+      <p className="text-gray-600 mb-12">
+        Signal.では様々なパートナー制度をご用意しています。<br />
+        クライアントのSNS運用課題を、Signal.で解決しませんか？
+      </p>
+      <a
+        href="/contact"
+        className="inline-block bg-[#ff8a15] text-white px-8 py-4 rounded-full font-bold hover:bg-orange-500 transition"
+      >
+        資料請求・お問い合わせ
+      </a>
+    </div>
 
-          {/* 右：イメージ */}
-          <div className="w-full flex justify-center">
-            <img 
-              src="/images/0000.svg" 
-              alt="パートナー制度イメージ"
-              className="w-full sm:w-96 md:w-[500px] h-auto rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+    {/* 右：イメージ */}
+    <div className="flex-1 flex justify-center min-w-[280px]">
+      <img 
+        src="/images/0000.svg" 
+        alt="パートナー制度イメージ"
+        className="w-full sm:w-96 md:w-[500px] h-auto rounded-lg"
+      />
+    </div>
+  </div>
+</section>
 
       {/* ========== メリット一覧 ========== */}
  {/* ========== ユーザー紹介制度 ========== */}
