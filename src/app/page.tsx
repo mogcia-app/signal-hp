@@ -208,7 +208,7 @@ export default function Home() {
 </section>
 <div className="w-full border-t border-[#ff8a15]/30 my-4"></div>
 
-<section className="py-20 bg-[#ff8a15]/5">
+<section className="pt-12 pb-6 bg-[#ff8a15]/5">
   {/* 3つ仕組み見出し */}
   <div className="flex justify-center items-center gap-4 mb-8 flex-wrap">
   <div className="flex gap-2">
@@ -404,8 +404,9 @@ export default function Home() {
 {/* ================== 提供できる価値 ================== */}
 <section className="max-w-6xl mx-auto py-8 px-4">
   <h2 className="text-3xl font-bold text-center mb-12">
-    Signal.が提供できる価値
-  </h2>
+  Signal<span className="text-[#ff8a15]">.</span>が提供できる価値
+</h2>
+
 
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
  <div className="relative border border-[#ff8a15] rounded-xl p-6 hover:shadow-lg transition">
