@@ -40,21 +40,31 @@ export default function Header() {
       </button>
 
       {/* スマホメニュー */}
-      {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md p-6 space-y-4 md:hidden">
-          <Link href="/features" className="block text-gray-600 hover:text-[#ff8a15]">機能</Link>
-          <Link href="/price" className="block text-gray-600 hover:text-[#ff8a15]">料金</Link>
-          <Link href="/flow" className="block text-gray-600 hover:text-[#ff8a15]">導入までの流れ</Link>
-          <Link href="/faq" className="block text-gray-600 hover:text-[#ff8a15]">よくある質問</Link>
-          <Link href="/document" className="block text-gray-600 hover:text-[#ff8a15]">資料</Link>
-          <Link
-            href="/contact"
-            className="block text-center bg-[#ff8a15] text-white px-4 py-2 rounded-full hover:bg-orange-500 transition"
-          >
-            お問い合わせ
-          </Link>
-        </div>
-      )}
+     {isOpen && (
+  <div className="absolute top-16 left-0 w-full bg-white shadow-md p-6 space-y-4 md:hidden">
+    <div className="flex justify-end mb-4">
+      <button
+        onClick={() => setIsOpen(false)}
+        className="text-3xl text-gray-600 hover:text-[#ff8a15] transition"
+        aria-label="メニューを閉じる"
+      >
+        &times;
+      </button>
+    </div>
+    <Link href="/features" className="block text-gray-600 hover:text-[#ff8a15]">機能</Link>
+    <Link href="/price" className="block text-gray-600 hover:text-[#ff8a15]">料金</Link>
+    <Link href="/flow" className="block text-gray-600 hover:text-[#ff8a15]">導入までの流れ</Link>
+    <Link href="/faq" className="block text-gray-600 hover:text-[#ff8a15]">よくある質問</Link>
+    <Link href="/document" className="block text-gray-600 hover:text-[#ff8a15]">資料</Link>
+    <Link
+      href="/contact"
+      className="block text-center bg-[#ff8a15] text-white px-4 py-2 rounded-full hover:bg-orange-500 transition"
+    >
+      お問い合わせ
+    </Link>
+  </div>
+)}
+
     </header>
   );
 }

@@ -46,6 +46,8 @@ export default function Footer() {
   </ul>
 </div>
 
+ <a href="/privacy" className="hover:text-[#ff8a15]">プライバシーポリシー</a>
+    <a href="/terms" className="hover:text-[#ff8a15]">利用規約</a>
 
           <div>
             <h4 className="font-bold text-[#ff8a15] mb-4">Campaigns</h4>
