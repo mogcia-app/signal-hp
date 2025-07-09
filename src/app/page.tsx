@@ -193,15 +193,16 @@ export default function Home() {
 
 
   {/* 見出し */}
-  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-center mb-12">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold text-center mb-12">
   その悩み、<span className="text-[#ff8a15]">Signal.</span>で解決できます
 </h2>
 
-  <div className="text-center text-gray-600 max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
+<div className="text-center text-gray-600 max-w-2xl mx-auto mb-8 text-base sm:text-lg leading-relaxed">
   <p>SNSで頑張っても「なぜ伸びないのか」がわからない…</p>
   <p>Signal. は、御社の強みを言語化し、逆算思考で成果につながる投稿設計へ。</p>
   <p>伸びない原因をAIとデータ戦略で根本から変え、持続的なSNS投稿を実現します。</p>
 </div>
+
 
 
 </section>
