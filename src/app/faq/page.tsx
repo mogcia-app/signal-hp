@@ -22,13 +22,14 @@ export default function FaqPage() {
       </a>
     </div>
 
-    <div className="flex justify-center">
-      <img 
-        src="/images/1012.svg" 
-        alt="FAQイメージ" 
-        className="w-[400px] max-w-full h-auto"
-      />
-    </div>
+   <div className="flex justify-center">
+  <img 
+    src="/images/1012.svg" 
+    alt="FAQイメージ" 
+    className="w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] max-w-full h-auto"
+  />
+</div>
+
   </div>
 </section>
 

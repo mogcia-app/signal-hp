@@ -316,9 +316,10 @@ export default function Home() {
 <div className="w-full border-t border-[#ff8a15]/80 my-4"></div>
 <section className="py-16 bg-[#ff8a15]/4">
   <div className="max-w-6xl mx-auto text-center px-4">
-  <h2 className="text-4xl font-extrabold tracking-tight mb-2 text-[#000000]">
-  数字で見るSignal<span className="text-[#ff8a15]">.</span>
+ <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-2 text-[#000000]">
+  数字で見る<span className="text-[#000000]">Signal</span><span className="text-[#ff8a15]">.</span>
 </h2>
+
   <p className="text-gray-600 text-base mt-6 mb-12">
    数字を通して、Signal.がどのように
    SNS運用を支えているかわかりやすくまとめました。

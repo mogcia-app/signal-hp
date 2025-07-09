@@ -4,7 +4,8 @@ export default function FeaturesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-    <section className="w-full bg-gradient-to-r from-[#fff3ea] to-white py-20 px-6">
+   <section className="w-full bg-gradient-to-r from-[#fff3ea] to-white py-12 md:py-16 lg:py-20 px-6">
+
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
       <p className="text-[#ff8a15] font-bold mb-2 text-sm uppercase">
@@ -67,23 +68,25 @@ export default function FeaturesPage() {
             />
           </div>
           <div>
-           <h3 className="text-[20px] font-bold mb-4 text-[#ff8a15]">
+  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[20px] font-bold mb-4 text-[#ff8a15]">
   計画ページ
 </h3>
-<p className="text-gray-900 text-[18px] mb-4">
+<p className="text-gray-900 text-base sm:text-lg md:text-xl mb-4">
   目標フォロワー数やKPIを入力すると、
   <span className="text-[#ff8a15] font-semibold">AIが逆算して</span><br />
   最適な投稿本数や進捗シナリオを自動設計
 </p>
 
-<p className="text-gray-900 text-[16px] mb-4">
+<p className="text-gray-900 text-sm sm:text-base md:text-lg mb-4">
   投稿カテゴリやターゲットを選択するだけで<br />
   AIが戦略を提案し、投稿シミュレーションで成果を可視化します
 </p>
-<p className="text-gray-900 text-[16px]">
+
+<p className="text-gray-900 text-sm sm:text-base md:text-lg">
   計画ページで作成したデータは、右側でAIが分析・アドバイス<br />
   データに基づき最短で成果を上げるSNS運用を実現します
 </p>
+
           </div>
         </div>
       </section>
@@ -100,24 +103,27 @@ export default function FeaturesPage() {
         />
        </div>
           <div className="md:order-1">
-            <h3 className="text-[20px] font-bold mt-2 mb-6 text-[#ff8a15]">
-              投稿ラボ
-            </h3>
-          <p className="text-black text-[18px] mb-4">
+       <h3 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-6 text-[#ff8a15]">
+  投稿ラボ
+</h3>
+<p className="text-black text-base sm:text-lg md:text-xl mb-4">
   投稿をAIと一緒に作り上げるワークスペース<br />
   手動入力はもちろん<br />
-  <span className="text-[#ff8a15] font-semibold">AIに投稿文やハッシュタグの生成、投稿時間の提案</span><br />
+  <span className="text-[#ff8a15] font-semibold">
+    AIに投稿文やハッシュタグの生成、投稿時間の提案
+  </span><br />
   まで任せられます
 </p>
-<p className="text-black text-[16px] mb-4">
+<p className="text-black text-sm sm:text-base md:text-lg mb-4">
   また、計画ページで立てた戦略や目標は右側に自動的に反映されるので<br />
   投稿を作成しながらいつでも計画を見直せます。
 </p>
-<p className="text-black text-[16px]">
+<p className="text-black text-sm sm:text-base md:text-lg">
   よく使う定型フレーズやハッシュタグは管理可能で<br />
-  次回以降の投稿作成もスムーズ
+  次回以降の投稿作成もスムーズ<br />
   投稿編集や改善を手間なく続けられます
 </p>
+
 
 
           </div>
@@ -136,10 +142,10 @@ export default function FeaturesPage() {
             />
           </div>
           <div>
-             <h3 className="text-[20px] font-bold mt-2 mb-6 text-[#ff8a15]">
+<h3 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-6 text-[#ff8a15]">
   SNSごとのAI履歴
 </h3>
- <p className="text-black text-[18px] mb-4">
+<p className="text-black text-base sm:text-lg md:text-xl mb-4">
   SNSごとにこれまでAIに設定した内容や過去の計画履歴を一覧で確認可能<br />
   御社だけのAIデータ資産として蓄積し、運用改善に活かせます。
 </p>
