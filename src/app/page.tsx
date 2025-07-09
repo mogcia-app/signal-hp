@@ -15,15 +15,20 @@ export default function Home() {
         </Link>
       </div>
 
-{/* ================== SEOキーワードセクション ================== */}
-<section className="max-w-4xl mx-auto text-center text-gray-500 text-sm my-8 leading-relaxed">
-  SNS運用・AIマーケティングならSignal.。
+{/* ================== SEOキーワードセクション（非表示） ================== */}
+<section className="sr-only">
+  SNS運用・AIマーケティングならSignal。
   Instagram、TikTok、X（旧Twitter）、YouTubeを活用し、
   KPI逆算型PDCAで集客・売上アップを実現。
   ECやギフト、高単価商品のブランド構築、
   中小企業・スタートアップのSNS戦略まで
-  Signal.がトータルでサポートします。
+  Signalがトータルでサポートします。
+  Signal, SNS運用, Instagram, TikTok, X, Twitter, YouTube, AIマーケティング,
+  SNS分析, 保存率, いいね率, KPI, PDCA, ブランディング, EC, ギフト, 小売, 高単価商品,
+  スタートアップ支援, 中小企業, SNS広告, 投稿戦略, AI診断, AI分析, コンテンツマーケティング,
+  フォロワー増加, 自動化, SNSコンサル, SNSデータ分析, SNS改善, SNSトレンド, mogcia, MOGCIA, MOGCIA Coffee
 </section>
+
 
 
 
@@ -175,21 +180,23 @@ export default function Home() {
 {/* ================== 解決宣言ブロック ================== */}
 <section className="py-16">
   {/* 吹き出し */}
-  <div className="flex justify-center mb-6">
-    <div className="relative inline-block">
-      <span className="bg-[#ff8a15] text-white text-xl font-bold py-3 px-8 rounded-full shadow-lg">
-        SNS運用で悩んでいるあなたへ
-      </span>
-      <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 w-0 h-0 
-                      border-x-8 border-x-transparent border-t-8 border-t-[#ff8a15]">
-      </div>
+<div className="flex justify-center mb-6">
+  <div className="relative inline-block">
+    <span className="bg-[#ff8a15] text-white text-base sm:text-lg md:text-xl font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full shadow-lg">
+      SNS運用で悩んでいるあなたへ
+    </span>
+    <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 w-0 h-0 
+                    border-x-8 border-x-transparent border-t-8 border-t-[#ff8a15]">
     </div>
   </div>
+</div>
+
 
   {/* 見出し */}
-  <h2 className="text-[42px] font-bold text-center mb-12">
-    その悩み、<span className="text-[#ff8a15]">Signal.</span>で解決できます
-  </h2>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-center mb-12">
+  その悩み、<span className="text-[#ff8a15]">Signal.</span>で解決できます
+</h2>
+
   <div className="text-center text-gray-600 max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
   <p>SNSで頑張っても「なぜ伸びないのか」がわからない…</p>
   <p>Signal. は、御社の強みを言語化し、逆算思考で成果につながる投稿設計へ。</p>
