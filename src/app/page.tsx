@@ -210,28 +210,28 @@ export default function Home() {
 
 <section className="py-20 bg-[#ff8a15]/5">
   {/* 3つ仕組み見出し */}
-  <div className="flex justify-center items-center gap-4 mb-8">
-    <div className="flex gap-2">
-      <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
-      <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
-      <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
-    </div>
-    <h3 className="text-4xl font-bold">
-  Signal<span className="text-[#ff8a15]">.</span> だから実現できる 
-  <span className="text-[#ff8a15] text-5xl">３つ</span>
-   の仕組み
-  </h3>
-    <div className="flex gap-2">
-      <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
-      <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
-      <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
-    </div>
+  <div className="flex justify-center items-center gap-4 mb-8 flex-wrap">
+  <div className="flex gap-2">
+    <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
+    <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
+    <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
   </div>
+  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+    Signal<span className="text-[#ff8a15]">.</span> だから実現できる 
+    <span className="text-[#ff8a15] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">３つ</span>
+    の仕組み
+  </h3>
+  <div className="flex gap-2">
+    <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
+    <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
+    <div className="w-3 h-3 bg-[#ff8a15] rounded-full"></div>
+  </div>
+</div>
 
-  <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 leading-loose text-lg">
-    これからのSNS運用は、ただ投稿するだけでは戦えません。<br/>
-    AI × データ戦略で、SNSを一歩先へ。
-  </p>
+<p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 leading-loose text-base sm:text-lg md:text-xl">
+  これからのSNS運用は、ただ投稿するだけでは戦えません。<br/>
+  AI × データ戦略で、SNSを一歩先へ。
+</p>
 
 
    {/* 上の3枚（ツールでできること） */}
@@ -670,9 +670,9 @@ export default function Home() {
   </div>
 
   {/* 見出し */}
-  <h3 className="text-3xl font-extrabold text-white">
-    1週間の無料トライアル
-  </h3>
+  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
+  1週間の無料トライアル
+</h3>
 
   {/* 右の丸 */}
   <div className="flex gap-2">
@@ -694,9 +694,24 @@ export default function Home() {
   導入前にツールの流れをしっかり把握いただけます。
 </p>
     <div className="flex items-center justify-start">
-  <a href="/contact" className="inline-block bg-white text-[#ff8a15] text-[15px] px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition">
-    無料トライアルを申し込む
-  </a>
+ <a 
+  href="/contact" 
+  className="
+    inline-block 
+    bg-white 
+    text-[#ff8a15] 
+    text-sm sm:text-base 
+    px-6 sm:px-8 md:px-10 
+    py-3 sm:py-4 
+    rounded-full 
+    font-bold 
+    hover:bg-gray-100 
+    transition
+  "
+>
+  無料トライアルを申し込む
+</a>
+
   <img src="/images/132.svg" alt="無料トライアル" className="w-65 h-65 ml-4" />
 </div>
 
