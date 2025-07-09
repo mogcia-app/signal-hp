@@ -1,6 +1,6 @@
 export default function ThankYouPage() {
   return (
-    <div className="max-w-4xl mx-auto py-20 px-6 text-center">
+    <div className="max-w-4xl mx-auto py-30 px-6 text-center">
       <h1 className="text-3xl font-bold mb-6 text-[#ff8a15]">お問い合わせありがとうございます！</h1>
       <p className="text-gray-700 text-lg mb-6">
         フォームの送信が完了しました。<br />
