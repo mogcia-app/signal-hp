@@ -4,94 +4,150 @@ import Script from "next/script";
 export default function ContactPage() {
   return (
     <>
-      {/* 🚀 メインビュー */}
-      <section className="w-full bg-[#fff3ea] py-20 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl font-bold mb-8">お問い合わせ</h1>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              Signal.のお問合せページです。
-              <br />
-              ご不明な点があれば、どんな些細なことでもお気軽にお問い合わせください。
-              <br />
-              専任スタッフが御社の状況を丁寧にヒアリングし、
-              <br />
-              最適な導入方法や活用法をご提案いたします。
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/images/1006.svg" 
-              alt="お問合せイメージ"
-              className="w-[400px] max-w-full h-auto"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 🚀 お問い合わせフォーム */}
       <main className="max-w-2xl mx-auto p-8">
+        <h1 className="text-3xl font-bold mb-6">お問い合わせ</h1>
         <form
           className="formrun space-y-6"
           action="https://form.run/api/v1/r/575mkrql9bi4nj5njblfa6e6"
           method="post"
         >
+          {/* お名前 */}
           <div>
-            <label className="block mb-1 font-medium">お名前</label>
+            <label className="block mb-1 font-medium">お名前 [必須]</label>
             <input
               name="お名前"
               type="text"
-              className="w-full border rounded p-2"
-            />
-          </div>
-          <div>
-            <label className="block mb-1 font-medium">メールアドレス [必須]</label>
-            <input
-              name="メールアドレス"
-              type="text"
-              data-formrun-type="email"
               data-formrun-required
               className="w-full border rounded p-2"
             />
             <div
-              data-formrun-show-if-error="メールアドレス"
+              data-formrun-show-if-error="お名前"
               className="text-red-600 text-sm mt-1"
             >
-              メールアドレスを正しく入力してください
+              お名前を入力してください
             </div>
           </div>
+
+          {/* 企業名 */}
           <div>
-            <label className="block mb-1 font-medium">お問い合わせ [必須]</label>
+            <label className="block mb-1 font-medium">企業名 [必須]</label>
+            <input
+              name="企業名"
+              type="text"
+              data-formrun-required
+              className="w-full border rounded p-2"
+            />
+            <div
+              data-formrun-show-if-error="企業名"
+              className="text-red-600 text-sm mt-1"
+            >
+              企業名を入力してください
+            </div>
+          </div>
+
+          {/* 役職 */}
+          <div>
+            <label className="block mb-1 font-medium">役職</label>
+            <input
+              name="役職"
+              type="text"
+              className="w-full border rounded p-2"
+            />
+          </div>
+
+          {/* お問い合わせ種別 */}
+          <div>
+            <label className="block mb-1 font-medium">お問い合わせ種別 [必須]</label>
+            <select
+              name="お問い合わせ種別"
+              data-formrun-required
+              className="w-full border rounded p-2"
+            >
+              <option value="">選択してください</option>
+              <option value="ツールについて質問">ツールについて質問</option>
+              <option value="見積・導入相談">見積・導入相談</option>
+              <option value="パートナー提携">パートナー提携</option>
+              <option value="その他">その他</option>
+            </select>
+            <div
+              data-formrun-show-if-error="お問い合わせ種別"
+              className="text-red-600 text-sm mt-1"
+            >
+              お問い合わせ種別を選択してください
+            </div>
+          </div>
+
+          {/* 公式SNSアカウント */}
+          <div>
+            <label className="block mb-1 font-medium">公式SNSアカウント（任意）</label>
+            <input
+              name="公式SNSアカウント"
+              type="text"
+              placeholder="https://"
+              className="w-full border rounded p-2"
+            />
+          </div>
+
+          {/* どこで見つけた？ */}
+          <div>
+            <label className="block mb-1 font-medium">どこでこのサイトを見つけましたか？ [必須]</label>
+            <select
+              name="流入経路"
+              data-formrun-required
+              className="w-full border rounded p-2"
+            >
+              <option value="">選択してください</option>
+              <option value="Google検索">Google検索</option>
+              <option value="SNS（X / Instagramなど）">SNS（X / Instagramなど）</option>
+              <option value="知人の紹介">知人の紹介</option>
+              <option value="イベント/セミナー">イベント/セミナー</option>
+              <option value="その他">その他</option>
+            </select>
+            <div
+              data-formrun-show-if-error="流入経路"
+              className="text-red-600 text-sm mt-1"
+            >
+              選択してください
+            </div>
+          </div>
+
+          {/* お問い合わせ内容 */}
+          <div>
+            <label className="block mb-1 font-medium">お問い合わせ内容 [必須]</label>
             <textarea
-              name="お問い合わせ"
+              name="お問い合わせ内容"
               data-formrun-required
               className="w-full border rounded p-2"
               rows={5}
             ></textarea>
             <div
-              data-formrun-show-if-error="お問い合わせ"
+              data-formrun-show-if-error="お問い合わせ内容"
               className="text-red-600 text-sm mt-1"
             >
               お問い合わせ内容を入力してください
             </div>
           </div>
+
+          {/* ロボット確認 */}
           <div>
             <label className="inline-flex items-center">
               <input
                 type="checkbox"
-                name="個人情報利用同意"
+                name="私はロボットではありません"
                 data-formrun-required
                 className="mr-2"
               />
-              個人情報利用同意 [必須]
+              私はロボットではありません [必須]
             </label>
             <div
-              data-formrun-show-if-error="個人情報利用同意"
+              data-formrun-show-if-error="私はロボットではありません"
               className="text-red-600 text-sm mt-1"
             >
-              同意してください
+              確認にチェックを入れてください
             </div>
           </div>
+
+          {/* bot対策 */}
           <div
             className="_formrun_gotcha"
             style={{
@@ -111,6 +167,8 @@ export default function ContactPage() {
               tabIndex={-1}
             />
           </div>
+
+          {/* 送信ボタン */}
           <button
             type="submit"
             data-formrun-error-text="未入力の項目があります"
@@ -122,7 +180,7 @@ export default function ContactPage() {
         </form>
       </main>
 
-      {/* 🚀 formrun SDK */}
+      {/* formrun SDK */}
       <Script
         src="https://sdk.form.run/js/v2/formrun.js"
         strategy="afterInteractive"

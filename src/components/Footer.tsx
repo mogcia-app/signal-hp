@@ -30,12 +30,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold text-[#ff8a15] mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><Link href="/company" className="hover:text-[#ff8a15] transition">運営会社</Link></li>
-            </ul>
-          </div>
+         <div>
+  <h4 className="font-bold text-[#ff8a15] mb-4">Company</h4>
+  <ul className="space-y-2">
+    <li>
+      <a 
+        href="https://mogcia.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-[#ff8a15] transition"
+      >
+        運営会社
+      </a>
+    </li>
+  </ul>
+</div>
+
 
           <div>
             <h4 className="font-bold text-[#ff8a15] mb-4">Campaigns</h4>
@@ -48,7 +58,7 @@ export default function Footer() {
             <p className="text-xs text-gray-500 mb-3">
             TEL: <a href="tel:092-517-9804" className="hover:text-[#ff8a15] transition">092-517-9804</a>
            </p>
-            <a href="mailto:info@xxxxx.jp" className="hover:text-[#ff8a15] transition">info@signalapp.jp</a>
+            <a href="mailto:info@signalapp.jp" className="hover:text-[#ff8a15] transition">info@signalapp.jp</a>
           </div>
         </div>
       </div>
