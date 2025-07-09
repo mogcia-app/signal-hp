@@ -21,7 +21,7 @@ export default function ContactPage() {
       <img
         src="/images/1006.svg"
         alt="FAQイメージ"
-        className="w-[400px] max-w-full h-auto"
+        className="w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] max-w-full h-auto"
       />
     </div>
   </div>

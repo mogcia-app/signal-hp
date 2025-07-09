@@ -4,7 +4,7 @@ export default function FeaturesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-   <section className="w-full bg-gradient-to-r from-[#fff3ea] to-white py-12 md:py-16 lg:py-20 px-6">
+  <section className="w-full bg-gradient-to-r from-[#fff3ea] to-white pt-32 pb-12 md:pt-36 md:pb-16 lg:pt-40 lg:pb-20 px-6">
 
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
