@@ -4,6 +4,29 @@ import Script from "next/script";
 export default function ContactPage() {
   return (
     <>
+    <section className="w-full bg-[#fff3ea] py-30 px-6">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 className="text-3xl font-bold mb-8">{`お問い合わせページ`}</h1>
+      <p className="text-gray-600 mb-8">
+        {`ご不明な点があれば、どんな些細なことでもお気軽にお問い合わせください。`}
+        <br />
+        {`専任スタッフが御社の状況を丁寧にヒアリングし`}
+        <br />
+        {`最適な導入方法や活用法をご提案いたします。`}
+      </p>
+    </div>
+
+    <div className="flex justify-center">
+      <img
+        src="/images/1006.svg"
+        alt="FAQイメージ"
+        className="w-[400px] max-w-full h-auto"
+      />
+    </div>
+  </div>
+</section>
+
       <main className="max-w-2xl mx-auto p-8">
         <h1 className="text-3xl font-bold mb-6">お問い合わせ</h1>
         <form
