@@ -167,7 +167,8 @@ export default function PricePage() {
   </div>
 </section>
 
-<section className="w-full py-20 px-6 bg-white">
+
+<section className="w-full py-8 px-6 bg-white">
   <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
     
     {/* 左：テキスト & CTA */}
@@ -181,9 +182,9 @@ export default function PricePage() {
   </div>
 
   {/* 見出し */}
-  <h3 className="text-3xl font-extrabold text-white">
-    1週間の無料トライアル
-  </h3>
+  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
+  1週間の無料トライアル
+</h3>
 
   {/* 右の丸 */}
   <div className="flex gap-2">
@@ -205,10 +206,24 @@ export default function PricePage() {
   導入前にツールの流れをしっかり把握いただけます。
 </p>
     <div className="flex items-center justify-start">
-  <a href="/contact" className="inline-block bg-white text-[#ff8a15] text-[15px] px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition">
-    無料トライアルを申し込む
-  </a>
-  <img src="/images/132.svg" alt="無料トライアル" className="w-65 h-65 ml-4" />
+ <a 
+  href="/contact" 
+  className="
+    inline-block 
+    bg-white 
+    text-[#ff8a15] 
+    text-sm sm:text-base 
+    px-6 sm:px-8 md:px-10 
+    py-3 sm:py-4 
+    rounded-full 
+    font-bold 
+    hover:bg-gray-100 
+    transition
+  "
+>
+  無料トライアルを申し込む
+</a>
+
 </div>
 
 
@@ -223,7 +238,6 @@ export default function PricePage() {
 
   </div>
 </section>
-
 
     </div>
   );

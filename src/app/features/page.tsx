@@ -10,14 +10,15 @@ export default function FeaturesPage() {
       <p className="text-[#ff8a15] font-bold mb-2 text-sm uppercase">
         日本発SNS特化AI
       </p>
-     <h1 className="text-[40px] font-bold mb-4">
-     Signal<span className="text-[#ff8a15]">.</span>が実現する<br />新しいSNS運用
-     </h1>
-      <p className="text-gray-800 text-[16px]">
-        AI × データ × PDCAで、SNSの戦略立案から運用までを完全サポート
-        <br />
-        投稿計画や分析に悩む時間をゼロにし、御社の強みを最大化します
-      </p>
+     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold mb-4">
+  Signal<span className="text-[#ff8a15]">.</span>が実現する<br />新しいSNS運用
+</h1>
+<p className="text-gray-800 text-sm sm:text-base md:text-lg lg:text-[16px]">
+  AI × データ × PDCAで、SNSの戦略立案から運用までを完全サポート
+  <br />
+  投稿計画や分析に悩む時間をゼロにし、御社の強みを最大化します
+</p>
+
     </div>
     <div>
       <img

@@ -114,50 +114,77 @@ export default function PageName() {
       </section>
 
       {/* ================== 無料トライアルセクション ================== */}
-      <section className="w-full py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
-          <div className="relative bg-[#ff8a15] text-white py-12 px-8 rounded-xl overflow-hidden">
-            <div className="flex items-center justify-center gap-3 mb-8">
-              <div className="flex gap-2">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-              </div>
-              <h3 className="text-3xl font-extrabold text-white">1週間の無料トライアル</h3>
-              <div className="flex gap-2">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-              </div>
-            </div>
-            <p className="text-lg mt-12 mb-2">
-              実際の管理画面やAI診断を、まずは無料で体験してみませんか？
-              <br />トライアルでは一時的なSNS特化AIをご提供し、
-              <br />以下のような機能を自由にお試しいただけます。
-              <br /><br />
-              ・投稿計画やKPIシミュレーションの作成<br />
-              ・過去の投稿データを元にしたAI診断<br />
-              ・AIからの強み分析や次のアクション提案
-              <br /><br />
-              導入前にツールの流れをしっかり把握いただけます。
-            </p>
-            <div className="flex items-center justify-start mt-8">
-              <a
-                href="/contact"
-                className="inline-block bg-white text-[#ff8a15] text-[15px] px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition"
-              >
-                無料トライアルを申し込む
-              </a>
-              <img src="/images/132.svg" alt="無料トライアル" className="w-64 h-64 ml-4" />
-            </div>
-          </div>
+      
+<section className="w-full py-8 px-6 bg-white">
+  <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
+    
+    {/* 左：テキスト & CTA */}
+    <div className="relative bg-[#ff8a15] text-white py-12 px-8 rounded-xl overflow-hidden">
+     <div className="flex items-center justify-center gap-3 mb-8">
+  {/* 左の丸 */}
+  <div className="flex gap-2">
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+  </div>
 
-          <div className="flex flex-col gap-6">
-            <img src="/images/monitor.png" alt="管理画面1" className="rounded-lg shadow-lg w-full" />
-            <img src="/images/122.svg" alt="管理画面2" className="rounded-lg shadow-lg w-full" />
-          </div>
-        </div>
-      </section>
+  {/* 見出し */}
+  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
+  1週間の無料トライアル
+</h3>
+
+  {/* 右の丸 */}
+  <div className="flex gap-2">
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+  </div>
+</div>
+
+      <p className="text-lg mt-12 mb-2">
+  実際の管理画面やAI診断を、まずは無料で体験してみませんか？
+  <br />トライアルでは一時的なSNS特化AIをご提供し、
+  <br />以下のような機能を自由にお試しいただけます。
+  <br /><br />
+  ・投稿計画やKPIシミュレーションの作成<br />
+  ・過去の投稿データを元にしたAI診断<br />
+  ・AIからの強み分析や次のアクション提案
+  <br /><br />
+  導入前にツールの流れをしっかり把握いただけます。
+</p>
+    <div className="flex items-center justify-start">
+ <a 
+  href="/contact" 
+  className="
+    inline-block 
+    bg-white 
+    text-[#ff8a15] 
+    text-sm sm:text-base 
+    px-6 sm:px-8 md:px-10 
+    py-3 sm:py-4 
+    rounded-full 
+    font-bold 
+    hover:bg-gray-100 
+    transition
+  "
+>
+  無料トライアルを申し込む
+</a>
+
+</div>
+
+
+
+    </div>
+
+    {/* 右：イメージ */}
+   <div className="flex flex-col gap-6">
+  <img src="/images/monitor.png" alt="管理画面1" className="rounded-lg shadow-lg w-full" />
+  <img src="/images/122.svg" alt="管理画面2" className="rounded-lg shadow-lg w-full" />
+</div>
+
+  </div>
+</section>
     </div>
   );
 }

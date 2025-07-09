@@ -3,7 +3,7 @@ export default function PartnerPage() {
     <div className="w-full">
 
       {/* ========== メインビュー ========== */}
-      <section className="w-full bg-[#fff3ea] py-50 px-6">
+      <section className="w-full bg-[#fff3ea] py-[80px] md:py-[100px] px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* 左：テキスト */}
           <div>
