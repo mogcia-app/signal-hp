@@ -607,10 +607,10 @@ export default function Home() {
        <div className="border border-[#ff8a15] rounded-xl p-6 hover:shadow-lg transition">
         <h3 className="text-xl font-bold text-[#ff8a15] mb-2">カスタマイズ</h3>
         <p className="text-gray-700 mb-4">完全オーダーメイド</p>
-        <div className="text-2xl font-bold mb-4">お問い合わせください</div>
+        <div className="text-2xl font-bold mb-4">月額3万円〜</div>
         <ul className="text-sm text-gray-600 mb-6 space-y-2">
-          <li>業界特化の投稿戦略</li>
-          <li>LP/広告連動設計</li>
+           <li>1SNSのみ契約</li>
+          <li>カスタマイズページ</li>
           <li>オプション機能多数</li>
         </ul>
         <button className="bg-[#ff8a15] text-white px-6 py-2 rounded-full hover:bg-orange-500 transition">
