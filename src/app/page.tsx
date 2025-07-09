@@ -712,7 +712,6 @@ export default function Home() {
   無料トライアルを申し込む
 </a>
 
-  <img src="/images/132.svg" alt="無料トライアル" className="w-65 h-65 ml-4" />
 </div>
 
 
