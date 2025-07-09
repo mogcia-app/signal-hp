@@ -48,7 +48,7 @@ export default function Footer() {
             <p className="text-xs text-gray-500 mb-3">
             TEL: <a href="tel:092-517-9804" className="hover:text-[#ff8a15] transition">092-517-9804</a>
            </p>
-            <a href="mailto:info@xxxxx.jp" className="hover:text-[#ff8a15] transition">info@xxxxx.jp</a>
+            <a href="mailto:info@xxxxx.jp" className="hover:text-[#ff8a15] transition">info@signalapp.jp</a>
           </div>
         </div>
       </div>

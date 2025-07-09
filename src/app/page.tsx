@@ -17,7 +17,7 @@ export default function Home() {
 
  {/* ================== ファーストビュー ================== */}
 
-<section className="w-full  bg-[#ff8a15]/5 pt-32 pb-24">
+<section className="w-full  bg-white pt-32 pb-24">
 
   <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 gap-12">
     
