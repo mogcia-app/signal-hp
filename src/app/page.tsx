@@ -59,13 +59,12 @@ export default function Home() {
     <img src="/images/4.svg" alt="YouTube" className="w-16 h-16" />
   </div>
 
-  <div className="fixed bottom-6 right-6 z-50">
-        <Link href="/contact">
-          <button className="bg-[#ff8a15] text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition transform">
-            ご相談はこちら
-          </button>
-        </Link>
-      </div>
+   <a
+   href="/contact"
+           className="inline-block bg-[#ff8a15] text-white px-8 py-4 rounded-full font-bold hover:bg-orange-500 transition"
+        >
+          お問い合わせはコチラ
+        </a>
 </div>
 
     </div>

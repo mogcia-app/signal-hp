@@ -73,7 +73,7 @@ export default function FeaturesPage() {
 </h3>
 <p className="text-black text-base sm:text-lg md:text-xl mb-4">
   SNSの目標計画を
-  <span className="text-[#ff8a15] font-semibold">1ヶ月、3ヶ月、6ヶ月、1年単位</span>で立てられます。<br />
+  <span className="text-[#ff8a15] font-semibold">1ヶ月、3ヶ月、6ヶ月、1年単位</span>で立てることが可能です。<br />
   目標期間内で達成したいフォロワー数やKPIを入力すると、
   <span className="text-[#ff8a15] font-semibold">
     AIが逆算し、月ごとの投稿数やシナリオを自動設計
@@ -115,22 +115,23 @@ export default function FeaturesPage() {
   投稿ラボ
 </h3>
 <p className="text-black text-base sm:text-lg md:text-xl mb-4">
-  投稿をAIと一緒に作り上げるワークスペース<br />
-  手動入力はもちろん<br />
+  投稿をAIと一緒に作り上げるワークスペース。<br />
+  手動入力はもちろん、<br />
   <span className="text-[#ff8a15] font-semibold">
     AIに投稿文やハッシュタグの生成、投稿時間の提案
-  </span><br />
-  まで任せられます
+  </span>
+  まで任せられます。
 </p>
 <p className="text-black text-sm sm:text-base md:text-lg mb-4">
-  また、計画ページで立てた戦略や目標は右側に自動的に反映されるので<br />
+  また、<span className="text-[#ff8a15] font-semibold">計画ページで立てた戦略や目標</span>は右側に自動的に反映されるので、<br />
   投稿を作成しながらいつでも計画を見直せます。
 </p>
 <p className="text-black text-sm sm:text-base md:text-lg">
-  よく使う定型フレーズやハッシュタグは管理可能で<br />
-  次回以降の投稿作成もスムーズ<br />
-  投稿編集や改善を手間なく続けられます
+  よく使う<span className="text-[#ff8a15] font-semibold">定型フレーズやハッシュタグは管理可能</span>で、<br />
+  次回以降の投稿作成もスムーズ。<br />
+  <span className="text-[#ff8a15] font-semibold">投稿編集や改善を手間なく続けられます。</span>
 </p>
+
 
 
 
