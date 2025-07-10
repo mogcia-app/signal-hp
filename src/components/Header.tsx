@@ -19,7 +19,6 @@ export default function Header() {
         <Link href="/price" className="text-gray-600 hover:text-[#ff8a15]">料金</Link>
         <Link href="/flow" className="text-gray-600 hover:text-[#ff8a15]">導入までの流れ</Link>
         <Link href="/faq" className="text-gray-600 hover:text-[#ff8a15]">よくある質問</Link>
-        <Link href="/document" className="text-gray-600 hover:text-[#ff8a15]">資料</Link>
         <Link
           href="/contact"
           className="bg-[#ff8a15] text-white px-4 py-2 rounded-full hover:bg-orange-500 transition"

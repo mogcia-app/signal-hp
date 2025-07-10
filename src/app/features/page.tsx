@@ -71,17 +71,29 @@ export default function FeaturesPage() {
   <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[20px] font-bold mb-4 text-[#ff8a15]">
   計画ページ
 </h3>
-<p className="text-gray-900 text-base sm:text-lg md:text-xl mb-4">
-  1ヶ月、3ヶ月、6ヶ月、1年単位でSNSの目標計画を立てることができます。
+<p className="text-black text-base sm:text-lg md:text-xl mb-4">
+  SNSの目標計画を
+  <span className="text-[#ff8a15] font-semibold">1ヶ月、3ヶ月、6ヶ月、1年単位</span>で立てられます。<br />
   目標期間内で達成したいフォロワー数やKPIを入力すると、
-  AIがその目的から逆算し、最適な月ごとの投稿数や
-  投稿シミュレーションで目標達成までの流れを自動設計します。
-  進行中の目標は画面右上で常に確認可能です。
-  また、初期導入時には専任スタッフと一緒に計画を作成することを推奨しています。
-  ツール操作やデータ入力に慣れていない場合でも、
-  スタッフが伴走することでスムーズに進められ、
+  <span className="text-[#ff8a15] font-semibold">
+    AIが逆算し、月ごとの投稿数やシナリオを自動設計
+  </span>します。
+</p>
+
+<p className="text-black text-sm sm:text-base md:text-lg mb-4">
+  進行中の目標はいつでも画面右上で確認可能。<br />
+  計画がブレず、達成までの道筋を常に把握できます。
+</p>
+
+<p className="text-black text-sm sm:text-base md:text-lg">
+  また初期導入時には
+  <span className="text-[#ff8a15] font-semibold">
+    専任スタッフと一緒に計画を作成
+  </span>するので安心です。<br />
+  ツールやデータ入力に慣れていなくても伴走型で進められ、
   スタートから的確な戦略を設定できます。
 </p>
+
 
           </div>
         </div>
@@ -142,16 +154,23 @@ export default function FeaturesPage() {
   AI履歴
 </h3>
 <p className="text-black text-base sm:text-lg md:text-xl mb-4">
-  これまでAIが御社に提案してきた戦略や投稿アイデアを、
-  理由や狙いも含めて一つひとつ蓄積し一覧化しています。
-  <br />
-  『いつ、どんな狙いでどんな施策を行ってきたのか？』が一目でわかるので、
-  これまでの運用を再分析したり、次の方向性を見直す際に大きなヒントとなります。
-  <br /><br />
-  さらに、この履歴は御社のSNS運用の“資産”そのもの。
-  使い込むほどに御社だけの独自データとして蓄積されていくため、
-  SNS担当が変わってもこれまでの戦略の流れや成功パターンを簡単に引き継ぐことができ、
-  運用の一貫性やクオリティを長期的に保つことができます。
+  これまで
+  <span className="text-[#ff8a15] font-semibold">AIが御社に提案してきた戦略や投稿アイデア</span>を、<br />
+  理由や狙いも含めて一つひとつ蓄積し、一覧化しています。
+</p>
+
+<p className="text-black text-sm sm:text-base md:text-lg mb-4">
+  『いつ、どんな狙いでどんな施策を行ってきたのか？』が一目で分かるので、<br />
+  これまでの運用を再分析したり、次の方向性を見直す際に
+  <span className="text-[#ff8a15] font-semibold">大きなヒント</span>となります。
+</p>
+
+<p className="text-black text-sm sm:text-base md:text-lg">
+  さらにこの履歴は、
+  <span className="text-[#ff8a15] font-semibold">御社のSNS運用の“資産”そのもの</span>。<br />
+  使い込むほどに御社だけの独自データとして蓄積されていくため、<br />
+  SNS担当が変わっても戦略の流れや成功パターンを簡単に引き継げ、
+  <span className="text-[#ff8a15] font-semibold">一貫性やクオリティを長期的に保つ</span>ことができます。
 </p>
 
           </div>

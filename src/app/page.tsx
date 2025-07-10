@@ -59,11 +59,13 @@ export default function Home() {
     <img src="/images/4.svg" alt="YouTube" className="w-16 h-16" />
   </div>
 
-  <div className="flex gap-4 justify-start mt-4">
-    <button className="border border-[#ff8a15] text-[#ff8a15] px-8 py-4 rounded-full hover:bg-[#ff8a15]/10 hover:scale-105 transition transform">
-      お問い合わせ
-    </button>
-  </div>
+  <div className="fixed bottom-6 right-6 z-50">
+        <Link href="/contact">
+          <button className="bg-[#ff8a15] text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition transform">
+            ご相談はこちら
+          </button>
+        </Link>
+      </div>
 </div>
 
     </div>
@@ -655,10 +657,8 @@ export default function Home() {
 </section>
 
 <div className="w-full border-t border-[#ff8a15]/80 my-4"></div>
-
 <section className="w-full py-8 px-6 bg-white">
-  <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
-    
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     {/* 左：テキスト & CTA */}
     <div className="relative bg-[#ff8a15] text-white py-12 px-8 rounded-xl overflow-hidden">
      <div className="flex items-center justify-center gap-3 mb-8">
