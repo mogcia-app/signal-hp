@@ -60,9 +60,6 @@ export default function Home() {
   </div>
 
   <div className="flex gap-4 justify-start mt-4">
-    <button className="bg-[#ff8a15] text-white px-8 py-4 rounded-full hover:bg-orange-500 hover:scale-105 transition transform shadow-lg">
-      資料をダウンロード
-    </button>
     <button className="border border-[#ff8a15] text-[#ff8a15] px-8 py-4 rounded-full hover:bg-[#ff8a15]/10 hover:scale-105 transition transform">
       お問い合わせ
     </button>
@@ -239,21 +236,24 @@ export default function Home() {
     {/* 1 */}
     <div className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
       <img src="/images/ai-card1.svg" alt="AI強み診断" className="w-52 h-52 mx-auto mb-4" />
-      <h3 className="font-bold text-lg mb-3 text-[#ff8a15]">AIが御社だけのSNS勝ち筋を解析</h3>
+      <h3 className="font-bold text-lg mb-3 text-[#ff8a15]">目標から逆算、AIが導く成果への最短ルート</h3>
       <p className="text-gray-600 text-sm leading-relaxed">
-        SNSデータとヒアリングを基に<br />
-        AIが競合に埋もれない勝ち筋を発見し、
-        差別化戦略を提案します。
+        運用目標から逆算し、AIが達成までの
+        戦略を提案。<br />
+投稿文の作成から分析まで、一貫してAIがサポートするので、
+目標がブレることなく、自然にPDCAが回るSNS運用を実現で
+きます。
       </p>
     </div>
     {/* 2 */}
     <div className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
       <img src="/images/ai-card2.svg" alt="KPI逆算プラン" className="w-52 h-52 mx-auto mb-4" />
-      <h3 className="font-bold text-lg mb-3 text-[#ff8a15]">目標から逆算した戦略プランニング</h3>
+      <h3 className="font-bold text-lg mb-3 text-[#ff8a15]">御社の目的に合わせたカスタマイズ</h3>
       <p className="text-gray-600 text-sm leading-relaxed">
-        フォロワーや売上目標から逆算して<br />
-        投稿頻度・コンテンツ比率をAIが自動設計。<br />
-        継続可能なPDCAを実現。
+        必要なページ・不要な項目を選定し、御社のSNS戦略にぴったり合う
+ツールを構築することで<br />
+複雑な分析や運用がラクになり、
+「これなら続けられる」と感じてもらえるツール仕組みになります。
       </p>
     </div>
     {/* 3 */}
@@ -334,7 +334,7 @@ export default function Home() {
        </div>
         <p className="text-gray-700 text-sm leading-relaxed">
           AIが次に投稿すべきテーマを自動で提案。<br />
-          さらに投稿タイミングになればメールでお知らせ。<br />
+          
           もう迷わず、計画的にSNSを運用できます。
         </p>
       </div>
@@ -345,9 +345,8 @@ export default function Home() {
        <span className="text-[#ff8a15] text-[56px]">0</span>
        </div>
         <p className="text-gray-700 text-sm leading-relaxed">
-          AIが過去の投稿データやターゲットに合わせて、<br />
-          次に何を投稿すれば成果が出やすいかを自動で提案。
-          もう「ネタ探し」に頭を悩ませることはありません。
+          AIがSNSデータやターゲットに合わせた、<br />
+         投稿提案で、「ネタ探し」に悩むことはありません。
         </p>
       </div>
 
@@ -375,7 +374,7 @@ export default function Home() {
        <span className="text-black text-[22px] ml-2">項目以上</span>
        </div>
       <p className="text-gray-700 text-sm leading-relaxed mt-3">
-    投稿結果を入力するだけで、AIが30項目以上のデータを自動でチェック。<br />
+    投稿結果を入力するだけで、AIが30項目以上のデータをチェック。<br />
      計画に基づいて次にすべき施策を提案するので<br />
      投稿の方向性がブレず<br />
      自信を持ってSNS運用を続けられます。
@@ -416,9 +415,9 @@ export default function Home() {
     <span className="text-[#ff8a15]">ネタを提案</span>
   </h3>
   <p className="text-gray-600 text-sm mt-4 mb-0">
-  AIがあなたの投稿実績を元に戦略を設計。<br />
+  AIがあなたのKPI計画を元に戦略を設計。<br />
   目的に沿った具体的な次の投稿が見えるから、<br />
-  効率よく成果を出すSNS運用が可能です。<br />
+  効率よいSNS運用が可能です。<br />
 </p>
 
   <p className="text-xs font-semibold text-[#000000] uppercase tracking-wide mt-10 mb-1">
@@ -445,7 +444,7 @@ export default function Home() {
   投稿目標を設定するだけで、<br />
   AIが逆算して最適な投稿頻度やテーマを<br />
   自動で設計。<br />
-  成果に直結するSNS運用を実現します。
+  目標達成に直結するSNS運用を実現します。
 </p>
   <p className="text-xs font-semibold text-[#000000] uppercase mt-6 mb-3">
   価値キーワード
@@ -466,8 +465,7 @@ export default function Home() {
   <span className="text-black">でSNS運用が可能</span>
 </h3>
       <p className="text-gray-600 text-sm mb-4">
-  プロ視点の戦略設計を、AIがそのまま再現。<br />
-  投稿ネタもハッシュタグも自動で用意。<br />
+  投稿ネタもハッシュタグもAIが提案してくれるので、<br />
   専門スタッフを雇うより低コストで、<br />
   高水準のSNS運用が始められます。
 </p>
@@ -492,7 +490,7 @@ export default function Home() {
 </h3>
       <p className="text-gray-600 text-sm mb-4">
   Signal.はInstagramやXなど、それぞれのSNS専用AIを搭載。<br />
-  汎用AIでは難しい投稿の一貫性や世界観を維持しながら、<br />
+  汎用AIでは難しい投稿の一貫性を維持しながら、<br />
   目的に合わせて次の投稿戦略を自動提案。<br />
 </p>
  <p className="text-xs font-semibold text-[#000000] uppercase mt-8 mb-3">
@@ -570,7 +568,7 @@ export default function Home() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-[#000000]">導入フロー</h2>
           <p className="text-gray-600">
-            Signal.はヒアリングからツール完成まで約1ヶ月でご利用開始可能です。
+            Signal.はヒアリングからツール完成まで最短約1ヶ月でご利用開始可能です。
             <br />専任スタッフが設計から運用までしっかり伴走いたします。
           </p>
         </div>
@@ -606,7 +604,7 @@ export default function Home() {
 
        <div className="border border-[#ff8a15] rounded-xl p-6 hover:shadow-lg transition">
         <h3 className="text-xl font-bold text-[#ff8a15] mb-2">カスタマイズ</h3>
-        <p className="text-gray-700 mb-4">完全オーダーメイド</p>
+        <p className="text-gray-700 mb-4">ご予算や目的に合わせてカスタム可能です</p>
         <div className="text-2xl font-bold mb-4">月額3万円〜</div>
         <ul className="text-sm text-gray-600 mb-6 space-y-2">
            <li>1SNSのみ契約</li>
@@ -624,7 +622,7 @@ export default function Home() {
   おすすめ
 </span>
   <h3 className="text-xl font-bold text-[#ff8a15] mb-2">スターター</h3>
-  <p className="text-gray-700 mb-4">SNS運用をこれから始めたい方に</p>
+  <p className="text-gray-700 mb-4">SNS運用を本格的に始めたい方へ</p>
   <div className="text-2xl font-bold mb-4">月額6万円</div>
   <ul className="text-sm text-gray-600 mb-6 space-y-2">
     <li>1SNSのみ契約</li>
@@ -673,7 +671,7 @@ export default function Home() {
 
   {/* 見出し */}
   <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
-  1週間の無料トライアル
+  無料相談で、御社だけのSNS戦略を見つけませんか？
 </h3>
 
   {/* 右の丸 */}
@@ -684,17 +682,26 @@ export default function Home() {
   </div>
 </div>
 
-      <p className="text-lg mt-12 mb-2">
-  実際の管理画面やAI診断を、まずは無料で体験してみませんか？
-  <br />トライアルでは一時的なSNS特化AIをご提供し、
-  <br />以下のような機能を自由にお試しいただけます。
+ <p className="text-lg mt-12 mb-2">
+  これからSNSを本格的に始めたい方。<br />
+  すでに投稿を頑張っているけれど、<br />
+  「数字が伸びない」「次に何をすればいいか分からない」<br />
+  と感じている方へ。
   <br /><br />
-  ・投稿計画やKPIシミュレーションの作成<br />
-  ・過去の投稿データを元にしたAI診断<br />
-  ・AIからの強み分析や次のアクション提案
+  Signal.は、AIと専門スタッフの力で、<br />
+  御社だけのSNS戦略をゼロから一緒に設計し、<br />
+  運用のお悩みを解決します。
   <br /><br />
-  導入前にツールの流れをしっかり把握いただけます。
+  投稿内容の提案から週次の振り返りまで。<br />
+  いつの間にか止まってしまいがちなSNSを、<br />
+  継続しやすい仕組みに変えていきませんか？
+  <br /><br />
+  まずはお気軽にオンラインでご相談ください。<br />
+  御社の状況や目標をお伺いし、<br />
+  どんな形でSignal.を活用できるか、<br />
+  具体的にご提案させていただきます。
 </p>
+
     <div className="flex items-center justify-start">
  <a 
   href="/contact" 
@@ -711,7 +718,7 @@ export default function Home() {
     transition
   "
 >
-  無料トライアルを申し込む
+  相談する
 </a>
 
 </div>
@@ -720,11 +727,6 @@ export default function Home() {
 
     </div>
 
-    {/* 右：イメージ */}
-   <div className="flex flex-col gap-6">
-  <img src="/images/monitor.png" alt="管理画面1" className="rounded-lg shadow-lg w-full" />
-  <img src="/images/122.svg" alt="管理画面2" className="rounded-lg shadow-lg w-full" />
-</div>
 
   </div>
 </section>

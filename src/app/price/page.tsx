@@ -47,7 +47,7 @@ export default function PricePage() {
 
        <div className="border border-[#ff8a15] rounded-xl p-6 hover:shadow-lg transition">
         <h3 className="text-xl font-bold text-[#ff8a15] mb-2">カスタマイズ</h3>
-        <p className="text-gray-700 mb-4">完全オーダーメイド</p>
+        <p className="text-gray-700 mb-4">ご予算や目的に合わせてカスタム可能です</p>
         <div className="text-2xl font-bold mb-4">月額3万円〜</div>
         <ul className="text-sm text-gray-600 mb-6 space-y-2">
            <li>1SNSのみ契約</li>
@@ -58,14 +58,14 @@ export default function PricePage() {
           カスタム相談
         </button>
       </div>
-    
+
   <div className="relative border-2 border-[#ff8a15] bg-[#ff8a15]/5 rounded-xl pt-8 p-6 hover:shadow-xl transition">
  <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2
   bg-[#ff8a15] text-white text-lg font-extrabold px-6 py-3 rounded-full shadow-lg">
   おすすめ
 </span>
   <h3 className="text-xl font-bold text-[#ff8a15] mb-2">スターター</h3>
-  <p className="text-gray-700 mb-4">SNS運用をこれから始めたい方に</p>
+ <p className="text-gray-700 mb-4">SNS運用を本格的に始めたい方へ</p>
   <div className="text-2xl font-bold mb-4">月額6万円</div>
   <ul className="text-sm text-gray-600 mb-6 space-y-2">
     <li>1SNSのみ契約</li>
@@ -148,24 +148,15 @@ export default function PricePage() {
           支払い方法は？
         </summary>
         <p className="mt-4 text-gray-600">
-          クレジットカード、請求書払い（銀行振込）からお選びいただけます。
+          請求書払い（銀行振込）に対応しています。
         </p>
       </details>
 
-      <details className="p-6 border rounded-xl">
-        <summary className="text-lg font-bold cursor-pointer text-[#ff8a15]">
-          無料トライアル期間は本当に無料ですか？
-        </summary>
-       <p className="mt-4 text-gray-600">
-  はい、期間中に料金が発生することはございません。
-  無料トライアルでは一般的な分析AIをご体験いただき、<br />
-  ご契約後に御社専用にカスタマイズしたAIを構築いたします。
-</p>
-
-      </details>
+      
     </div>
   </div>
 </section>
+
 
 
 <section className="w-full py-8 px-6 bg-white">
@@ -183,7 +174,7 @@ export default function PricePage() {
 
   {/* 見出し */}
   <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
-  1週間の無料トライアル
+  無料相談で、御社だけのSNS戦略を見つけませんか？
 </h3>
 
   {/* 右の丸 */}
@@ -194,17 +185,26 @@ export default function PricePage() {
   </div>
 </div>
 
-      <p className="text-lg mt-12 mb-2">
-  実際の管理画面やAI診断を、まずは無料で体験してみませんか？
-  <br />トライアルでは一時的なSNS特化AIをご提供し、
-  <br />以下のような機能を自由にお試しいただけます。
+ <p className="text-lg mt-12 mb-2">
+  これからSNSを本格的に始めたい方。<br />
+  すでに投稿を頑張っているけれど、<br />
+  「数字が伸びない」「次に何をすればいいか分からない」<br />
+  と感じている方へ。
   <br /><br />
-  ・投稿計画やKPIシミュレーションの作成<br />
-  ・過去の投稿データを元にしたAI診断<br />
-  ・AIからの強み分析や次のアクション提案
+  Signal.は、AIと専門スタッフの力で、<br />
+  御社だけのSNS戦略をゼロから一緒に設計し、<br />
+  運用のお悩みを解決します。
   <br /><br />
-  導入前にツールの流れをしっかり把握いただけます。
+  投稿内容の提案から週次の振り返りまで。<br />
+  いつの間にか止まってしまいがちなSNSを、<br />
+  継続しやすい仕組みに変えていきませんか？
+  <br /><br />
+  まずはお気軽にオンラインでご相談ください。<br />
+  御社の状況や目標をお伺いし、<br />
+  どんな形でSignal.を活用できるか、<br />
+  具体的にご提案させていただきます。
 </p>
+
     <div className="flex items-center justify-start">
  <a 
   href="/contact" 
@@ -221,7 +221,7 @@ export default function PricePage() {
     transition
   "
 >
-  無料トライアルを申し込む
+  相談する
 </a>
 
 </div>
@@ -230,11 +230,6 @@ export default function PricePage() {
 
     </div>
 
-    {/* 右：イメージ */}
-   <div className="flex flex-col gap-6">
-  <img src="/images/monitor.png" alt="管理画面1" className="rounded-lg shadow-lg w-full" />
-  <img src="/images/122.svg" alt="管理画面2" className="rounded-lg shadow-lg w-full" />
-</div>
 
   </div>
 </section>

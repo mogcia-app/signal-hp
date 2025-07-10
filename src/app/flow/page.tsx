@@ -114,7 +114,7 @@ export default function PageName() {
       </section>
 
       {/* ================== 無料トライアルセクション ================== */}
-      
+
 <section className="w-full py-8 px-6 bg-white">
   <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
     
@@ -130,7 +130,7 @@ export default function PageName() {
 
   {/* 見出し */}
   <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
-  1週間の無料トライアル
+  無料相談で、御社だけのSNS戦略を見つけませんか？
 </h3>
 
   {/* 右の丸 */}
@@ -141,17 +141,26 @@ export default function PageName() {
   </div>
 </div>
 
-      <p className="text-lg mt-12 mb-2">
-  実際の管理画面やAI診断を、まずは無料で体験してみませんか？
-  <br />トライアルでは一時的なSNS特化AIをご提供し、
-  <br />以下のような機能を自由にお試しいただけます。
+ <p className="text-lg mt-12 mb-2">
+  これからSNSを本格的に始めたい方。<br />
+  すでに投稿を頑張っているけれど、<br />
+  「数字が伸びない」「次に何をすればいいか分からない」<br />
+  と感じている方へ。
   <br /><br />
-  ・投稿計画やKPIシミュレーションの作成<br />
-  ・過去の投稿データを元にしたAI診断<br />
-  ・AIからの強み分析や次のアクション提案
+  Signal.は、AIと専門スタッフの力で、<br />
+  御社だけのSNS戦略をゼロから一緒に設計し、<br />
+  運用のお悩みを解決します。
   <br /><br />
-  導入前にツールの流れをしっかり把握いただけます。
+  投稿内容の提案から週次の振り返りまで。<br />
+  いつの間にか止まってしまいがちなSNSを、<br />
+  継続しやすい仕組みに変えていきませんか？
+  <br /><br />
+  まずはお気軽にオンラインでご相談ください。<br />
+  御社の状況や目標をお伺いし、<br />
+  どんな形でSignal.を活用できるか、<br />
+  具体的にご提案させていただきます。
 </p>
+
     <div className="flex items-center justify-start">
  <a 
   href="/contact" 
@@ -168,7 +177,7 @@ export default function PageName() {
     transition
   "
 >
-  無料トライアルを申し込む
+  相談する
 </a>
 
 </div>
@@ -177,14 +186,10 @@ export default function PageName() {
 
     </div>
 
-    {/* 右：イメージ */}
-   <div className="flex flex-col gap-6">
-  <img src="/images/monitor.png" alt="管理画面1" className="rounded-lg shadow-lg w-full" />
-  <img src="/images/122.svg" alt="管理画面2" className="rounded-lg shadow-lg w-full" />
-</div>
 
   </div>
 </section>
+
     </div>
   );
 }

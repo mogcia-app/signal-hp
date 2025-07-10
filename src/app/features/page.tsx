@@ -72,19 +72,15 @@ export default function FeaturesPage() {
   計画ページ
 </h3>
 <p className="text-gray-900 text-base sm:text-lg md:text-xl mb-4">
-  目標フォロワー数やKPIを入力すると、
-  <span className="text-[#ff8a15] font-semibold">AIが逆算して</span><br />
-  最適な投稿本数や進捗シナリオを自動設計
-</p>
-
-<p className="text-gray-900 text-sm sm:text-base md:text-lg mb-4">
-  投稿カテゴリやターゲットを選択するだけで<br />
-  AIが戦略を提案し、投稿シミュレーションで成果を可視化します
-</p>
-
-<p className="text-gray-900 text-sm sm:text-base md:text-lg">
-  計画ページで作成したデータは、右側でAIが分析・アドバイス<br />
-  データに基づき最短で成果を上げるSNS運用を実現します
+  1ヶ月、3ヶ月、6ヶ月、1年単位でSNSの目標計画を立てることができます。
+  目標期間内で達成したいフォロワー数やKPIを入力すると、
+  AIがその目的から逆算し、最適な月ごとの投稿数や
+  投稿シミュレーションで目標達成までの流れを自動設計します。
+  進行中の目標は画面右上で常に確認可能です。
+  また、初期導入時には専任スタッフと一緒に計画を作成することを推奨しています。
+  ツール操作やデータ入力に慣れていない場合でも、
+  スタッフが伴走することでスムーズに進められ、
+  スタートから的確な戦略を設定できます。
 </p>
 
           </div>
@@ -136,18 +132,26 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="/images/126.svg"
+              src="/images/2323.svg"
               alt="AI履歴"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
           <div>
 <h3 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-6 text-[#ff8a15]">
-  SNSごとのAI履歴
+  AI履歴
 </h3>
 <p className="text-black text-base sm:text-lg md:text-xl mb-4">
-  SNSごとにこれまでAIに設定した内容や過去の計画履歴を一覧で確認可能<br />
-  御社だけのAIデータ資産として蓄積し、運用改善に活かせます。
+  これまでAIが御社に提案してきた戦略や投稿アイデアを、
+  理由や狙いも含めて一つひとつ蓄積し一覧化しています。
+  <br />
+  『いつ、どんな狙いでどんな施策を行ってきたのか？』が一目でわかるので、
+  これまでの運用を再分析したり、次の方向性を見直す際に大きなヒントとなります。
+  <br /><br />
+  さらに、この履歴は御社のSNS運用の“資産”そのもの。
+  使い込むほどに御社だけの独自データとして蓄積されていくため、
+  SNS担当が変わってもこれまでの戦略の流れや成功パターンを簡単に引き継ぐことができ、
+  運用の一貫性やクオリティを長期的に保つことができます。
 </p>
 
           </div>
@@ -331,23 +335,82 @@ export default function FeaturesPage() {
 
 
       {/* CTA */}
-    <section className="w-full py-20 px-6 bg-[#ff8a15] text-white text-center mb-0">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          SNS運用、AIと一緒に次のステージへ。
-        </h2>
-        <p className="text-lg mb-8">
-          強み分析からPDCA改善まで、Signal.がトータルでサポートします。
-          まずは無料相談で、御社に合わせたプランをご提案します。
-        </p>
-        <Link
-          href="/contact"
-          className="bg-white text-[#ff8a15] px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition inline-block"
-        >
-          無料相談してみる
-        </Link>
-      </div>
-    </section>
+    
+<section className="w-full py-8 px-6 bg-white">
+  <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
+    
+    {/* 左：テキスト & CTA */}
+    <div className="relative bg-[#ff8a15] text-white py-12 px-8 rounded-xl overflow-hidden">
+     <div className="flex items-center justify-center gap-3 mb-8">
+  {/* 左の丸 */}
+  <div className="flex gap-2">
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+  </div>
+
+  {/* 見出し */}
+  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
+  無料相談で、御社だけのSNS戦略を見つけませんか？
+</h3>
+
+  {/* 右の丸 */}
+  <div className="flex gap-2">
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+    <div className="w-2 h-2 bg-white rounded-full"></div>
+  </div>
+</div>
+
+ <p className="text-lg mt-12 mb-2">
+  これからSNSを本格的に始めたい方。<br />
+  すでに投稿を頑張っているけれど、<br />
+  「数字が伸びない」「次に何をすればいいか分からない」<br />
+  と感じている方へ。
+  <br /><br />
+  Signal.は、AIと専門スタッフの力で、<br />
+  御社だけのSNS戦略をゼロから一緒に設計し、<br />
+  運用のお悩みを解決します。
+  <br /><br />
+  投稿内容の提案から週次の振り返りまで。<br />
+  いつの間にか止まってしまいがちなSNSを、<br />
+  継続しやすい仕組みに変えていきませんか？
+  <br /><br />
+  まずはお気軽にオンラインでご相談ください。<br />
+  御社の状況や目標をお伺いし、<br />
+  どんな形でSignal.を活用できるか、<br />
+  具体的にご提案させていただきます。
+</p>
+
+    <div className="flex items-center justify-start">
+ <a 
+  href="/contact" 
+  className="
+    inline-block 
+    bg-white 
+    text-[#ff8a15] 
+    text-sm sm:text-base 
+    px-6 sm:px-8 md:px-10 
+    py-3 sm:py-4 
+    rounded-full 
+    font-bold 
+    hover:bg-gray-100 
+    transition
+  "
+>
+  相談する
+</a>
+
+</div>
+
+
+
+    </div>
+
+
+  </div>
+</section>
+
 
     </div>
   );

@@ -89,7 +89,7 @@ export default function ContactPage() {
     className="w-full border rounded p-2"
   >
     <option value="">選択してください</option>
-    <option value="ツールについて質問">ツールについて質問</option>
+    <option value="ツールについて質問">オンライン相談</option>
     <option value="資料請求">資料請求</option>
     <option value="見積・導入相談">見積・導入相談</option>
     <option value="パートナー提携">パートナー提携</option>
