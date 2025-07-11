@@ -10,7 +10,7 @@ export const metadata = {
   title: "Signal. - SNS特化AIツール",
   description: "Signal.はSNS運用をAIで効率化する逆算型PDCAツールです。",
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon-32x32.png', // ←ここで設定
   },
 };
 
