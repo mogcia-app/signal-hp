@@ -88,6 +88,19 @@ export default function Home() {
 
 <div className="w-full border-t border-[#ff8a15]/30 my-4"></div>
 
+<section className="mt-20 text-center">
+  <p className="text-gray-600 mb-3 text-sm">
+    Signal.ができた背景やサービスへの想いをまとめました。
+  </p>
+  <a
+    href="/about"
+    className="inline-block bg-[#ff8a15] text-white px-8 py-3 rounded-full font-bold hover:bg-orange-500 transition"
+  >
+  営業からご案内を受けたお客様へ
+  </a>
+</section>
+
+
 {/* ================== こんなお悩みありませんか？ ================== */}
 <section className="bg-gray-50 py-20 px-4">
   <div className="max-w-6xl mx-auto text-center"></div>

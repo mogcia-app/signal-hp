@@ -8,8 +8,8 @@ export default function DiagnosisPage() {
             <h1 className="text-3xl font-bold mb-8">SNS無料診断お申し込み</h1>
            <p className="mb-8 text-gray-700">
   AIと専門スタッフがあなたのSNSをじっくり分析し、<br/>
-  本気で伸ばすためのプランを<span className="font-bold text-[#ff8a15]">オーダーメイド</span>で提案します。<br/>
-  そのため2〜3営業日ほどお時間をいただきますが、<br/>
+  本気で伸ばすためのプランを<span className="font-bold text-[#ff8a15]">オーダーメイド資料</span>にて提案します。<br/>
+  そのため1〜7営業日ほどお時間をいただきますが、<br/>
   他にはない「あなた専用の戦略」をお届けします。
 </p>       
           </div>
@@ -27,32 +27,59 @@ export default function DiagnosisPage() {
       <section className="mt-16 bg-gray-50 py-12 px-6 rounded-xl shadow-inner">
   <div className="max-w-4xl mx-auto">
     <h2 className="text-2xl font-bold text-[#ff8a15] mb-6 text-center">
-      どんな提案が届くの？
+      オーダーメイド資料とは？
     </h2>
     <p className="text-center text-gray-700 mb-8">
       無料診断では、あなたのSNSを詳しく分析し<br/>
       以下のような内容をオーダーメイドでお届けします。
     </p>
-   <div className="grid md:grid-cols-3 gap-8">
-  <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
-    <h3 className="text-lg font-semibold mb-2">アカウントの現状分析</h3>
-    <p className="text-sm text-gray-600">
-      投稿内容・ターゲット・ブランドイメージをもとに、今のSNSの強みや弱みを明確にします。
-    </p>
+  
+<div className="grid md:grid-cols-2 gap-8">
+  {/* AIが自動で分析 */}
+  <div className="space-y-6">
+    <h3 className="text-xl font-bold text-[#ff8a15] mb-4">AIが分析すること</h3>
+    
+    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+      <h4 className="text-lg font-semibold mb-2">アカウントの現状分析</h4>
+      <p className="text-sm text-gray-600">
+        投稿内容・ターゲット・ブランドイメージをもとに、今のアカウントの強みや弱みをAIが可視化します。
+      </p>
+    </div>
+    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+      <h4 className="text-lg font-semibold mb-2">最適な投稿テーマ</h4>
+      <p className="text-sm text-gray-600">
+        どんな切り口・ハッシュタグ・クリエイティブが響きやすいかを1ヶ月分提案。
+      </p>
+    </div>
+     <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+      <h4 className="text-lg font-semibold mb-2">目標達成の逆算プラン</h4>
+     <p className="text-sm text-gray-600">
+  カスタマージャーニーに沿って、何周目にどんな投稿をすればいいか？
+  アカウントの数字がどれくらい下がったらどこを改善すべきか？
+  具体的なPDCAレポートもお届けします。
+</p>
+    </div>
   </div>
-  <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
-    <h3 className="text-lg font-semibold mb-2">目標達成の逆算プラン</h3>
-    <p className="text-sm text-gray-600">
-      フォロワー数やアカウントの目的など、ゴールから逆算してどんな投稿や施策が必要かを具体的に提案。
-    </p>
-  </div>
-  <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
-    <h3 className="text-lg font-semibold mb-2">あなた専用の投稿戦略</h3>
-    <p className="text-sm text-gray-600">
-      AIが傾向を分析し、実際にどんな切り口・ハッシュタグ・テーマで攻めるかを1ヶ月分具体化します。
-    </p>
+
+  {/* 専門スタッフが提案 */}
+  <div className="space-y-6">
+    <h3 className="text-xl font-bold text-[#ff8a15] mb-4">専門スタッフが提案すること</h3>
+    
+   <h4 className="text-lg font-semibold mb-2">ユーザー目線の課題発見</h4>
+<p className="text-sm text-gray-600">
+  専任スタッフがフォロワー視点で「どこで離脱するか」「何が刺さっていないか」を
+  客観的に分析し、改善ポイントを提案します。
+</p>
+
+    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+      <h4 className="text-lg font-semibold mb-2">差別化・ブランディングのポイント</h4>
+      <p className="text-sm text-gray-600">
+        同業他社とどう差別化し、ファンを作るか。店舗やブランドに合った長期視点の提案も行います。
+      </p>
+    </div>
   </div>
 </div>
+
 
   </div>
 </section>
@@ -60,9 +87,25 @@ export default function DiagnosisPage() {
 
       {/* 2️⃣ フォームセクション */}
       <section className="w-full py-20 px-6">
+        <div className="mb-10 text-center">
+  <h2 className="text-2xl font-bold mb-4 text-[#ff8a15]">無料診断お申し込みフォーム</h2>
+  <p className="text-gray-700 max-w-2xl mx-auto">
+    入力内容が具体的であるほど、より実践的な診断が可能です。
+    <br />
+    レポートはPDF形式でお届けします。
+    <br />
+    SNSは、どれだけ本気で取り組むかで結果が大きく変わります。
+<br />
+「本気でSNSを伸ばしたい」と思っている方に
+この無料診断をおすすめしています。
+<br />
+    まずはレポートをご覧いただき、今後のSNS戦略にお役立てください。
+  </p>
+</div>
+
         <div className="max-w-3xl mx-auto">
           <div dangerouslySetInnerHTML={{ __html: `
-           <form class="formrun space-y-4 bg-gray-50 p-6 rounded-xl shadow" action="https://form.run/api/v1/r/6emid1n25ptrxqjyjvocdymh" method="post">
+   <form class="formrun space-y-4 bg-gray-50 p-6 rounded-xl shadow" action="https://form.run/api/v1/r/6emid1n25ptrxqjyjvocdymh" method="post">
   <div>
     <label class="block mb-1 text-sm font-medium text-gray-700">お名前</label>
     <input name="お名前" type="text" class="w-full border p-3 rounded" />
@@ -83,28 +126,36 @@ export default function DiagnosisPage() {
     </select>
   </div>
   <div>
-    <label class="block mb-1 text-sm font-medium text-gray-700">SNSアカウント</label>
-    <input name="SNSアカウント" type="text" class="w-full border p-3 rounded" />
+    <label class="block mb-1 text-sm font-medium text-gray-700">SNSアカウントURL</label>
+    <input name="SNSアカウント" type="text" class="w-full border p-3 rounded" placeholder="https://instagram.com/youraccount" />
+  </div>
+  <div>
+    <label class="block mb-1 text-sm font-medium text-gray-700">事業ジャンル（例：韓国風カフェ / 苺大福専門店）</label>
+    <textarea name="事業ジャンル" class="w-full border p-3 rounded"></textarea>
+  </div>
+  <div>
+    <label class="block mb-1 text-sm font-medium text-gray-700">ブランドの世界観・投稿トーン</label>
+    <textarea name="世界観・トーン" class="w-full border p-3 rounded" placeholder="例：店内は高級感×黒基調、投稿はPOPな黄色イメージ"></textarea>
   </div>
   <div>
     <label class="block mb-1 text-sm font-medium text-gray-700">目標フォロワー数</label>
     <input name="目標フォロワー数" type="text" class="w-full border p-3 rounded" />
   </div>
   <div>
-    <label class="block mb-1 text-sm font-medium text-gray-700">ターゲット層（例：20代前半・自分磨き好き）</label>
-    <input name="ターゲット層" type="text" class="w-full border p-3 rounded" />
+    <label class="block mb-1 text-sm font-medium text-gray-700">ターゲット層（できるだけ具体的に）</label>
+    <input name="ターゲット層" type="text" class="w-full border p-3 rounded" placeholder="例：20代前半・流行に敏感な女性" />
   </div>
   <div>
-    <label class="block mb-1 text-sm font-medium text-gray-700">現在のお悩み</label>
-    <textarea name="現在のお悩み" class="w-full border p-3 rounded"></textarea>
+    <label class="block mb-1 text-sm font-medium text-gray-700">現在のお悩み・課題</label>
+    <textarea name="現在のお悩み" class="w-full border p-3 rounded" placeholder="例：投稿が伸びない、リーチが増えない"></textarea>
   </div>
   <div>
     <label class="block mb-1 text-sm font-medium text-gray-700">アカウントのゴール</label>
-    <textarea name="アカウントのゴール" class="w-full border p-3 rounded"></textarea>
+    <textarea name="アカウントのゴール" class="w-full border p-3 rounded" placeholder="例：店舗集客・ECで月50件購入など"></textarea>
   </div>
   <div>
-    <label class="block mb-1 text-sm font-medium text-gray-700">その他相談したいこと</label>
-    <textarea name="その他相談したいこと" class="w-full border p-3 rounded"></textarea>
+    <label class="block mb-1 text-sm font-medium text-gray-700">その他ご相談・気になること</label>
+    <textarea name="その他相談したいこと" class="w-full border p-3 rounded" placeholder="例：広告は使うべき？競合との差別化ポイントなど"></textarea>
   </div>
   <div>
     <label class="block text-sm font-medium text-gray-700">個人情報利用同意 [必須]</label>
@@ -122,6 +173,7 @@ export default function DiagnosisPage() {
   </button>
 </form>
 <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+
           `}} />
         </div>
       </section>

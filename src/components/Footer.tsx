@@ -35,6 +35,7 @@ export default function Footer() {
               <li><Link href="/price" className="hover:text-[#ff8a15] transition">料金</Link></li>
               <li><Link href="/flow" className="hover:text-[#ff8a15] transition">導入までの流れ</Link></li>
               <li><Link href="/faq" className="hover:text-[#ff8a15] transition">よくある質問</Link></li>
+              <Link href="/diagnosis" className="text-gray-600 hover:text-[#ff8a15]">SNS無料診断</Link>
             </ul>
           </div>
 

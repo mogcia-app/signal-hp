@@ -19,7 +19,7 @@ export default function DiagnosisPopup() {
 
       {/* 上部イメージ */}
       <div className="flex justify-center mb-4">
-        <img src="/images/0602.jpg"  alt="無料診断" className="w-20 h-20" />
+        <img src="/images/0602.jpg" alt="SNS診断" className="w-32 h-32 mx-auto mb-4" />
       </div>
 
       {/* テキスト & ボタン */}
@@ -30,9 +30,7 @@ export default function DiagnosisPopup() {
       <p className="text-sm text-gray-700 mb-4 text-center">
         本気でSNSを伸ばしたい方限定で<br />
         AIと専門スタッフがあなたのSNSを無料診断します。<br />
-        テンプレではないオリジナルレポートをメールでお届けするため<br />
-        お申し込み後、2〜3営業日ほどお時間をいただきますが、<br/>
-  他にはない「あなた専用の戦略」をお届けします。
+       
       </p>
       <div className="flex justify-center">
         <a
