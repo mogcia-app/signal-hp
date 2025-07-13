@@ -22,11 +22,12 @@ export default function DiagnosisPopup() {
         <img src="/images/0602.jpg" alt="SNS診断" className="w-32 h-32 mx-auto mb-4" />
       </div>
 
-      {/* テキスト & ボタン */}
-      <h3 className="text-xl font-bold mb-2 text-[#ff8a15] text-center">
-       Signal.をご検討中の皆様へ<br />
-        SNS無料診断受付中
-      </h3>
+    <h3 className="text-xl font-bold mb-2 text-center">
+  Signal<span className="text-[#ff8a15]">.</span>をご検討中の皆様へ<br />
+  <span className="text-[#ff8a15]">SNS無料診断</span>受付中
+</h3>
+
+
       <p className="text-sm text-gray-700 mb-4 text-center">
         本気でSNSを伸ばしたい方限定で<br />
         AIと専門スタッフがあなたのSNSを無料診断します。<br />
