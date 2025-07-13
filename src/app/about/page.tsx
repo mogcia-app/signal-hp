@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto py-16 px-6">
+    <div className="max-w-4xl mx-auto mt-10 py-16 px-6">
       <h1 className="text-3xl font-bold text-[#ff8a15] mb-8 text-center">
         営業からご案内を受けたお客様へ
       </h1>

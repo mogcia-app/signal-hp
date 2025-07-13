@@ -63,33 +63,33 @@ export default function DiagnosisPage() {
 
   {/* 専門スタッフが提案 */}
   <div className="space-y-6">
-    <h3 className="text-xl font-bold text-[#ff8a15] mb-4">専門スタッフが提案すること</h3>
+  <h3 className="text-xl font-bold text-[#ff8a15] mb-4">専門スタッフが提案すること</h3>
 
-    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition"></div> 
-   <h4 className="text-lg font-semibold mb-2">ユーザー目線の課題発見</h4>
-<p className="text-sm text-gray-600">
-  専任スタッフがフォロワー視点で「どこで離脱するか」「何が刺さっていないか」を
-  客観的に分析し、改善ポイントを提案します。
-</p>
+  <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+    <h4 className="text-lg font-semibold mb-2">ユーザー目線の課題発見</h4>
+    <p className="text-sm text-gray-600">
+      専任スタッフがフォロワー視点で「どこで離脱するか」「何が刺さっていないか」を
+      客観的に分析し、改善ポイントを提案します。
+    </p>
+  </div>
 
-    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
-      <h4 className="text-lg font-semibold mb-2">差別化・ブランディングのポイント</h4>
-      <p className="text-sm text-gray-600">
-        同業他社とどう差別化し、ファンを作るか。店舗やブランドに合った長期視点の提案も行います。
-      </p>
-    </div>
+  <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+    <h4 className="text-lg font-semibold mb-2">差別化・ブランディングのポイント</h4>
+    <p className="text-sm text-gray-600">
+      同業他社とどう差別化し、ファンを作るか。店舗やブランドに合った長期視点の提案も行います。
+    </p>
+  </div>
 
-    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
-  <h4 className="text-lg font-semibold mb-2">運用の効率化・続けやすさ</h4>
-  <p className="text-sm text-gray-600">
-    無理のない運用フローや役割分担、投稿ネタのストック方法までサポート。
-    施策が続かない原因を洗い出し、継続できる体制を整えます。
-  </p>
-</div>
-
+  <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+    <h4 className="text-lg font-semibold mb-2">運用の効率化・続けやすさ</h4>
+    <p className="text-sm text-gray-600">
+      無理のない運用フローや役割分担、投稿ネタのストック方法までサポート。
+      施策が続かない原因を洗い出し、継続できる体制を整えます。
+    </p>
   </div>
 </div>
 
+</div>
 
   </div>
 </section>
