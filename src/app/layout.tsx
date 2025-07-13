@@ -58,7 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   </a>
 </div>
 
-<ContactModal />
+  {/* <ContactModal />*/}
 <Footer />
 
       </body>
