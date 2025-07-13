@@ -88,7 +88,7 @@ export default function Home() {
 
 <div className="w-full border-t border-[#ff8a15]/30 my-4"></div>
 
-<section className="mt-20 text-center">
+<section className="mt-4 mb-4 text-center">
   <p className="text-gray-600 mb-3 text-sm">
     Signal.ができた背景やサービスへの想いをまとめました。
   </p>

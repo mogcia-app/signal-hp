@@ -64,7 +64,8 @@ export default function DiagnosisPage() {
   {/* 専門スタッフが提案 */}
   <div className="space-y-6">
     <h3 className="text-xl font-bold text-[#ff8a15] mb-4">専門スタッフが提案すること</h3>
-    
+
+    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition"></div> 
    <h4 className="text-lg font-semibold mb-2">ユーザー目線の課題発見</h4>
 <p className="text-sm text-gray-600">
   専任スタッフがフォロワー視点で「どこで離脱するか」「何が刺さっていないか」を
@@ -77,6 +78,15 @@ export default function DiagnosisPage() {
         同業他社とどう差別化し、ファンを作るか。店舗やブランドに合った長期視点の提案も行います。
       </p>
     </div>
+
+    <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
+  <h4 className="text-lg font-semibold mb-2">運用の効率化・続けやすさ</h4>
+  <p className="text-sm text-gray-600">
+    無理のない運用フローや役割分担、投稿ネタのストック方法までサポート。
+    施策が続かない原因を洗い出し、継続できる体制を整えます。
+  </p>
+</div>
+
   </div>
 </div>
 
@@ -126,8 +136,8 @@ export default function DiagnosisPage() {
     </select>
   </div>
   <div>
-    <label class="block mb-1 text-sm font-medium text-gray-700">SNSアカウントURL</label>
-    <input name="SNSアカウント" type="text" class="w-full border p-3 rounded" placeholder="https://instagram.com/youraccount" />
+    <label class="block mb-1 text-sm font-medium text-gray-700">SNSアカウント名またはURL</label>
+    <input name="SNSアカウント" type="text" class="w-full border p-3 rounded" placeholder="@xxxxxx" />
   </div>
   <div>
     <label class="block mb-1 text-sm font-medium text-gray-700">事業ジャンル（例：韓国風カフェ / 苺大福専門店）</label>
