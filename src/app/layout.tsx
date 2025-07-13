@@ -1,7 +1,9 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ContactModal from "@/components/ContactModal";
+  {/* import ContactModal from "@/components/ContactModal"; */}
+import DiagnosisPopup from "@/components/DiagnosisPopup";
+
 
 import type { ReactNode } from "react";
 import Script from "next/script";
@@ -41,22 +43,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-white min-h-screen flex flex-col">
         <Header />
       <main className="flex-grow">{children}</main>
+<DiagnosisPopup />
 
-<div className="fixed bottom-6 right-6 bg-white shadow-xl rounded-lg p-6 max-w-xs border border-[#ff8a15] z-50">
-  <h3 className="text-lg font-bold mb-2 text-[#ff8a15]">
-    SNS無料診断受付中📈
-  </h3>
-  <p className="text-sm text-gray-700 mb-4">
-    AIと専門スタッフがあなたのSNSを無料診断します。<br />
-    お申し込み後、2〜3日以内に診断レポートをメールでお届け。
-  </p>
-  <a
-    href="/diagnosis"
-    className="inline-block bg-[#ff8a15] text-white px-6 py-2 rounded-full hover:bg-orange-600 transition"
-  >
-    無料診断を申し込む
-  </a>
-</div>
 
   {/* <ContactModal />*/}
 <Footer />
