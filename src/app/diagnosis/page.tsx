@@ -48,7 +48,7 @@ export default function DiagnosisPage() {
     <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
       <h4 className="text-lg font-semibold mb-2">最適な投稿テーマ</h4>
       <p className="text-sm text-gray-600">
-        どんな切り口・ハッシュタグ・クリエイティブが響きやすいかを1ヶ月分提案。
+        どんなハッシュタグや投稿ジャンル・施策が響きやすいかを提案。
       </p>
     </div>
      <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
@@ -83,7 +83,7 @@ export default function DiagnosisPage() {
   <div className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#ff8a15] shadow hover:shadow-xl transform hover:scale-105 transition">
     <h4 className="text-lg font-semibold mb-2">運用の効率化・続けやすさ</h4>
     <p className="text-sm text-gray-600">
-      無理のない運用フローや役割分担、投稿ネタのストック方法までサポート。
+      無理のない運用フローや、投稿ネタのストック方法までサポート。
       施策が続かない原因を洗い出し、継続できる体制を整えます。
     </p>
   </div>
@@ -140,7 +140,7 @@ export default function DiagnosisPage() {
     <input name="SNSアカウント" type="text" class="w-full border p-3 rounded" placeholder="@xxxxxx" />
   </div>
   <div>
-    <label class="block mb-1 text-sm font-medium text-gray-700">事業ジャンル（例：韓国風カフェ / 苺大福専門店）</label>
+    <label class="block mb-1 text-sm font-medium text-gray-700">事業ジャンル（例：韓国風カフェ / 〇〇を使った苺大福専門店など）</label>
     <textarea name="事業ジャンル" class="w-full border p-3 rounded"></textarea>
   </div>
   <div>
@@ -154,6 +154,18 @@ export default function DiagnosisPage() {
   <div>
     <label class="block mb-1 text-sm font-medium text-gray-700">ターゲット層（できるだけ具体的に）</label>
     <input name="ターゲット層" type="text" class="w-full border p-3 rounded" placeholder="例：20代前半・流行に敏感な女性" />
+  </div>
+   <div>
+    <label class="block mb-1 text-sm font-medium text-gray-700">SNS運用人数</label>
+    <textarea name="SNS運用人数" class="w-full border p-3 rounded" placeholder="例：全て１人で運用している/投稿・編集１名・撮影２名・分析１名など"></textarea>
+  </div>
+   <div>
+    <label class="block mb-1 text-sm font-medium text-gray-700">HP URL</label>
+    <textarea name="HP URL" class="w-full border p-3 rounded"></textarea>
+  </div>
+   <div>
+    <label class="block mb-1 text-sm font-medium text-gray-700">SNS歴</label>
+    <textarea name="SNS歴" class="w-full border p-3 rounded" placeholder="例：Instagram3ヶ月など"></textarea>
   </div>
   <div>
     <label class="block mb-1 text-sm font-medium text-gray-700">現在のお悩み・課題</label>
