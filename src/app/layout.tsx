@@ -9,12 +9,14 @@ import type { ReactNode } from "react";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Signal. - SNS特化AIツール",
-  description: "Signal.はSNS運用をAIで効率化する逆算型PDCAツールです。",
+  title: "Signal.｜SNS運用の90%を自動化するAIマーケティングツール",
+  description:
+    "SNS戦略設計から投稿作成・分析改善までAIが自動化。InstagramやTikTok運用の時間を90%削減し、フォロワー増加と成果創出を加速。無料診断で最適な運用プランをご提案。",
   icons: {
-    icon: '/favicon-32x32.png', // ←ここで設定
+    icon: '/favicon.png',
   },
 };
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
