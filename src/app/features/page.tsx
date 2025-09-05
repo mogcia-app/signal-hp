@@ -4,7 +4,7 @@ export default function FeaturesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-  <section className="w-full bg-gradient-to-r from-[#fff3ea] to-white pt-32 pb-12 md:pt-36 md:pb-16 lg:pt-40 lg:pb-20 px-6">
+      <section className="w-full bg-gray-50 pt-32 pb-12 md:pt-36 md:pb-16 lg:pt-40 lg:pb-20 px-6">
 
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
@@ -34,12 +34,11 @@ export default function FeaturesPage() {
       {/* Features Grid */}
 <section className="w-full py-12 px-6">
   <div className="max-w-7xl mx-auto mb-8">
-    <div className="flex items-center justify-center mb-6">
-      <div className="flex-grow border-t border-[#ff8a15]"></div>
-      <h2 className="text-3xl font-bold mx-4 whitespace-nowrap">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-6">
         Signal<span className="text-[#ff8a15]">.</span>の主な機能
       </h2>
-      <div className="flex-grow border-t border-[#ff8a15]"></div>
+      <div className="w-24 h-1 bg-gray-300 mx-auto"></div>
     </div>
    <div className="text-gray-600 text-lg text-center max-w-2xl mx-auto mt-12 mb-4">
   <p>
@@ -98,7 +97,7 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
-<div className="w-full border-t border-[#ff8a15]/30 my-4"></div>
+<div className="w-full border-t border-gray-200 my-4"></div>
 
       {/* Feature 2 */}
       <section className="w-full py-20 px-6 bg-white">
@@ -138,7 +137,7 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
-<div className="w-full border-t border-[#ff8a15]/30 my-4"></div>
+<div className="w-full border-t border-gray-200 my-4"></div>
 
       {/* Feature 3 */}
       <section className="w-full py-20 px-6">
@@ -185,102 +184,102 @@ export default function FeaturesPage() {
       他にもこんな基本機能があります
     </h3>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">投稿分析</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">投稿分析</h4>
         <p className="text-gray-600 text-sm">投稿結果を手動入力することでAIが解析</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">定型フレーズ管理</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">定型フレーズ管理</h4>
         <p className="text-gray-600 text-sm">よく使うキャプションやハッシュタグを<br />一括管理</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">分析グラフ</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">分析グラフ</h4>
         <p className="text-gray-600 text-sm">エンゲージメント別やフォロワー推移を<br />グラフで可視化</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">SNSごとに特化したAI</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">SNSごとに特化したAI</h4>
         <p className="text-gray-600 text-sm">InstagramやXなど媒体別の最適AIを搭載</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">月次レポート</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">月次レポート</h4>
         <p className="text-gray-600 text-sm">月ごとの成果を自動レポート化</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">投稿シミュレーション</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">投稿シミュレーション</h4>
         <p className="text-gray-600 text-sm">投稿計画を立てるとKPI達成率をAIが予測</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">AIフィードバック</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">AIフィードバック</h4>
         <p className="text-gray-600 text-sm">投稿ごとにAIが改善点や伸ばすべき点を<br />提案</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">マルチガイド</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">マルチガイド</h4>
         <p className="text-gray-600 text-sm">SNSごとの運用方法やお役立ち情報<br />Signal.の使い方をいつでも確認可能</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">スケジュールページ</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">スケジュールページ</h4>
         <p className="text-gray-600 text-sm">投稿予定を一目で確認・管理</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">過去の投稿一覧</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">過去の投稿一覧</h4>
         <p className="text-gray-600 text-sm">過去投稿を保存率や反応別に振り返り</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">ToDoリスト</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">ToDoリスト</h4>
         <p className="text-gray-600 text-sm">SNS運用のタスクをダッシュボードで管理</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">Signal.からのお知らせ</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">Signal.からのお知らせ</h4>
         <p className="text-gray-600 text-sm">新機能や運用ヒントを随時お届け</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">今日すべきこと</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">今日すべきこと</h4>
         <p className="text-gray-600 text-sm">今日優先すべきタスクを提示</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">目標の進捗状況</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">目標の進捗状況</h4>
         <p className="text-gray-600 text-sm">設定した目標の達成率を常時チェック</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">直近の投稿アドバイス</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">直近の投稿アドバイス</h4>
         <p className="text-gray-600 text-sm">最近の投稿をAIが再評価し改善を提案</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">AIによる伸び悩み診断</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">AIによる伸び悩み診断</h4>
         <p className="text-gray-600 text-sm">投稿が伸びない原因をAIが特定</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">目標までの実績グラフ</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">目標までの実績グラフ</h4>
         <p className="text-gray-600 text-sm">目標までの進捗をグラフで追跡</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">
           投稿時間×エンゲージメント別<br />ヒートマップ
         </h4>
         <p className="text-gray-600 text-sm">最も反応の良い時間帯を色で可視化</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">動画分析</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">動画分析</h4>
         <p className="text-gray-600 text-sm">AIが最初の5秒間の印象を分析</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">画像分析</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">画像分析</h4>
         <p className="text-gray-600 text-sm">投稿画像の訴求ポイントをAIが解析</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">おすすめサムネイル画像生成</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">おすすめサムネイル画像生成</h4>
         <p className="text-gray-600 text-sm">AIが最適なサムネイルを自動作成</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">おすすめ動画絵コンテ生成</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">おすすめ動画絵コンテ生成</h4>
         <p className="text-gray-600 text-sm">動画構成のアイデアをAIが提示</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">ヒアリング</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">ヒアリング</h4>
         <p className="text-gray-600 text-sm">ブランドの基本情報や注力したい商品などAIに覚えさせることが可能です</p>
       </div>
-      <div className="p-4 border border-[#ff8a15] rounded-lg">
-        <h4 className="font-bold text-[#ff8a15] mb-2">投稿戦略アドバイス</h4>
+      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">投稿戦略アドバイス</h4>
         <p className="text-gray-600 text-sm">戦略視点から投稿の方向性をAIが提案</p>
       </div>
     </div>
@@ -300,49 +299,49 @@ export default function FeaturesPage() {
     </p>
 
     <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
-  <div className="p-4 border border-[#ff8a15] rounded-lg flex flex-col justify-between h-full">
+  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
-      <h4 className="font-bold text-[#ff8a15] mb-2">LINE通知</h4>
+      <h4 className="font-bold text-gray-900 mb-2">LINE通知</h4>
       <p className="text-gray-600 text-sm">
         重要な分析結果やリマインダーをLINEへ送信
       </p>
     </div>
   </div>
-  <div className="p-4 border border-[#ff8a15] rounded-lg flex flex-col justify-between h-full">
+  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
-      <h4 className="font-bold text-[#ff8a15] mb-2">ショップ連携</h4>
+      <h4 className="font-bold text-gray-900 mb-2">ショップ連携</h4>
       <p className="text-gray-600 text-sm">
         ECサイトと連携して商品データを活用
       </p>
     </div>
   </div>
-  <div className="p-4 border border-[#ff8a15] rounded-lg flex flex-col justify-between h-full">
+  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
-      <h4 className="font-bold text-[#ff8a15] mb-2">多言語分析</h4>
+      <h4 className="font-bold text-gray-900 mb-2">多言語分析</h4>
       <p className="text-gray-600 text-sm">
         海外市場に向けた投稿の反応もAIが解析
       </p>
     </div>
   </div>
-  <div className="p-4 border border-[#ff8a15] rounded-lg flex flex-col justify-between h-full">
+  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
-      <h4 className="font-bold text-[#ff8a15] mb-2">タスク割り当て</h4>
+      <h4 className="font-bold text-gray-900 mb-2">タスク割り当て</h4>
       <p className="text-gray-600 text-sm">
         投稿計画や改善アクションをメンバーごとに割り当て
       </p>
     </div>
   </div>
-  <div className="p-4 border border-[#ff8a15] rounded-lg flex flex-col justify-between h-full">
+  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
-      <h4 className="font-bold text-[#ff8a15] mb-2">承認フロー</h4>
+      <h4 className="font-bold text-gray-900 mb-2">承認フロー</h4>
       <p className="text-gray-600 text-sm">
         上長承認が必要な投稿を管理者がチェック＆承認
       </p>
     </div>
   </div>
-  <div className="p-4 border border-[#ff8a15] rounded-lg flex flex-col justify-between h-full">
+  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
-      <h4 className="font-bold text-[#ff8a15] mb-2">API連携</h4>
+      <h4 className="font-bold text-gray-900 mb-2">API連携</h4>
       <p className="text-gray-600 text-sm">
         社内基幹システムや顧客管理ツールと連動
       </p>
@@ -355,83 +354,37 @@ export default function FeaturesPage() {
 
 
       {/* CTA */}
-    
-<section className="w-full py-8 px-6 bg-white">
-  <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
-    
-    {/* 左：テキスト & CTA */}
-    <div className="relative bg-[#ff8a15] text-white py-12 px-8 rounded-xl overflow-hidden">
-     <div className="flex items-center justify-center gap-3 mb-8">
-  {/* 左の丸 */}
-  <div className="flex gap-2">
-    <div className="w-2 h-2 bg-white rounded-full"></div>
-    <div className="w-2 h-2 bg-white rounded-full"></div>
-    <div className="w-2 h-2 bg-white rounded-full"></div>
-  </div>
+      <section className="w-full py-8 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
+          
+          {/* 左：テキスト & CTA */}
+          <div className="bg-gray-900 text-white py-16 px-8 rounded-lg">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              無料相談で、御社だけのSNS戦略を見つけませんか？
+            </h3>
 
-  {/* 見出し */}
-  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
-  無料相談で、御社だけのSNS戦略を見つけませんか？
-</h3>
+            <p className="text-lg text-white/90 mb-8 leading-relaxed">
+              これからSNSを本格的に始めたい方。すでに投稿を頑張っているけれど、
+              「数字が伸びない」「次に何をすればいいか分からない」と感じている方へ。
+            </p>
 
-  {/* 右の丸 */}
-  <div className="flex gap-2">
-    <div className="w-2 h-2 bg-white rounded-full"></div>
-    <div className="w-2 h-2 bg-white rounded-full"></div>
-    <div className="w-2 h-2 bg-white rounded-full"></div>
-  </div>
-</div>
+            <p className="text-base text-white/80 mb-8 leading-relaxed">
+              Signal.は、AIと専門スタッフの力で、御社だけのSNS戦略をゼロから一緒に設計し、
+              運用のお悩みを解決します。投稿内容の提案から週次の振り返りまで。
+              いつの間にか止まってしまいがちなSNSを、継続しやすい仕組みに変えていきませんか？
+            </p>
 
- <p className="text-lg mt-12 mb-2">
-  これからSNSを本格的に始めたい方。<br />
-  すでに投稿を頑張っているけれど、<br />
-  「数字が伸びない」「次に何をすればいいか分からない」<br />
-  と感じている方へ。
-  <br /><br />
-  Signal.は、AIと専門スタッフの力で、<br />
-  御社だけのSNS戦略をゼロから一緒に設計し、<br />
-  運用のお悩みを解決します。
-  <br /><br />
-  投稿内容の提案から週次の振り返りまで。<br />
-  いつの間にか止まってしまいがちなSNSを、<br />
-  継続しやすい仕組みに変えていきませんか？
-  <br /><br />
-  まずはお気軽にオンラインでご相談ください。<br />
-  御社の状況や目標をお伺いし、<br />
-  どんな形でSignal.を活用できるか、<br />
-  具体的にご提案させていただきます。
-</p>
-
-    <div className="flex items-center justify-start">
- <a 
-  href="/contact" 
-  className="
-    inline-block 
-    bg-white 
-    text-[#ff8a15] 
-    text-sm sm:text-base 
-    px-6 sm:px-8 md:px-10 
-    py-3 sm:py-4 
-    rounded-full 
-    font-bold 
-    hover:bg-gray-100 
-    transition
-  "
->
-  相談する
-</a>
-
-</div>
-
-
-
-    </div>
-
-
-  </div>
-</section>
-
-
+            <div className="flex items-center justify-start">
+              <a 
+                href="/contact" 
+                className="inline-block bg-white text-gray-900 text-base px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                相談する
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
