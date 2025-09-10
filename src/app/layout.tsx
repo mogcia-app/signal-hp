@@ -62,7 +62,7 @@ export const metadata = {
   },
   // Search Console のサイト所有権確認（あなたのコードをセット）
   verification: {
-    google: "ACxQJR4t09wu6j7Skb1yFuM_NcjFkCvzYxgjd-i7dk0",
+    google: "g4OAU_6aZjujbDlX688yg_dezRgpehllGzkhHyqoimg",
   },
 };
 
