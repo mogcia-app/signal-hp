@@ -30,8 +30,8 @@ export default function Home() {
   
   {/* 高級感のある背景装飾 */}
   <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-[#ff8a15]/10 to-transparent rounded-full filter blur-3xl"></div>
-    <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-gradient-to-tr from-[#ff8a15]/8 to-transparent rounded-full filter blur-3xl"></div>
+    <div className="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-[#ff8a15]/10 to-transparent rounded-lg filter blur-3xl"></div>
+    <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-gradient-to-tr from-[#ff8a15]/8 to-transparent rounded-lg filter blur-3xl"></div>
     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-slate-50/20"></div>
   </div>
   
@@ -42,7 +42,7 @@ export default function Home() {
       <div className="text-center lg:text-left space-y-6 lg:space-y-8">
         {/* 高級感のあるバッジ */}
         <div className="inline-flex items-center  px-8 py-4 bg-white/90 backdrop-blur-sm text-slate-800 rounded-lg text-sm font-semibold mb-8 border border-slate-200/50 shadow-xl">
-          <div className="w-2 h-2 bg-gradient-to-r from-[#ff8a15] to-orange-600 rounded-full mr-3"></div>
+          <div className="w-2 h-2 bg-gradient-to-r from-[#ff8a15] to-orange-600 rounded-lg mr-3"></div>
           <span className="tracking-wide">SNS運用自動化ツール</span>
         </div>
         
@@ -63,32 +63,32 @@ export default function Home() {
         
         {/* 高級感のある特徴ポイント */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-slate-100/50">
-            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-full flex items-center justify-center">
+          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-lg p-4 shadow-lg border border-slate-100/50">
+            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-lg flex items-center justify-center">
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
             <span className="text-sm font-medium tracking-wide">4つのSNS対応</span>
           </div>
-          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-slate-100/50">
-            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-full flex items-center justify-center">
+          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-lg p-4 shadow-lg border border-slate-100/50">
+            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-lg flex items-center justify-center">
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
             <span className="text-sm font-medium tracking-wide">SNS担当者の人材確保不要</span>
           </div>
-          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-slate-100/50">
-            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-full flex items-center justify-center">
+          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-lg p-4 shadow-lg border border-slate-100/50">
+            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-lg flex items-center justify-center">
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
             <span className="text-sm font-medium tracking-wide">無料診断実施中</span>
           </div>
-          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-slate-100/50">
-            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-full flex items-center justify-center">
+          <div className="flex items-center justify-center sm:justify-start space-x-4 text-slate-700 bg-white/80 backdrop-blur-md rounded-lg p-4 shadow-lg border border-slate-100/50">
+            <div className="w-6 h-6 bg-gradient-to-br from-[#ff8a15] to-orange-600 rounded-lg flex items-center justify-center">
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
@@ -101,7 +101,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-6">
           <a
             href="/contact"
-            className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-[#ff8a15] to-orange-600 text-white rounded-2xl font-semibold hover:from-orange-600 hover:to-[#ff8a15] transition-all duration-500 text-center shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border border-orange-500/20"
+            className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-[#ff8a15] to-orange-600 text-white rounded-lg font-semibold hover:from-orange-600 hover:to-[#ff8a15] transition-all duration-500 text-center shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border border-orange-500/20"
           >
             <span className="tracking-wide">お問い合わせはコチラ</span>
             <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ export default function Home() {
           </a>
           <a
             href="/diagnosis"
-            className="group inline-flex items-center justify-center px-10 py-5 bg-white/90 backdrop-blur-sm text-slate-800 rounded-2xl font-semibold hover:bg-white border-2 border-slate-200 hover:border-slate-300 transition-all duration-500 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2"
+            className="group inline-flex items-center justify-center px-10 py-5 bg-white/90 backdrop-blur-sm text-slate-800 rounded-lg font-semibold hover:bg-white border-2 border-slate-200 hover:border-slate-300 transition-all duration-500 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2"
           >
             <span className="tracking-wide">無料診断を受ける</span>
             <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,7 +126,7 @@ export default function Home() {
           <img
             src="/images/aaa.jpg"
             alt="Signal. ダッシュボード"
-            className="w-full h-auto max-w-full lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl rounded-2xl"
+            className="w-full h-auto max-w-full lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl rounded-lg"
           />
           
           {/* 右下に重ねる画像 */}
@@ -134,7 +134,7 @@ export default function Home() {
             <img
               src="/images/0602.jpg"
               alt="Signal. PDCA × 強み × 進化するAI分析"
-              className="w-40 h-auto lg:w-48 xl:w-56 rounded-xl shadow-lg border border-white/50"
+              className="w-40 h-auto lg:w-48 xl:w-56 rounded-md shadow-lg border border-white/50"
             />
           </div>
         </div>
@@ -173,8 +173,8 @@ export default function Home() {
 {/* ================== こんなお悩みありませんか？ ================== */}
 <section className="py-24 px-4 sm:px-6 bg-gradient-to-br from-slate-50 via-white to-orange-50/30 relative overflow-hidden">
   {/* 装飾要素 */}
-  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#ff8a15]/5 to-orange-500/5 rounded-full -translate-y-32 translate-x-32"></div>
-  <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-slate-200/20 to-transparent rounded-full translate-y-24 -translate-x-24"></div>
+  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#ff8a15]/5 to-orange-500/5 rounded-lg -translate-y-32 translate-x-32"></div>
+  <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-slate-200/20 to-transparent rounded-lg translate-y-24 -translate-x-24"></div>
   
   <div className="relative max-w-7xl mx-auto">
     <div className="text-center mb-20">
@@ -191,7 +191,7 @@ export default function Home() {
     
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
       {/* 1 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/flag.svg" alt="投稿が伸びない" className="w-full h-full object-contain" />
@@ -203,7 +203,7 @@ export default function Home() {
       </div>
 
       {/* 2 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/chart.svg" alt="売上に繋がらない" className="w-full h-full object-contain" />
@@ -215,7 +215,7 @@ export default function Home() {
       </div>
 
       {/* 3 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/003.svg" alt="SNS担当がいない" className="w-full h-full object-contain" />
@@ -227,7 +227,7 @@ export default function Home() {
       </div>
 
       {/* 4 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/ai.svg" alt="AIを使っても成果が出ない" className="w-full h-full object-contain" />
@@ -239,7 +239,7 @@ export default function Home() {
       </div>
 
       {/* 5 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/9780.svg" alt="強みが伝わらない" className="w-full h-full object-contain" />
@@ -251,7 +251,7 @@ export default function Home() {
       </div>
 
       {/* 6 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/004.svg" alt="運用に手が回らない" className="w-full h-full object-contain" />
@@ -273,7 +273,7 @@ export default function Home() {
   <div className="max-w-7xl mx-auto text-center">
     {/* シンプルなバッジ */}
     <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm text-slate-700 rounded-lg text-sm font-semibold mb-12 border border-slate-200/50 shadow-lg">
-      <div className="w-2 h-2 bg-[#ff8a15] rounded-full mr-3"></div>
+      <div className="w-2 h-2 bg-[#ff8a15] rounded-lg mr-3"></div>
       <span className="tracking-wide">SNS運用で悩んでいるあなたへ</span>
     </div>
 
@@ -316,7 +316,7 @@ export default function Home() {
     {/* 上の3枚（ツールでできること） */}
     <div className="grid grid-cols-1 gap-10 lg:gap-12 mb-24">
       {/* 1 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-6 -left-6 w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/ai-card1.svg" alt="AI強み診断" className="w-full h-full object-contain" />
@@ -330,7 +330,7 @@ export default function Home() {
       </div>
       
       {/* 2 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-6 -left-6 w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/ai-card2.svg" alt="KPI逆算プラン" className="w-full h-full object-contain" />
@@ -344,7 +344,7 @@ export default function Home() {
       </div>
       
       {/* 3 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
+      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
         {/* 左上に重ねる画像 */}
         <div className="absolute -top-6 -left-6 w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <img src="/images/ai-card3.svg" alt="カルテ" className="w-full h-full object-contain" />
@@ -417,83 +417,96 @@ export default function Home() {
 </section>
 
 {/* ================== 数字で見るSignal. ================== */}
-<section className="py-32 px-4 sm:px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-  {/* 背景装飾 */}
-  <div className="absolute inset-0">
-    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#ff8a15]/5 via-transparent to-[#ff8a15]/10"></div>
-    <div className="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-[#ff8a15]/10 to-transparent rounded-full filter blur-3xl"></div>
-    <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-gradient-to-tr from-[#ff8a15]/8 to-transparent rounded-full filter blur-3xl"></div>
-  </div>
-
-  <div className="relative max-w-7xl mx-auto">
+<section className="py-24 px-4 sm:px-6 bg-white">
+  <div className="max-w-7xl mx-auto">
     {/* ヘッダー */}
-    <div className="text-center mb-20">
-      <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/20">
-        <div className="w-2 h-2 bg-[#ff8a15] rounded-full mr-3 animate-pulse"></div>
-        <span className="text-white/90 text-sm font-medium">実績データ</span>
-      </div>
+    <div className="text-center mb-16">
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+        <span className="text-slate-900">数字で見る  Signal<span className="text-[#ff8a15]">.</span></span>
       
-      <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-        <span className="text-white">数字で見る</span>
-        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ff8a15] to-orange-300">
-          Signal<span className="text-white">.</span>
-        </span>
       </h2>
       
-      <p className="text-white/80 text-xl max-w-3xl mx-auto leading-relaxed">
-        圧倒的な数字が証明する、Signal.の実力
+      <p className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed">
+        数字が証明する、Signal.の実力
       </p>
     </div>
 
-    {/* メイン統計カード */}
+    {/* 統計カード */}
     <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-16">
       {/* 90% 自動化 - メインカード */}
       <div className="lg:col-span-2 group relative">
-        <div className="bg-gradient-to-br from-[#ff8a15] to-orange-600 p-8 lg:p-12 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-          
-          <div className="relative z-10">
+        <div className="bg-gradient-to-br from-[#ff8a15] to-orange-600 p-8 lg:p-12 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="text-white">
             <div className="flex items-center justify-between mb-6">
               <div className="text-white/90 text-lg font-medium">SNS運用の自動化率</div>
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
                 </svg>
               </div>
             </div>
             
-            <div className="text-8xl lg:text-9xl font-black text-white mb-4 group-hover:scale-105 transition-transform duration-300">
-              90<span className="text-6xl lg:text-7xl">%</span>
+            <div className="text-7xl lg:text-8xl font-black mb-4 group-hover:scale-105 transition-transform duration-300">
+              90<span className="text-5xl lg:text-6xl">%</span>
             </div>
             
-            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">完全自動化</h3>
-            <p className="text-white/90 text-lg leading-relaxed">
+            <h3 className="text-2xl lg:text-3xl font-bold mb-4">完全自動化</h3>
+            <p className="text-white/90 text-lg leading-relaxed mb-6">
               SNS運用の90%をAIが自動化。残り10%は戦略判断のみ。
               人的リソースを大幅削減し、コスト最適化を実現。
             </p>
+            
+            {/* 比較ボックス */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-white/90 mb-2">従来のSNS運用</h4>
+                <div className="text-2xl font-bold text-white/80 mb-1">100%手動</div>
+                <p className="text-xs text-white/70">企画・作成・投稿・分析すべて手作業</p>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Signal.でのSNS運用</h4>
+                <div className="text-2xl font-bold text-white mb-1">90%自動化</div>
+                <p className="text-xs text-white/90">AIが自動実行、戦略判断のみ</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* 5分 - 時間短縮 */}
       <div className="group relative">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
           <div className="text-center">
-            <div className="w-16 h-16 bg-[#ff8a15]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
+            <div className="w-12 h-12 bg-[#ff8a15]/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <svg className="w-6 h-6 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
               </svg>
             </div>
             
-            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-              5<span className="text-3xl lg:text-4xl text-white/80">分</span>
+            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">
+              5<span className="text-2xl lg:text-3xl text-slate-600">分</span>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-4">1投稿あたりの運用時間</h3>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">1投稿あたりの運用時間</h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">
               AIが自動提案するため、投稿準備時間を大幅短縮
             </p>
+            
+            {/* 追加の詳細説明 */}
+            <div className="text-left">
+              <div className="bg-slate-50 rounded-lg p-4 mb-4">
+                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来の運用時間</h4>
+                <div className="text-2xl font-bold text-slate-600 line-through">30-60分</div>
+                <p className="text-xs text-slate-500 mt-1">ネタ探し・構成・画像選定</p>
+              </div>
+              
+              <div className="bg-[#ff8a15]/5 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-[#ff8a15] mb-2">Signal.での運用時間</h4>
+                <div className="text-2xl font-bold text-[#ff8a15]">5分</div>
+                <p className="text-xs text-slate-600 mt-1">AI提案を確認・微調整のみ</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -503,76 +516,111 @@ export default function Home() {
     <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-3">
       {/* 0 ネタ切れ */}
       <div className="group relative">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
           <div className="text-center">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
             
-            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">0</div>
+            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">0</div>
             
-            <h3 className="text-xl font-bold text-white mb-4">ネタ切れ</h3>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">ネタ切れ</h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">
               AIが無限に投稿テーマを提案
             </p>
+            
+            {/* 比較ボックス */}
+            <div className="text-left">
+              <div className="bg-slate-50 rounded-lg p-4 mb-4">
+                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来のネタ探し</h4>
+                <div className="text-lg font-bold text-slate-600">毎日悩む</div>
+                <p className="text-xs text-slate-500 mt-1">アイデア枯渇・時間浪費</p>
+              </div>
+              
+              <div className="bg-green-50 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-green-700 mb-2">Signal.でのネタ探し</h4>
+                <div className="text-lg font-bold text-green-600">0回</div>
+                <p className="text-xs text-green-600 mt-1">AIが自動で無限提案</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* 4時間短縮 */}
       <div className="group relative">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
               </svg>
             </div>
             
-            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-              4<span className="text-3xl lg:text-4xl text-white/80">時間</span>
+            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">
+              4<span className="text-2xl lg:text-3xl text-slate-600">時間</span>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-4">撮影準備短縮</h3>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">撮影準備短縮</h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">
               AIが絵コンテとサムネイルを自動生成
             </p>
+            
+            {/* 比較ボックス */}
+            <div className="text-left">
+              <div className="bg-slate-50 rounded-lg p-4 mb-4">
+                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来の撮影準備</h4>
+                <div className="text-lg font-bold text-slate-600">6-8時間</div>
+                <p className="text-xs text-slate-500 mt-1">企画・絵コンテ・準備</p>
+              </div>
+              
+              <div className="bg-blue-50 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-blue-700 mb-2">Signal.での撮影準備</h4>
+                <div className="text-lg font-bold text-blue-600">2-4時間</div>
+                <p className="text-xs text-blue-600 mt-1">AIが自動で絵コンテ生成</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* 30+ 分析項目 */}
       <div className="group relative">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+              <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
               </svg>
             </div>
             
-            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-              30<span className="text-3xl lg:text-4xl text-white/80">+</span>
+            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">
+              30<span className="text-2xl lg:text-3xl text-slate-600">+</span>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-4">自動分析項目</h3>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">自動分析項目</h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">
               AIが多角的にデータを分析・提案
             </p>
+            
+            {/* 比較ボックス */}
+            <div className="text-left">
+              <div className="bg-slate-50 rounded-lg p-4 mb-4">
+                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来の分析</h4>
+                <div className="text-lg font-bold text-slate-600">3-5項目</div>
+                <p className="text-xs text-slate-500 mt-1">手動集計・限定的</p>
+              </div>
+              
+              <div className="bg-purple-50 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-purple-700 mb-2">Signal.での分析</h4>
+                <div className="text-lg font-bold text-purple-600">30+項目</div>
+                <p className="text-xs text-purple-600 mt-1">AIが自動で多角的分析</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    {/* 下部のCTA */}
-    <div className="text-center mt-16">
-      <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-8 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
-        <span className="text-white font-medium mr-3">これらの数字を体感してみませんか？</span>
-        <svg className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-        </svg>
       </div>
     </div>
   </div>
@@ -582,130 +630,219 @@ export default function Home() {
 
 
 {/* ================== 提供できる価値 ================== */}
-<section className="py-20 px-4 sm:px-6 bg-white">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-3xl font-bold text-center mb-16">
-      Signal<span className="text-[#ff8a15]">.</span>が提供できる価値
-    </h2>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
- <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-  <h3 className="font-bold text-lg mb-4 text-gray-900 text-center">
-    投稿目的に合わせた<span className="text-[#ff8a15]">ネタを提案</span>
-  </h3>
-  <p className="text-gray-600 text-sm leading-relaxed text-center mb-6">
-    AIがあなたのKPI計画を元に戦略を設計。<br />
-    目的に沿った具体的な次の投稿が見えるから、<br />
-    効率よいSNS運用が可能です。
-  </p>
-
-  <div className="flex gap-2 flex-wrap justify-center">
-    <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">AI提案</span>
-    <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">構成アドバイス</span>
-    <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">目的別最適化</span>
-    <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">SNSに特化したAI</span>
-    <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">データ活用</span>
+<section className="py-24 px-4 sm:px-6 bg-gradient-to-br from-slate-50 via-white to-orange-50/30 relative overflow-hidden">
+  {/* 背景装飾 */}
+  <div className="absolute inset-0">
+    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#ff8a15]/5 to-orange-500/5 rounded-lg -translate-y-32 translate-x-32"></div>
+    <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-slate-200/20 to-transparent rounded-lg translate-y-24 -translate-x-24"></div>
   </div>
-</div>
 
-
-    <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-      <h3 className="font-bold text-lg mb-4 text-gray-900 text-center">
-        KPIから<span className="text-[#ff8a15]">逆算した</span>SNS計画
-      </h3>
-      <p className="text-gray-600 text-sm leading-relaxed text-center mb-6">
-        投稿目標を設定するだけで、<br />
-        AIが逆算して最適な投稿頻度やテーマを<br />
-        自動で設計。<br />
-        目標達成に直結するSNS運用を実現します。
-      </p>
-      <div className="flex gap-2 flex-wrap justify-center">
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">成果に直結</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">目標設定</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">AI自動設計</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">効率化</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">PDCA強化</span>
+  <div className="relative max-w-7xl mx-auto">
+    {/* ヘッダー */}
+    <div className="text-center mb-20">
+      <div className="inline-flex items-center bg-white/80 backdrop-blur-md px-6 py-3 rounded-lg mb-8 border border-[#ff8a15]/20">
+        <div className="w-2 h-2 bg-[#ff8a15] rounded-lg mr-3 animate-pulse"></div>
+        <span className="text-slate-700 text-sm font-medium">提供価値</span>
       </div>
+      
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+        <span className="text-slate-900">Signal<span className="text-[#ff8a15]">.</span>が提供できる価値</span>
+        
+      </h2>
+      
+      <p className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed">
+        6つの核心価値で、SNS運用を根本から変革
+      </p>
     </div>
 
-    <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-       <h3 className="font-bold text-lg mb-4 text-gray-900 text-center">
-         <span className="text-[#ff8a15]">ノウハウ不要</span>でSNS運用が可能
-       </h3>
-      <p className="text-gray-600 text-sm leading-relaxed text-center mb-6">
-        投稿ネタもハッシュタグもAIが提案してくれるので、<br />
-        専門スタッフを雇うより低コストで、<br />
-        高水準のSNS運用が始められます。
-      </p>
-      <div className="flex gap-2 flex-wrap justify-center">
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">プロ戦略</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">ミス削減</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">人件費削減</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">コスト最適化</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">戦略的SNS</span>
-      </div>
-    </div>
+    {/* 価値カード */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* 1. AI提案 */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-[#ff8a15] to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            投稿目的に合わせた<span className="text-[#ff8a15]">ネタを提案</span>
+          </h3>
+        </div>
+        
+        <p className="text-slate-600 text-base leading-relaxed mb-6 text-center">
+          AIがあなたのKPI計画を元に戦略を設計。目的に沿った具体的な次の投稿が見えるから、効率よいSNS運用が可能です。
+        </p>
 
-   
-    <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-        <h3 className="font-bold text-lg mb-4 text-gray-900 text-center">
-          <span className="text-[#ff8a15]">SNSに特化したAI</span>で最適化
-        </h3>
-      <p className="text-gray-600 text-sm leading-relaxed text-center mb-6">
-        Signal.はInstagramやXなど、それぞれのSNS専用AIを搭載。<br />
-        汎用AIでは難しい投稿の一貫性を維持しながら、<br />
-        目的に合わせて次の投稿戦略を自動提案。
-      </p>
-       <div className="flex gap-2 flex-wrap justify-center">
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">SNS専用AI</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">一貫性維持</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">世界観強化</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">自動提案</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">ブランド構築</span>
+        {/* 比較ボックス */}
+        <div className="space-y-3">
+          <div className="bg-slate-50 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-slate-800 mb-1">従来のネタ探し</h4>
+            <p className="text-xs text-slate-600">毎日悩む・アイデア枯渇</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-[#ff8a15]/10 to-orange-100 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-[#ff8a15] mb-1">Signal.でのネタ探し</h4>
+            <p className="text-xs text-orange-700">AIが自動で無限提案</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-   
-    <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-       <h3 className="font-bold text-lg mb-4 text-gray-900 text-center">
-        万全な<span className="text-[#ff8a15]">サポート</span>体制
-       </h3>
-      <p className="text-gray-600 text-sm leading-relaxed text-center mb-6">
-        投稿戦略はAIに任せつつ、<br />
-        専門スタッフが定期的なミーティングで<br />
-        成果をチェック。<br />
-        ツールの使い方やSNSの運用方法も<br />
-        手厚くサポートし、スムーズに運用できます。
-      </p>
-      <div className="flex gap-2 flex-wrap justify-center">
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">定期ミーティング</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">使い方支援</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">完全サポート</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">長期支援</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">ハイブリッド運用</span>
-      </div>
-    </div>
+      {/* 2. KPI逆算 */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            KPIから<span className="text-[#ff8a15]">逆算した</span>SNS計画
+          </h3>
+        </div>
+        
+        <p className="text-slate-600 text-base leading-relaxed mb-6 text-center">
+          投稿目標を設定するだけで、AIが逆算して最適な投稿頻度やテーマを自動で設計。目標達成に直結するSNS運用を実現します。
+        </p>
 
-    
-    <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-      <h3 className="font-bold text-lg mb-4 text-gray-900 text-center">
-        御社専用ツールに<span className="text-[#ff8a15]">カスタマイズ</span>
-      </h3>
-      <p className="text-gray-600 text-sm leading-relaxed text-center mb-6">
-        SNSの活用目的や業種特性に合わせて、<br />
-        オリジナルAIごとカスタマイズ。<br />
-        自社の強みを最大限に活かせる仕組みを<br />
-        構築し、<br />
-        一過性ではない再現可能な成果を生み出します。
-      </p>
-      <div className="flex gap-2 flex-wrap justify-center">
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">オーダーメイド戦略</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">再現性高</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">強み解析</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">事業特化</span>
-        <span className="bg-[#ff8a15]/10 text-[#ff8a15] text-xs px-3 py-1 rounded-full">差別化</span>
+        {/* 比較ボックス */}
+        <div className="space-y-3">
+          <div className="bg-slate-50 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-slate-800 mb-1">従来の計画</h4>
+            <p className="text-xs text-slate-600">感覚的・目標と乖離</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-blue-700 mb-1">Signal.での計画</h4>
+            <p className="text-xs text-blue-700">KPIから逆算・成果直結</p>
+          </div>
+        </div>
       </div>
-    </div>
+
+      {/* 3. ノウハウ不要 */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            <span className="text-[#ff8a15]">ノウハウ不要</span>でSNS運用が可能
+          </h3>
+        </div>
+        
+        <p className="text-slate-600 text-base leading-relaxed mb-6 text-center">
+          投稿ネタもハッシュタグもAIが提案してくれるので、専門スタッフを雇うより低コストで、高水準のSNS運用が始められます。
+        </p>
+
+        {/* 比較ボックス */}
+        <div className="space-y-3">
+          <div className="bg-slate-50 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-slate-800 mb-1">従来の運用</h4>
+            <p className="text-xs text-slate-600">専門知識必須・高コスト</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-green-700 mb-1">Signal.での運用</h4>
+            <p className="text-xs text-green-700">ノウハウ不要・低コスト</p>
+          </div>
+        </div>
+      </div>
+
+      {/* 4. SNS特化AI */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+              <path fillRule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 001 1h6a1 1 0 001-1V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            <span className="text-[#ff8a15]">SNSに特化したAI</span>で最適化
+          </h3>
+        </div>
+        
+        <p className="text-slate-600 text-base leading-relaxed mb-6 text-center">
+          Signal.はInstagramやXなど、それぞれのSNS専用AIを搭載。汎用AIでは難しい投稿の一貫性を維持しながら、目的に合わせて次の投稿戦略を自動提案。
+        </p>
+
+        {/* 比較ボックス */}
+        <div className="space-y-3">
+          <div className="bg-slate-50 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-slate-800 mb-1">汎用AI</h4>
+            <p className="text-xs text-slate-600">一貫性なし・SNS特性無視</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-purple-700 mb-1">Signal.のSNS特化AI</h4>
+            <p className="text-xs text-purple-700">一貫性維持・SNS特性考慮</p>
+          </div>
+        </div>
+      </div>
+
+      {/* 5. サポート体制 */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            万全な<span className="text-[#ff8a15]">サポート</span>体制
+          </h3>
+        </div>
+        
+        <p className="text-slate-600 text-base leading-relaxed mb-6 text-center">
+          投稿戦略はAIに任せつつ、専門スタッフが定期的なミーティングで成果をチェック。ツールの使い方やSNSの運用方法も手厚くサポートし、スムーズに運用できます。
+        </p>
+
+        {/* 比較ボックス */}
+        <div className="space-y-3">
+          <div className="bg-slate-50 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-slate-800 mb-1">従来のサポート</h4>
+            <p className="text-xs text-slate-600">ツールのみ・サポート不足</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-indigo-700 mb-1">Signal.のサポート</h4>
+            <p className="text-xs text-indigo-700">AI+人・完全サポート</p>
+          </div>
+        </div>
+      </div>
+
+      {/* 6. カスタマイズ */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            御社専用ツールに<span className="text-[#ff8a15]">カスタマイズ</span>
+          </h3>
+        </div>
+        
+        <p className="text-slate-600 text-base leading-relaxed mb-6 text-center">
+          SNSの活用目的や業種特性に合わせて、オリジナルAIごとカスタマイズ。自社の強みを最大限に活かせる仕組みを構築し、一過性ではない再現可能な成果を生み出します。
+        </p>
+
+        {/* 比較ボックス */}
+        <div className="space-y-3">
+          <div className="bg-slate-50 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-slate-800 mb-1">汎用ツール</h4>
+            <p className="text-xs text-slate-600">画一的・自社特性無視</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-pink-50 to-pink-100 rounded-lg p-3">
+            <h4 className="text-sm font-semibold text-pink-700 mb-1">Signal.のカスタマイズ</h4>
+            <p className="text-xs text-pink-700">オーダーメイド・自社特化</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -761,13 +898,13 @@ export default function Home() {
           <div key={idx} className="group relative">
             {/* ステップ番号 */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
                 {item.step}
               </div>
             </div>
             
             {/* カード */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-orange-300 mt-8">
+            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-orange-300 mt-8">
               {/* アイコン */}
               <div className="text-4xl mb-4 text-center group-hover:scale-110 transition-transform">
                 {item.icon}
@@ -790,122 +927,242 @@ export default function Home() {
   </div>
 </section>
 <div className="w-full border-t border-gray-300 my-4"></div>
-{/* ================== 料金 ================== */}
-<section className="py-20 px-4 sm:px-6 bg-white">
-  <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">料金プラン</h2>
-    <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-16">
-      事業規模や運用体制に合わせて最適なプランをご提案します。
-    </p>
+{/* ================== 料金プラン ================== */}
+<section className="py-24 px-4 sm:px-6 bg-gradient-to-br from-white via-slate-50 to-orange-50/20 relative overflow-hidden">
+  {/* 背景装飾 */}
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-[#ff8a15]/5 to-orange-500/5 rounded-lg -translate-y-32 -translate-x-32"></div>
+    <div className="absolute bottom-0 right-0 w-48 h-48 bg-gradient-to-tr from-slate-200/20 to-transparent rounded-lg translate-y-24 translate-x-24"></div>
+  </div>
 
-    <div className="grid gap-8 lg:gap-12 md:grid-cols-3">
-      {/* カスタマイズ */}
-      <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-        <div className="w-20 h-20 bg-[#ff8a15]/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
-          <svg className="w-12 h-12 text-[#ff8a15]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
+  <div className="relative max-w-7xl mx-auto">
+    {/* ヘッダー */}
+    <div className="text-center mb-20">
+      <div className="inline-flex items-center bg-white/80 backdrop-blur-md px-6 py-3 rounded-lg mb-8 border border-[#ff8a15]/20">
+        <div className="w-2 h-2 bg-[#ff8a15] rounded-lg mr-3 animate-pulse"></div>
+        <span className="text-slate-700 text-sm font-medium">料金プラン</span>
+      </div>
+      
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+        <span className="text-slate-900">事業規模に合わせた</span>
+        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ff8a15] to-orange-400">
+          最適プラン
+        </span>
+      </h2>
+      
+      <p className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed">
+        3つのプランから、御社に最適なSNS運用ソリューションを選択
+      </p>
+    </div>
+
+    {/* 料金プランカード */}
+    <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-3">
+      {/* カスタマイズプラン */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-8">
+          <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+            </svg>
+          </div>
+          
+          <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            カスタマイズ
+          </h3>
+          
+          <p className="text-slate-600 mb-6">
+            ご予算や目的に合わせてカスタム可能
+          </p>
+          
+          <div className="mb-8">
+            <div className="text-4xl font-black text-slate-900 mb-2">月額3万円〜</div>
+            <div className="text-sm text-slate-500">最小構成からスタート</div>
+          </div>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-3">カスタマイズ</h3>
-        <p className="text-gray-600 mb-6">ご予算や目的に合わせてカスタム可能です</p>
-        <div className="text-3xl font-bold text-gray-900 mb-6">月額3万円〜</div>
-        <ul className="text-sm text-gray-600 mb-8 space-y-3 text-left">
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            1SNSのみ契約
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            カスタマイズページ
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            オプション機能多数
-          </li>
-        </ul>
-        <button className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+
+        {/* 機能リスト */}
+        <div className="space-y-4 mb-8">
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-slate-700">1SNSのみ契約</span>
+          </div>
+          
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-slate-700">カスタマイズページ</span>
+          </div>
+          
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-slate-700">オプション機能多数</span>
+          </div>
+        </div>
+
+        <button className="w-full bg-slate-900 text-white px-6 py-4 rounded-lg font-semibold hover:bg-slate-800 transition-all duration-300 hover:scale-105">
           カスタム相談
         </button>
       </div>
-    
-      {/* スターター（おすすめ） */}
-      <div className="relative bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-200 border-2 border-gray-900">
-        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm font-bold px-4 py-2 rounded-full">
-          おすすめ
-        </span>
-        <div className="w-20 h-20 bg-[#ff8a15]/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
-          <svg className="w-12 h-12 text-[#ff8a15]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-          </svg>
+
+      {/* スタータープラン（おすすめ） */}
+      <div className="group relative bg-gradient-to-br from-[#ff8a15] to-orange-600 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 transform scale-105">
+        {/* おすすめバッジ */}
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <div className="bg-white text-[#ff8a15] px-6 py-2 rounded-lg font-bold text-sm shadow-lg">
+            おすすめ
+          </div>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-3">スターター</h3>
-        <p className="text-gray-600 mb-6">SNS運用を本格的に始めたい方へ</p>
-        <div className="text-3xl font-bold text-gray-900 mb-6">月額6万円</div>
-        <ul className="text-sm text-gray-600 mb-8 space-y-3 text-left">
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+
+        <div className="text-center mb-8">
+          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
-            1SNSのみ契約
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            ツールの基本機能
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            専任スタッフサポート
-          </li>
-        </ul>
-        <button className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+          </div>
+          
+          <h3 className="text-2xl font-bold text-white mb-3">
+            スターター
+          </h3>
+          
+          <p className="text-white/90 mb-6">
+            SNS運用を本格的に始めたい方へ
+          </p>
+          
+          <div className="mb-8">
+            <div className="text-4xl font-black text-white mb-2">月額6万円</div>
+            <div className="text-sm text-white/80">最も人気のプラン</div>
+          </div>
+        </div>
+
+        {/* 機能リスト */}
+        <div className="space-y-4 mb-8">
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-white/20 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-white">1SNSのみ契約</span>
+          </div>
+          
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-white/20 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-white">ツールの基本機能</span>
+          </div>
+          
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-white/20 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-white">専任スタッフサポート</span>
+          </div>
+        </div>
+
+        <button className="w-full bg-white text-[#ff8a15] px-6 py-4 rounded-lg font-bold hover:bg-white/90 transition-all duration-300 hover:scale-105">
           無料相談
         </button>
       </div>
 
-      {/* ビジネス（チーム） */}
-      <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200">
-        <div className="w-20 h-20 bg-[#ff8a15]/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
-          <svg className="w-12 h-12 text-[#ff8a15]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
+      {/* ビジネスプラン */}
+      <div className="group relative bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
+        <div className="text-center mb-8">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+            </svg>
+          </div>
+          
+          <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#ff8a15] transition-colors duration-300">
+            ビジネス（チーム）
+          </h3>
+          
+          <p className="text-slate-600 mb-6">
+            チーム利用向けの本格プラン
+          </p>
+          
+          <div className="mb-8">
+            <div className="text-4xl font-black text-slate-900 mb-2">月額12万円</div>
+            <div className="text-sm text-slate-500">チーム運用に最適</div>
+          </div>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-3">ビジネス（チーム）</h3>
-        <p className="text-gray-600 mb-6">チーム利用向け</p>
-        <div className="text-3xl font-bold text-gray-900 mb-6">月額12万円</div>
-        <ul className="text-sm text-gray-600 mb-8 space-y-3 text-left">
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            複数メンバー管理
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            チーム別KPIレポート
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            戦略進行ミーティング
-          </li>
-        </ul>
-        <button className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+
+        {/* 機能リスト */}
+        <div className="space-y-4 mb-8">
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-slate-700">複数メンバー管理</span>
+          </div>
+          
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-slate-700">チーム別KPIレポート</span>
+          </div>
+          
+          <div className="flex items-center">
+            <div className="w-5 h-5 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-slate-700">戦略進行ミーティング</span>
+          </div>
+        </div>
+
+        <button className="w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105">
           詳しく相談
         </button>
+      </div>
+    </div>
+
+    {/* 下部の説明 */}
+    <div className="text-center mt-16">
+      <div className="bg-white/60 backdrop-blur-md rounded-lg p-8 border border-slate-200/50">
+        <h3 className="text-xl font-bold text-slate-900 mb-4">すべてのプランに含まれる</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-600">
+          <div className="flex items-center justify-center">
+            <svg className="w-5 h-5 text-[#ff8a15] mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            無料診断・コンサルティング
+          </div>
+          <div className="flex items-center justify-center">
+            <svg className="w-5 h-5 text-[#ff8a15] mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            AI自動化機能
+          </div>
+          <div className="flex items-center justify-center">
+            <svg className="w-5 h-5 text-[#ff8a15] mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            30日間無料トライアル
+          </div>
+        </div>
       </div>
     </div>
   </div>
