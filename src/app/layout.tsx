@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 // import ContactModal from "@/components/ContactModal";
-import DiagnosisPopup from "@/components/DiagnosisPopup";
 
 import type { ReactNode } from "react";
 import Script from "next/script";
@@ -96,7 +95,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main className="flex-grow">{children}</main>
 
-        <DiagnosisPopup />
         {/* <ContactModal /> */}
 
         <Footer />
