@@ -6,14 +6,6 @@ export default function Home() {
   return (
     <div className="bg-white min-h-screen">
       <Header />
-          {/* 右下固定ボタン */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <Link href="/contact">
-          <button className="bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-800 transition-colors">
-            ご相談はこちら
-          </button>
-        </Link>
-      </div>
 
 {/* ================== SEOキーワードセクション（非表示） ================== */}
 <section className="sr-only">
