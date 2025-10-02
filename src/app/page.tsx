@@ -279,7 +279,7 @@ export default function Home() {
 
     {/* シンプルな見出し */}
     <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight text-slate-900 mb-12 leading-tight">
-      その悩み、
+      その悩み
       <span className="block font-light text-slate-800">
         Signal<span className="text-[#ff8a15]">.</span>で解決できます
       </span>
@@ -417,92 +417,162 @@ export default function Home() {
 </section>
 
 {/* ================== 数字で見るSignal. ================== */}
-<div className="w-full border-t border-gray-200 my-4"></div>
-<section className="py-24 px-4 sm:px-6 bg-white">
-  <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight mb-8 text-slate-900">
-      数字で見る
-      <span className="block font-extrabold text-slate-800">
-        Signal<span className="text-[#ff8a15]">.</span>
-      </span>
-    </h2>
+<section className="py-32 px-4 sm:px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+  {/* 背景装飾 */}
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#ff8a15]/5 via-transparent to-[#ff8a15]/10"></div>
+    <div className="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-[#ff8a15]/10 to-transparent rounded-full filter blur-3xl"></div>
+    <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-gradient-to-tr from-[#ff8a15]/8 to-transparent rounded-full filter blur-3xl"></div>
+  </div>
 
-    <p className="text-slate-600 text-lg sm:text-xl max-w-4xl mx-auto mb-20 leading-relaxed font-light">
-      数字を通して、Signal.がどのようにSNS運用を支えているかわかりやすくまとめました。
-    </p>
+  <div className="relative max-w-7xl mx-auto">
+    {/* ヘッダー */}
+    <div className="text-center mb-20">
+      <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/20">
+        <div className="w-2 h-2 bg-[#ff8a15] rounded-full mr-3 animate-pulse"></div>
+        <span className="text-white/90 text-sm font-medium">実績データ</span>
+      </div>
+      
+      <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+        <span className="text-white">数字で見る</span>
+        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ff8a15] to-orange-300">
+          Signal<span className="text-white">.</span>
+        </span>
+      </h2>
+      
+      <p className="text-white/80 text-xl max-w-3xl mx-auto leading-relaxed">
+        圧倒的な数字が証明する、Signal.の実力
+      </p>
+    </div>
 
-    {/* シンプルな数字カード */}
-    <div className="grid gap-12 lg:gap-16 md:grid-cols-3 mb-20">
-      {/* 1. 時間短縮 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
-        <div className="text-center mb-8">
-          <div className="text-6xl sm:text-7xl font-black text-[#ff8a15] mb-4 group-hover:scale-110 transition-transform duration-300">5</div>
-          <div className="text-2xl sm:text-3xl font-bold text-slate-800">分</div>
+    {/* メイン統計カード */}
+    <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-16">
+      {/* 90% 自動化 - メインカード */}
+      <div className="lg:col-span-2 group relative">
+        <div className="bg-gradient-to-br from-[#ff8a15] to-orange-600 p-8 lg:p-12 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-6">
+              <div className="text-white/90 text-lg font-medium">SNS運用の自動化率</div>
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            
+            <div className="text-8xl lg:text-9xl font-black text-white mb-4 group-hover:scale-105 transition-transform duration-300">
+              90<span className="text-6xl lg:text-7xl">%</span>
+            </div>
+            
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">完全自動化</h3>
+            <p className="text-white/90 text-lg leading-relaxed">
+              SNS運用の90%をAIが自動化。残り10%は戦略判断のみ。
+              人的リソースを大幅削減し、コスト最適化を実現。
+            </p>
+          </div>
         </div>
-        
-        <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-[#ff8a15] transition-colors duration-300">1投稿あたりのSNS運用時間</h3>
-        <p className="text-slate-600 text-base leading-relaxed font-light">
-          AIが次に投稿すべきテーマを自動で提案。
-          もう迷わず、計画的にSNSを運用できます。
-        </p>
       </div>
 
-      {/* 2. ネタ切れゼロ */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
-        <div className="text-center mb-8">
-          <div className="text-6xl sm:text-7xl font-black text-[#ff8a15] mb-4 group-hover:scale-110 transition-transform duration-300">0</div>
-          <div className="text-lg text-slate-600">ネタ切れ</div>
+      {/* 5分 - 時間短縮 */}
+      <div className="group relative">
+        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-[#ff8a15]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+              </svg>
+            </div>
+            
+            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+              5<span className="text-3xl lg:text-4xl text-white/80">分</span>
+            </div>
+            
+            <h3 className="text-xl font-bold text-white mb-4">1投稿あたりの運用時間</h3>
+            <p className="text-white/80 text-sm leading-relaxed">
+              AIが自動提案するため、投稿準備時間を大幅短縮
+            </p>
+          </div>
         </div>
-        
-        <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-[#ff8a15] transition-colors duration-300">SNSの投稿ネタ切れ</h3>
-        <p className="text-slate-600 text-base leading-relaxed font-light">
-          AIがSNSデータやターゲットに合わせた投稿提案で、「ネタ探し」に悩むことはありません。
-        </p>
-      </div>
-
-      {/* 3. 撮影準備時間短縮 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
-        <div className="text-center mb-8">
-          <div className="text-6xl sm:text-7xl font-black text-[#ff8a15] mb-4 group-hover:scale-110 transition-transform duration-300">4</div>
-          <div className="text-2xl sm:text-3xl font-bold text-slate-800">時間短縮</div>
-        </div>
-        
-        <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-[#ff8a15] transition-colors duration-300">撮影準備を短縮</h3>
-        <p className="text-slate-600 text-base leading-relaxed font-light">
-          AIが投稿文に沿ったサムネイル画像や絵コンテを作成。
-          どんなシーンで何を撮影するか悩む時間がなくなり、スムーズに撮影可能です。
-        </p>
       </div>
     </div>
 
-    {/* 下段の2つのカード */}
-    <div className="grid gap-12 lg:gap-16 md:grid-cols-2">
-      {/* 4. 分析項目 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
-        <div className="text-center mb-8">
-          <div className="text-6xl sm:text-7xl font-black text-[#ff8a15] mb-4 group-hover:scale-110 transition-transform duration-300">30+</div>
-          <div className="text-2xl sm:text-3xl font-bold text-slate-800">項目</div>
+    {/* 下段の統計カード */}
+    <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-3">
+      {/* 0 ネタ切れ */}
+      <div className="group relative">
+        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            
+            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">0</div>
+            
+            <h3 className="text-xl font-bold text-white mb-4">ネタ切れ</h3>
+            <p className="text-white/80 text-sm leading-relaxed">
+              AIが無限に投稿テーマを提案
+            </p>
+          </div>
         </div>
-        
-        <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-[#ff8a15] transition-colors duration-300">AIが自動分析する項目</h3>
-        <p className="text-slate-600 text-base leading-relaxed font-light">
-          投稿結果を入力するだけで、AIが30項目以上のデータをチェック。
-          計画に基づいて次にすべき施策を提案するので投稿の方向性がブレず自信を持ってSNS運用を続けられます。
-        </p>
       </div>
 
-      {/* 5. 自動化率 */}
-      <div className="group relative bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-[#ff8a15]/20 hover:-translate-y-3">
-        <div className="text-center mb-8">
-          <div className="text-6xl sm:text-7xl font-black text-[#ff8a15] mb-4 group-hover:scale-110 transition-transform duration-300">90%</div>
-          <div className="text-2xl sm:text-3xl font-bold text-slate-800">自動化</div>
+      {/* 4時間短縮 */}
+      <div className="group relative">
+        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+              </svg>
+            </div>
+            
+            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+              4<span className="text-3xl lg:text-4xl text-white/80">時間</span>
+            </div>
+            
+            <h3 className="text-xl font-bold text-white mb-4">撮影準備短縮</h3>
+            <p className="text-white/80 text-sm leading-relaxed">
+              AIが絵コンテとサムネイルを自動生成
+            </p>
+          </div>
         </div>
-        
-        <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-[#ff8a15] transition-colors duration-300">SNS運用の自動化</h3>
-        <p className="text-slate-600 text-base leading-relaxed font-light">
-          SNS運用の約90%はAIが自動化し、人的リソースや固定費を大幅に最適化。
-          残りの10%は経営判断やブランド戦略に基づく調整領域。
-        </p>
+      </div>
+
+      {/* 30+ 分析項目 */}
+      <div className="group relative">
+        <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 h-full">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+              </svg>
+            </div>
+            
+            <div className="text-6xl lg:text-7xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+              30<span className="text-3xl lg:text-4xl text-white/80">+</span>
+            </div>
+            
+            <h3 className="text-xl font-bold text-white mb-4">自動分析項目</h3>
+            <p className="text-white/80 text-sm leading-relaxed">
+              AIが多角的にデータを分析・提案
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* 下部のCTA */}
+    <div className="text-center mt-16">
+      <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-8 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
+        <span className="text-white font-medium mr-3">これらの数字を体感してみませんか？</span>
+        <svg className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+        </svg>
       </div>
     </div>
   </div>
