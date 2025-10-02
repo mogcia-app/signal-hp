@@ -15,8 +15,6 @@ export default function Header() {
 
       {/* PC用メニュー */}
       <nav className="hidden md:flex gap-6">
-        <Link href="/features" className="text-gray-600 hover:text-[#ff8a15]">機能</Link>
-        <Link href="/price" className="text-gray-600 hover:text-[#ff8a15]">料金</Link>
         <Link href="/flow" className="text-gray-600 hover:text-[#ff8a15]">導入までの流れ</Link>
         <Link href="/faq" className="text-gray-600 hover:text-[#ff8a15]">よくある質問</Link>
          <Link href="/diagnosis" className="text-gray-600 hover:text-[#ff8a15]">SNS無料診断</Link>
@@ -51,8 +49,6 @@ export default function Header() {
         &times;
       </button>
     </div>
-    <Link href="/features" className="block text-gray-600 hover:text-[#ff8a15]">機能</Link>
-    <Link href="/price" className="block text-gray-600 hover:text-[#ff8a15]">料金</Link>
     <Link href="/flow" className="block text-gray-600 hover:text-[#ff8a15]">導入までの流れ</Link>
     <Link href="/faq" className="block text-gray-600 hover:text-[#ff8a15]">よくある質問</Link>
     <Link href="/diagnosis" className="text-gray-600 hover:text-[#ff8a15]">SNS無料診断</Link>
