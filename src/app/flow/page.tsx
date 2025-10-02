@@ -234,7 +234,6 @@ export default function PageName() {
           </div>
         </div>
       </section>
-      </section>
 
       {/* ================== CTA セクション ================== */}
       <section className="py-24 bg-gradient-to-br from-[#ff8a15] via-[#ff8a15] to-[#ff6b00] relative overflow-hidden">
