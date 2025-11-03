@@ -68,8 +68,8 @@ export default function Home() {
 
         {/* 説明コピー */}
         <p className="text-base sm:text-[17px] text-slate-500 leading-relaxed font-normal max-w-xl">
-          投稿企画から分析・改善までを自動化<br className="hidden sm:block" />
-          属人的な運用をなくし、継続的に成果を伸ばします
+          投稿企画から分析・改善までをAIが自動化、<br className="hidden sm:block" />
+          継続的に成果を伸ばします
         </p>
 
         {/* CTAボタン群 */}
@@ -106,13 +106,11 @@ export default function Home() {
   <div className="relative max-w-5xl mx-auto">
     <div className="text-center mb-12 sm:mb-16 lg:mb-20">
       <div className="flex flex-col items-center">
-        <div className="flex gap-4 sm:gap-6 items-center justify-center mb-4 translate-x-12 sm:translate-x-8 lg:translate-x-16">
-          <div className="w-2 h-2 bg-[#ff8a15] rounded-full"></div>
-          <div className="w-2 h-2 bg-[#ff8a15] rounded-full"></div>
-          <div className="w-2 h-2 bg-[#ff8a15] rounded-full"></div>
-        </div>
-        <h2 className="text-2xl sm:text-[28px] lg:text-[30px] font-light tracking-tight text-slate-900 mb-6 sm:mb-8 leading-tight text-center px-2">
-          SNS運用に関してこんな<span className="font-bold">お悩み</span>ありませんか？
+        <h2 className="text-xl sm:text-[28px] lg:text-[30px] font-light tracking-tight text-slate-900 mb-6 sm:mb-8 leading-tight text-center px-2">
+          SNS運用に関してこんな<span className="relative inline-block font-bold">
+            <span className="relative z-10">お悩み</span>
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-[#ff8a15] opacity-60 -rotate-1"></span>
+          </span>ありませんか？
         </h2>
       </div>
      
