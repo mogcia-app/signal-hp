@@ -3,7 +3,7 @@ export default function FaqPage() {
     <div className="w-full">
 
       {/* メインビュー */}
-     <section className="w-full bg-[#fff3ea] py-30 px-6">
+    {/* <section className="w-full bg-[#fff3ea] py-30 px-6">
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
       <h1 className="text-3xl font-bold mb-8">よくある質問</h1>
@@ -31,11 +31,23 @@ export default function FaqPage() {
 </div>
 
   </div>
-</section>
+</section>*/}
 
 
       {/* よくある質問 */}
-      <section className="max-w-7xl mx-auto py-18 px-6">
+      <section className="max-w-7xl mx-auto py-18 px-6 mt-12">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-base sm:text-lg text-gray-600 mb-2 sm:mb-3">
+            FAQ
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
+            よくある質問
+          </h2>
+          <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
+            Signal.の導入を検討いただく際によくいただくご質問をまとめました。<br />
+            ご不明な点があれば、お気軽にお問い合わせください。
+          </p>
+        </div>
         <div className="space-y-6">
           {[
             {
@@ -54,25 +66,21 @@ export default function FaqPage() {
               q: "SNSを途中で追加できますか？",
               a: "もちろん可能です。ツールやAIを追加SNSに合わせて再設計しますのでご安心ください。"
             },
-            {
-              q: "ツールを自社専用にカスタマイズできますか？",
-              a: "可能です。投稿戦略・KPI・UIなど、ご要望に応じてオリジナルAIや画面を設計できます。"
-            },
              {
     q: "運用開始後のサポート内容は？",
     a: "月次の改善ミーティングやチャットサポートを通じて、運用が安定するまでしっかり伴走します。"
   },
   {
     q: "どのSNSに対応していますか？",
-    a: "Instagram、X（旧Twitter）、TikTok、YouTubeに対応。複数SNSの統合管理が可能です。"
+    a: "Instagram、X（旧Twitter）、TikTokに対応。複数SNSの統合管理が可能です。"
   },
   {
     q: "AIが具体的に何をしてくれるのですか？",
-    a: "1つ1つの投稿分析はもちろん、投稿戦略やSNSでの強みを診断。PDCAを自動で回して次の一手を提案します。"
+    a: "1つ1つの投稿分析はもちろん、投稿戦略やPDCAを自動で回して次の一手を提案します。"
   },
   {
     q: "投稿作成や画像もAIがやってくれるの？",
-    a: "AIから投稿文ハッシュタグはもちろん、投稿内容に最適なサムネイル画像の提案しますが撮影などは御社にてお願いしております。"
+    a: "AIが投稿文・ハッシュタグ生成の他に投稿内容に最適な画像の提案しますが撮影などは御社にてお願いしております。"
   },
   {
     q: "他ツールとの違いは何ですか？",
@@ -83,15 +91,23 @@ export default function FaqPage() {
     a: "ツール引渡し月からスタートします。"
   }
           ].map((item, idx) => (
-            <details 
+            <div 
               key={idx} 
-              className="p-6 border rounded-xl cursor-pointer hover:shadow transition"
+              className="p-6 sm:p-8 border border-gray-200 shadow-sm hover:shadow-md transition"
             >
-              <summary className="text-lg font-bold text-[#ff8a15]">
-                {item.q}
-              </summary>
-              <p className="mt-4 text-gray-600">{item.a}</p>
-            </details>
+              <div className="flex gap-3 sm:gap-4 mb-4">
+                <span className="text-lg sm:text-xl font-bold text-[#ff8a15] flex-shrink-0">Q</span>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+                  {item.q}
+                </h3>
+              </div>
+              <div className="flex gap-3 sm:gap-4">
+                <span className="text-base sm:text-lg font-bold text-gray-500 flex-shrink-0">A</span>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                  {item.a}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </section>

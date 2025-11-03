@@ -31,9 +31,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-[#ff8a15] mb-4">Service</h4>
             <ul className="space-y-2">
-              <li><Link href="/features" className="hover:text-[#ff8a15] transition">機能</Link></li>
-              <li><Link href="/price" className="hover:text-[#ff8a15] transition">料金</Link></li>
-              <li><Link href="/flow" className="hover:text-[#ff8a15] transition">導入までの流れ</Link></li>
+              <li><Link href="/features" className="hover:text-[#ff8a15] transition">Signal.の機能</Link></li>
               <li><Link href="/faq" className="hover:text-[#ff8a15] transition">よくある質問</Link></li>
               <Link href="/diagnosis" className="text-gray-600 hover:text-[#ff8a15]">SNS無料診断</Link>
             </ul>
@@ -56,10 +54,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-[#ff8a15] mb-4">Campaigns</h4>
-            <ul className="space-y-2">
+            {/*<h4 className="font-bold text-[#ff8a15] mb-4">Campaigns</h4>*/}
+            {/*<ul className="space-y-2">
               <li><Link href="/partners" className="hover:text-[#ff8a15] transition">パートナー制度</Link></li>
-            </ul>
+            </ul>*/}
             <h4 className="font-bold text-[#ff8a15] mt-6 mb-3">お問い合わせ</h4>
             <p className="text-xs mb-1">平日 10:00〜17:00</p>
             <p className="text-xs mb-3">翌営業日にご連絡いたします。</p>

@@ -4,28 +4,31 @@ export default function FeaturesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="w-full bg-gray-50 pt-32 pb-12 md:pt-36 md:pb-16 lg:pt-40 lg:pb-20 px-6">
+      <section className="w-full bg-white pt-32 pb-12 md:pt-36 md:pb-16 lg:pt-40 lg:pb-20 px-6">
 
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
       <p className="text-[#ff8a15] font-bold mb-2 text-sm uppercase">
-        日本発SNS特化AI
+        SNS特化型AI
       </p>
-     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold mb-4">
-  Signal<span className="text-[#ff8a15]">.</span>が実現する<br />新しいSNS運用
-</h1>
-<p className="text-gray-800 text-sm sm:text-base md:text-lg lg:text-[16px]">
-  AI × データ × PDCAで、SNSの戦略立案から運用までを完全サポート
+      <p className="text-base sm:text-lg md:text-xl text-black mb-2 sm:mb-3">
+        Signal<span className="text-[#ff8a15]">.</span>が実現する
+      </p>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold mb-4 sm:mb-6">
+        新しいSNS運用のカタチ
+      </h1>
+      <p className="text-gray-800 text-sm sm:text-base md:text-lg lg:text-[16px]">
+  AI × データ × PDCAで、戦略立案から運用まで完全サポート
   <br />
-  投稿計画や分析に悩む時間をゼロにし、御社の強みを最大化します
+  投稿計画や分析の時間を削減し、御社の強みを最大化します
 </p>
 
     </div>
     <div>
       <img
-        src="/images/monitor.png"
+        src="/images/istockphoto-1576838337-1024x1024.jpg"
         alt="SNS AI Dashboard"
-        className="w-full h-auto rounded-lg shadow-lg mt-8"
+        className="w-full h-auto  mt-8"
       />
     </div>
   </div>
@@ -61,14 +64,14 @@ export default function FeaturesPage() {
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="/images/122.svg"
+              src="/images/02202.png"
               alt="計画ページ"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
           <div>
-  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[20px] font-bold mb-4 text-[#ff8a15]">
-  計画ページ
+  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[20px] font-bold mb-4 text-[#000000]">
+  運用計画ページ
 </h3>
 <p className="text-black text-base sm:text-lg md:text-xl mb-4">
   SNSの目標計画を
@@ -104,31 +107,25 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="md:order-2 flex justify-end w-full">
         <img
-        src="/images/125.svg"
+        src="/images/0101.png"
         alt="強み診断"
          className="w-full h-auto rounded-lg shadow-lg"
         />
        </div>
           <div className="md:order-1">
-       <h3 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-6 text-[#ff8a15]">
+       <h3 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-6 text-[#000000]">
   投稿ラボ
 </h3>
 <p className="text-black text-base sm:text-lg md:text-xl mb-4">
-  投稿をAIと一緒に作り上げるワークスペース。<br />
-  手動入力はもちろん、<br />
-  <span className="text-[#ff8a15] font-semibold">
-    AIに投稿文やハッシュタグの生成、投稿時間の提案
-  </span>
-  まで任せられます。
+  1ヶ月のフィード投稿スケジュールを提案するワークスペースです<br />
+  投稿頻度（週間・月間の投稿回数、1日の投稿回数）を設定すると<br />
+  AIが週間投稿スケジュールを生成
 </p>
-<p className="text-black text-sm sm:text-base md:text-lg mb-4">
-  また、<span className="text-[#ff8a15] font-semibold">計画ページで立てた戦略や目標</span>は右側に自動的に反映されるので、<br />
-  投稿を作成しながらいつでも計画を見直せます。
-</p>
+
 <p className="text-black text-sm sm:text-base md:text-lg">
-  よく使う<span className="text-[#ff8a15] font-semibold">定型フレーズやハッシュタグは管理可能</span>で、<br />
-  次回以降の投稿作成もスムーズ。<br />
-  <span className="text-[#ff8a15] font-semibold">投稿編集や改善を手間なく続けられます。</span>
+  投稿のない日は「投稿なし」と提示してくれるので<br />
+  週単位で投稿計画を一目で確認・管理でき<br />
+  <span className="text-[#ff8a15] font-semibold">計画的なSNS運用が可能</span>です。
 </p>
 
 
@@ -144,33 +141,30 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="/images/2323.svg"
-              alt="AI履歴"
+              src="/images/0330.png"
+              alt="投稿文エディター"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
           <div>
-<h3 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-6 text-[#ff8a15]">
-  AI履歴
+<h3 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-6 text-[#000000]">
+  投稿文エディター
 </h3>
 <p className="text-black text-base sm:text-lg md:text-xl mb-4">
-  これまで
-  <span className="text-[#ff8a15] font-semibold">AIが御社に提案してきた戦略や投稿アイデア</span>を、<br />
-  理由や狙いも含めて一つひとつ蓄積し、一覧化しています。
+  投稿文を作成・編集するワークスペースです<br />
+  投稿日や投稿時間を設定し、タイトルと投稿文を入力できます。
 </p>
 
 <p className="text-black text-sm sm:text-base md:text-lg mb-4">
-  『いつ、どんな狙いでどんな施策を行ってきたのか？』が一目で分かるので、<br />
-  これまでの運用を再分析したり、次の方向性を見直す際に
-  <span className="text-[#ff8a15] font-semibold">大きなヒント</span>となります。
+  リール動画投稿では、<span className="text-[#ff8a15] font-semibold">AIで動画構成を生成</span>することができます。<br />
+  起（導入）・承（展開）・転（転換）・結（結論）の構成で、<br />
+  リール動画の流れを作成できます。
 </p>
 
 <p className="text-black text-sm sm:text-base md:text-lg">
-  さらにこの履歴は、
-  <span className="text-[#ff8a15] font-semibold">御社のSNS運用の“資産”そのもの</span>。<br />
-  使い込むほどに御社だけの独自データとして蓄積されていくため、<br />
-  SNS担当が変わっても戦略の流れや成功パターンを簡単に引き継げ、
-  <span className="text-[#ff8a15] font-semibold">一貫性やクオリティを長期的に保つ</span>ことができます。
+  右側には<span className="text-[#ff8a15] font-semibold">よく使う文言を保存・管理</span>する機能があり、<br />
+  よく使うフレーズを登録しておくことで、<br />
+  効率的に投稿文を作成できます。
 </p>
 
           </div>
@@ -184,109 +178,76 @@ export default function FeaturesPage() {
       他にもこんな基本機能があります
     </h3>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">投稿分析</h4>
-        <p className="text-gray-600 text-sm">投稿結果を手動入力することでAIが解析</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">投稿文AI生成</h4>
+        <p className="text-gray-600 text-sm">ボタンひとつでAIが投稿文・ハッシュタグを生成してくれます</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
         <h4 className="font-bold text-gray-900 mb-2">定型フレーズ管理</h4>
         <p className="text-gray-600 text-sm">よく使うキャプションやハッシュタグを<br />一括管理</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">分析グラフ</h4>
-        <p className="text-gray-600 text-sm">エンゲージメント別やフォロワー推移を<br />グラフで可視化</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">アカウントスコア</h4>
+        <p className="text-gray-600 text-sm">AIがアカウントスコアを生成し<br />グラフで可視化</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
         <h4 className="font-bold text-gray-900 mb-2">SNSごとに特化したAI</h4>
         <p className="text-gray-600 text-sm">InstagramやXなど媒体別の最適AIを搭載</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
         <h4 className="font-bold text-gray-900 mb-2">月次レポート</h4>
         <p className="text-gray-600 text-sm">月ごとの成果を自動レポート化</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
         <h4 className="font-bold text-gray-900 mb-2">投稿シミュレーション</h4>
-        <p className="text-gray-600 text-sm">投稿計画を立てるとKPI達成率をAIが予測</p>
+        <p className="text-gray-600 text-sm">投稿計画を立てるとフォロワー数増加をAIが予測</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">AIフィードバック</h4>
-        <p className="text-gray-600 text-sm">投稿ごとにAIが改善点や伸ばすべき点を<br />提案</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">AI戦略</h4>
+        <p className="text-gray-600 text-sm">運用計画の内容をもとにAIが戦略を提案</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">マルチガイド</h4>
-        <p className="text-gray-600 text-sm">SNSごとの運用方法やお役立ち情報<br />Signal.の使い方をいつでも確認可能</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">ハッシュタグランキング</h4>
+        <p className="text-gray-600 text-sm">月ごとに使用したハッシュタグを<br />ランキング形式で表示</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">スケジュールページ</h4>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">今週の投稿予定</h4>
         <p className="text-gray-600 text-sm">投稿予定を一目で確認・管理</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">過去の投稿一覧</h4>
-        <p className="text-gray-600 text-sm">過去投稿を保存率や反応別に振り返り</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">分析待ちの投稿</h4>
+        <p className="text-gray-600 text-sm">分析ができていない投稿を一覧で確認</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">ToDoリスト</h4>
-        <p className="text-gray-600 text-sm">SNS運用のタスクをダッシュボードで管理</p>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">Signal.からのお知らせ</h4>
-        <p className="text-gray-600 text-sm">新機能や運用ヒントを随時お届け</p>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">今日すべきこと</h4>
-        <p className="text-gray-600 text-sm">今日優先すべきタスクを提示</p>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
         <h4 className="font-bold text-gray-900 mb-2">目標の進捗状況</h4>
         <p className="text-gray-600 text-sm">設定した目標の達成率を常時チェック</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">直近の投稿アドバイス</h4>
-        <p className="text-gray-600 text-sm">最近の投稿をAIが再評価し改善を提案</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">投稿一覧</h4>
+        <p className="text-gray-600 text-sm">作成済み・分析済みの投稿を一覧で確認可能</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">AIによる伸び悩み診断</h4>
-        <p className="text-gray-600 text-sm">投稿が伸びない原因をAIが特定</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">カスタマージャーニーマップ</h4>
+        <p className="text-gray-600 text-sm">興味・認知・検討・行動の各ステップに合わせた投稿ネタをAIが提案</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">目標までの実績グラフ</h4>
-        <p className="text-gray-600 text-sm">目標までの進捗をグラフで追跡</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">注意点・コツ</h4>
+        <p className="text-gray-600 text-sm">AIが投稿する上での注意点やコツを提示</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">
-          投稿時間×エンゲージメント別<br />ヒートマップ
-        </h4>
-        <p className="text-gray-600 text-sm">最も反応の良い時間帯を色で可視化</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">おすすめ画像提案</h4>
+        <p className="text-gray-600 text-sm">AIが生成した投稿文に合わせて、画像の枚数やどんな写真が良いかをアドバイス</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">動画分析</h4>
-        <p className="text-gray-600 text-sm">AIが最初の5秒間の印象を分析</p>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">NG設定</h4>
+        <p className="text-gray-600 text-sm">あらかじめNGワードを設定することでAIが投稿生成時にNGワードを避けてくれます</p>
       </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">画像分析</h4>
-        <p className="text-gray-600 text-sm">投稿画像の訴求ポイントをAIが解析</p>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">おすすめサムネイル画像生成</h4>
-        <p className="text-gray-600 text-sm">AIが最適なサムネイルを自動作成</p>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">おすすめ動画絵コンテ生成</h4>
-        <p className="text-gray-600 text-sm">動画構成のアイデアをAIが提示</p>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">ヒアリング</h4>
-        <p className="text-gray-600 text-sm">ブランドの基本情報や注力したい商品などAIに覚えさせることが可能です</p>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-2">投稿戦略アドバイス</h4>
-        <p className="text-gray-600 text-sm">戦略視点から投稿の方向性をAIが提案</p>
-      </div>
+      
     </div>
   </div>
 </section>
 
-<section className="w-full py-16 px-6 bg-white">
+{/*<section className="w-full py-16 px-6 bg-white">
   <div className="max-w-7xl mx-auto text-center">
     <h3 className="text-2xl font-bold mb-8 text-[#ff8a15]">
       拡張機能
@@ -299,7 +260,7 @@ export default function FeaturesPage() {
     </p>
 
     <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
-  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
+  <div className="p-4 bg-white shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
       <h4 className="font-bold text-gray-900 mb-2">LINE通知</h4>
       <p className="text-gray-600 text-sm">
@@ -307,7 +268,7 @@ export default function FeaturesPage() {
       </p>
     </div>
   </div>
-  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
+  <div className="p-4 bg-white shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
       <h4 className="font-bold text-gray-900 mb-2">ショップ連携</h4>
       <p className="text-gray-600 text-sm">
@@ -315,7 +276,7 @@ export default function FeaturesPage() {
       </p>
     </div>
   </div>
-  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
+  <div className="p-4 bg-white shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
       <h4 className="font-bold text-gray-900 mb-2">多言語分析</h4>
       <p className="text-gray-600 text-sm">
@@ -323,7 +284,7 @@ export default function FeaturesPage() {
       </p>
     </div>
   </div>
-  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
+  <div className="p-4 bg-white shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
       <h4 className="font-bold text-gray-900 mb-2">タスク割り当て</h4>
       <p className="text-gray-600 text-sm">
@@ -331,7 +292,7 @@ export default function FeaturesPage() {
       </p>
     </div>
   </div>
-  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
+  <div className="p-4 bg-white shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
       <h4 className="font-bold text-gray-900 mb-2">承認フロー</h4>
       <p className="text-gray-600 text-sm">
@@ -339,7 +300,7 @@ export default function FeaturesPage() {
       </p>
     </div>
   </div>
-  <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between h-full">
+  <div className="p-4 bg-white shadow-sm border border-gray-200 flex flex-col justify-between h-full">
     <div>
       <h4 className="font-bold text-gray-900 mb-2">API連携</h4>
       <p className="text-gray-600 text-sm">
@@ -350,38 +311,28 @@ export default function FeaturesPage() {
 </div>
 
   </div>
-</section>
+</section>*/}
 
 
       {/* CTA */}
-      <section className="w-full py-8 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid text-center md:grid-cols-2 gap-12 items-center">
-          
-          {/* 左：テキスト & CTA */}
-          <div className="bg-gray-900 text-white py-16 px-8 rounded-lg">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-              無料相談で、御社だけのSNS戦略を見つけませんか？
-            </h3>
+      <section className="w-full py-16 sm:py-20 px-6 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Signal<span className="text-[#ff8a15]">.</span>の機能を<br className="sm:hidden" />実際に試してみませんか？
+          </h3>
 
-            <p className="text-lg text-white/90 mb-8 leading-relaxed">
-              これからSNSを本格的に始めたい方。すでに投稿を頑張っているけれど、
-              「数字が伸びない」「次に何をすればいいか分からない」と感じている方へ。
-            </p>
+          <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
+            無料相談で、御社のSNS運用の課題を一緒に解決しませんか？<br />
+            AIと専門スタッフが、御社だけのSNS戦略をゼロから設計します。
+          </p>
 
-            <p className="text-base text-white/80 mb-8 leading-relaxed">
-              Signal.は、AIと専門スタッフの力で、御社だけのSNS戦略をゼロから一緒に設計し、
-              運用のお悩みを解決します。投稿内容の提案から週次の振り返りまで。
-              いつの間にか止まってしまいがちなSNSを、継続しやすい仕組みに変えていきませんか？
-            </p>
-
-            <div className="flex items-center justify-start">
-              <a 
-                href="/contact" 
-                className="inline-block bg-white text-gray-900 text-base px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                相談する
-              </a>
-            </div>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="inline-block bg-[#ff8a15] text-white text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 font-bold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl"
+            >
+              お問い合わせ
+            </a>
           </div>
         </div>
       </section>
