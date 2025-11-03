@@ -62,14 +62,13 @@ export default function Home() {
 
         {/* サブコピー */}
         <p className="text-lg sm:text-xl md:text-[22px] text-slate-700 leading-relaxed font-light">
-          御社オリジナルのAIが、<br className="hidden sm:block" />
+          御社オリジナルのAIが<br className="hidden sm:block" />
           一貫性のある戦略でSNS運用を支援
         </p>
 
         {/* 説明コピー */}
         <p className="text-base sm:text-[17px] text-slate-500 leading-relaxed font-normal max-w-xl">
-          投稿企画から分析・改善までをAIが自動化、<br className="hidden sm:block" />
-          継続的に成果を伸ばします
+          投稿企画から分析・改善までをAIが自動化<br className="hidden sm:block" />
         </p>
 
         {/* CTAボタン群 */}
@@ -516,8 +515,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* 画像 - モバイル時は下、デスクトップ時は絶対配置 */}
-            <div className="relative sm:absolute sm:top-1/2 sm:-translate-y-1/2 right-0 sm:right-0 lg:right-10 w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[320px] xl:max-w-[380px] mx-auto sm:mx-0 h-auto z-10 pointer-events-none mt-6 sm:mt-0 order-2 sm:order-none sm:w-[240px] lg:w-[320px] xl:w-[380px]">
+            {/* 画像 - モバイル時は非表示、デスクトップ時は絶対配置 */}
+            <div className="hidden sm:block sm:absolute sm:top-1/2 sm:-translate-y-1/2 right-0 sm:right-0 lg:right-10 sm:max-w-[240px] lg:max-w-[320px] xl:max-w-[380px] h-auto z-10 pointer-events-none sm:w-[240px] lg:w-[320px] xl:w-[380px]">
               <img
                 src="/images/02202.png"
                 alt="目標から逆算、AIが導く成果への最短ルート"
@@ -582,8 +581,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* 画像 - モバイル時は下、デスクトップ時は絶対配置 */}
-            <div className="relative sm:absolute sm:top-1/2 sm:-translate-y-1/2 left-0 sm:left-[20px] lg:left-[50px] w-full max-w-[180px] sm:max-w-[220px] lg:max-w-[320px] xl:max-w-[380px] mx-auto sm:mx-0 h-auto z-10 pointer-events-none mt-6 sm:mt-0 order-2 sm:order-none sm:w-[220px] lg:w-[320px] xl:w-[380px]">
+            {/* 画像 - モバイル時は非表示、デスクトップ時は絶対配置 */}
+            <div className="hidden sm:block sm:absolute sm:top-1/2 sm:-translate-y-1/2 left-0 sm:left-[20px] lg:left-[50px] sm:max-w-[220px] lg:max-w-[320px] xl:max-w-[380px] h-auto z-10 pointer-events-none sm:w-[220px] lg:w-[320px] xl:w-[380px]">
               <img src="/images/0101.png" alt="御社の目的に合わせたカスタマイズ" className="w-full h-auto object-contain" />
             </div>
           </div>
@@ -644,8 +643,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* 画像 - モバイル時は下、デスクトップ時は絶対配置 */}
-            <div className="relative sm:absolute sm:top-1/2 sm:-translate-y-1/2 right-0 sm:right-0 lg:right-10 w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[320px] xl:max-w-[380px] mx-auto sm:mx-0 h-auto z-10 pointer-events-none mt-6 sm:mt-0 order-2 sm:order-none sm:w-[240px] lg:w-[320px] xl:w-[380px]">
+            {/* 画像 - モバイル時は非表示、デスクトップ時は絶対配置 */}
+            <div className="hidden sm:block sm:absolute sm:top-1/2 sm:-translate-y-1/2 right-0 sm:right-0 lg:right-10 sm:max-w-[240px] lg:max-w-[320px] xl:max-w-[380px] h-auto z-10 pointer-events-none sm:w-[240px] lg:w-[320px] xl:w-[380px]">
               <img
                 src="/images/0330.png"
                 alt="SNS運用をデータ資産に変えるカルテ"
