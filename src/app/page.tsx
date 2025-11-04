@@ -36,7 +36,7 @@ export default function Home() {
       <div className="relative flex items-center justify-center lg:justify-start z-10 w-full lg:absolute lg:right-0 lg:inset-y-0 lg:-ml-6 lg:w-auto order-1 lg:order-2 mt-12 lg:mt-0">
         <div className="w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-none lg:w-[560px] xl:w-[640px]">
           <video
-            src="/images/istockphoto-2167803333-640_adpp_is.mp4"
+            src="/images/signal.main.mp4"
             autoPlay
             loop
             muted

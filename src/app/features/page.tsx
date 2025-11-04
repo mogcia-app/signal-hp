@@ -26,7 +26,7 @@ export default function FeaturesPage() {
     </div>
     <div>
       <img
-        src="/images/istockphoto-1576838337-1024x1024.jpg"
+        src="/images/signal.mein2.jpg"
         alt="SNS AI Dashboard"
         className="w-full h-auto  mt-8"
       />
