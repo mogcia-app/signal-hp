@@ -603,10 +603,7 @@ export default function Home() {
                   </h3>
                   <h4 className="font-semibold text-lg lg:text-xl mb-3 text-gray-800">AIが投稿文と動画構成を自動生成</h4>
                   <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    投稿文の作成や編集から、リール動画の起承転結までAIが自動で生成。<br />よく使う文言を保存して効率的に投稿作成ができます。
-                  </p>
-                  <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    診断や投稿計画をカルテに蓄積し、専用AIが学習を重ねることで提案精度が進化し続けます。
+                    投稿文の作成から、リール動画の起承転結までAIが自動で生成。<br />よく使う文言を保存して効率的に投稿作成ができます。
                   </p>
                   <div className="mt-6">
                     <p className="font-semibold text-base text-gray-900 mb-3">ポイント</p>
