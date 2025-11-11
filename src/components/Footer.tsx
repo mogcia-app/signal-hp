@@ -10,7 +10,7 @@ export default function Footer() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Signal<span className="text-[#ff8a15]">.</span>
           </h2>
-          <p className="text-[13px] mb-4">
+          <p className="text-[10px] mb-4">
             オリジナルAIが逆算思考で戦略を専用設計。<br />
             一貫性を持ったPDCAで御社の強みを最大限に活かし、
             SNSを次の成長へつなげます。
@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://mogcia.vercel.app/"
+                  href="https://www.mogcia.net/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#ff8a15] transition"
