@@ -16,7 +16,7 @@ export default function Header() {
       {/* PC用メニュー */}
       <nav className="hidden md:flex items-center gap-6 lg:gap-8">
         <Link href="/features" className="text-sm lg:text-base text-gray-700 hover:text-[#ff8a15] transition font-medium">
-          Signal.の機能
+          Signal.の特徴
         </Link>
         <Link href="/faq" className="text-sm lg:text-base text-gray-700 hover:text-[#ff8a15] transition font-medium">
           よくある質問
@@ -51,7 +51,7 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
             className="block text-gray-700 hover:text-[#ff8a15] transition font-medium py-2"
           >
-            Signal.の機能
+            Signal.の特徴
           </Link>
           <Link 
             href="/faq" 

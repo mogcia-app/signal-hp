@@ -1,7 +1,127 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
+import AboutSignalSection from '@/components/AboutSignalSection'
+import { useEffect, useState } from 'react'
 
+// 円グラフコンポーネント
+function CircularProgress({ value, size = 200, strokeWidth = 15 }: { value: number; size?: number; strokeWidth?: number }) {
+  const [animatedValue, setAnimatedValue] = useState(0)
+  const radius = (size - strokeWidth) / 2
+  const circumference = 2 * Math.PI * radius
+  const offset = circumference - (animatedValue / 100) * circumference
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimatedValue(value)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [value])
+
+  return (
+    <svg width={size} height={size} className="transform -rotate-90">
+      {/* 背景円 */}
+      <circle
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        fill="none"
+        stroke="rgba(255, 255, 255, 0.2)"
+        strokeWidth={strokeWidth}
+      />
+      {/* プログレス円 */}
+      <circle
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        fill="none"
+        stroke="white"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeDasharray={circumference}
+        strokeDashoffset={offset}
+        className="transition-all duration-2000 ease-out"
+      />
+    </svg>
+  )
+}
+
+// 統計円グラフコンポーネント
+function StatCircle({ 
+  value, 
+  unit, 
+  title, 
+  subtitle, 
+  percentage, 
+  showPercentage = true 
+}: { 
+  value: number; 
+  unit: string; 
+  title: string; 
+  subtitle: string; 
+  percentage: number;
+  showPercentage?: boolean;
+}) {
+  const [animatedValue, setAnimatedValue] = useState(0)
+  const size = 160
+  const strokeWidth = 10
+  const radius = (size - strokeWidth) / 2
+  const circumference = 2 * Math.PI * radius
+  const offset = circumference - (animatedValue / 100) * circumference
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimatedValue(percentage)
+    }, 200)
+    return () => clearTimeout(timer)
+  }, [percentage])
+
+  return (
+    <div className="flex flex-col items-center justify-center p-8">
+      <div className="relative mb-6">
+        <svg width={size} height={size} className="transform -rotate-90">
+          {/* 背景円 */}
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            fill="none"
+            stroke="#e2e8f0"
+            strokeWidth={strokeWidth}
+          />
+          {/* プログレス円 */}
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            fill="none"
+            stroke="#ff8a15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            strokeDashoffset={offset}
+            className="transition-all duration-2000 ease-out"
+          />
+        </svg>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <div className="flex items-baseline justify-center gap-1">
+              <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#ff8a15]">{value}</span>
+              {unit && <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-700">{unit}</span>}
+            </div>
+            {showPercentage && (
+              <div className="text-base font-semibold text-slate-500 mt-1">{percentage}%</div>
+            )}
+          </div>
+        </div>
+      </div>
+      <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-2 text-center">{title}</h3>
+      <p className="text-sm text-slate-600 text-center">{subtitle}</p>
+    </div>
+  )
+}
 
 export default function Home() {
   const comparisonColumns = [
@@ -126,52 +246,50 @@ export default function Home() {
 
 
 {/* ================== ファーストビュー ================== */}
-<section className="relative w-full min-h-[48vh] sm:min-h-[52vh] lg:min-h-[58vh] flex items-center bg-white overflow-hidden border-b border-slate-200 pt-[4.5rem] pb-8 sm:pt-[5.5rem] sm:pb-10 lg:pt-[6.5rem] lg:pb-12">
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full">
-    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-10 items-center">
-
-      {/* === ビジュアル === */}
-      <div className="relative flex items-center justify-center lg:justify-start z-10 w-full xl:absolute xl:right-0 xl:inset-y-0 xl:-ml-2 xl:w-auto order-1 xl:order-2 mt-6 xl:mt-0">
-        <div className="w-full max-w-[220px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-none xl:w-[520px]">
-          <video
-            src="/images/signal.main.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-auto object-contain"
-          />
-        </div>
-      </div>
+<section 
+  className="relative w-full min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] lg:min-h-[85vh] flex items-center overflow-hidden border-b border-slate-200 pt-[4.5rem] pb-6 sm:pt-[5.5rem] sm:pb-8 md:pb-10 lg:pt-[6.5rem] lg:pb-12"
+  style={{
+    backgroundImage: 'url(/images/Signal.002.svg)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center bottom',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+  <div className="relative z-10 w-full">
+    <div className="flex flex-col items-start justify-center px-4 sm:px-6 md:pl-12 lg:pl-16 xl:pl-24 2xl:pl-32">
 
       {/* === テキスト === */}
-      <div className="relative z-20 space-y-4 sm:space-y-5 text-left max-w-lg w-full xl:w-auto order-2 xl:order-1">
+      <div className="relative z-20 space-y-3 sm:space-y-4 md:space-y-5 text-left max-w-lg w-full">
 
         {/* === タイトル === */}
-        <h1 className="text-[20px] sm:text-[28px] md:text-[40px] lg:text-[40px] font-black tracking-tight leading-tight text-slate-900">
-          SNS運用の<span className="text-[#ff8a15]">90％</span>を自動化
+        <h1 className="text-[28px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] font-black tracking-tight leading-tight text-white drop-shadow-lg">
+          Signal.
         </h1>
 
+        {/* === サブタイトル === */}
+        <h2 className="text-[16px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[40px] font-black tracking-tight leading-tight text-white drop-shadow-lg">
+          SNS運用の90％を自動化
+        </h2>
+
         {/* === サブコピー === */}
-        <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed font-medium">
-        Signal.は、御社専用AIがSNS運用の90％を自動化<br />投稿づくりも分析も、もう感覚に頼らない運用へ
+        <p className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed font-medium drop-shadow-md">
+        ノウハウ不要で、続けられるSNS運用を<br />
+        AIが学習して、負担のない投稿サイクルを実現
         </p>
 
         {/* === CTA === */}
-        <div className="pt-5 sm:pt-7 flex flex-col sm:flex-row gap-3 sm:gap-4 text-[0.6rem] sm:text-[0.7rem]">
+        <div className="pt-4 sm:pt-5 md:pt-6 lg:pt-7 flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
           <a
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-[0.65rem] sm:py-3 bg-[#ff8a15] text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:bg-orange-600 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-white text-[#ff8a15] border-2 border-white text-xs sm:text-sm md:text-base font-bold rounded-lg shadow-xl hover:bg-slate-50 hover:border-slate-200 transition-all duration-300 w-fit sm:w-auto"
           >
             問い合わせをする
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            
           </a>
 
           <a
             href="/features"
-            className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-[0.65rem] sm:py-3 bg-white text-slate-900 border-2 border-slate-300 font-bold rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-white text-slate-900 text-xs sm:text-sm md:text-base font-bold rounded-lg hover:bg-slate-50 transition-all duration-300 w-fit sm:w-auto"
           >
             サービス概要を見る
           </a>
@@ -192,10 +310,11 @@ export default function Home() {
     <div className="text-center mb-12 sm:mb-16 lg:mb-20">
       <div className="flex flex-col items-center">
         <h2 className="text-xl sm:text-[28px] lg:text-[30px] font-semibold tracking-tight text-slate-900 mb-4 sm:mb-6 leading-tight text-center px-2">
-          Signal<span className="text-[#ff8a15]">.</span>が現場で見てきたSNS運用の壁
+          こんなお悩みありませんか？
         </h2>
         <p className="max-w-3xl text-sm sm:text-base text-slate-600 leading-relaxed">
-          AIを導入しても成果が出ない、外注してもブランドらしさが失われる——<br />そんな相談をいただく企業には、共通する課題がありました。
+        SNS運用で、多くの企業様が共通して抱える課題があります<br />
+        代表的なものを、以下にまとめました
         </p>
       </div>
     </div>
@@ -289,127 +408,14 @@ export default function Home() {
 </section>
 
 
-{/* ================== 他社比較セクション ================== */}
-<section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-white border-t border-slate-200/60">
-  <div className="max-w-7xl mx-auto space-y-10">
-    <div className="text-center space-y-4">
-      <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff8a15]/10 text-[#ff8a15] rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.22em]">
-        Differentiation
-      </div>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
-  もう「AIだけ」でも「運用代行だけ」でも限界<br />
-  Signal<span className="text-[#ff8a15]">.</span>は成果を出すための第三の選択肢
-</h2>
-<p className="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
-  SNS運用を効率化するだけのAIツール。成果を出すけれどコストが重い代行。<br/>
-  Signal.はこの二極の中間ではなく、「AIが動かし、人が磨く」新しい運用モデルです。
-</p>
-          </div>
-          
-    <div className="grid gap-6 lg:gap-8 grid-cols-1 md:grid-cols-3">
-      {[
-        {
-          label: "AI投稿ツール",
-          tag: "汎用AI",
-          color: "bg-slate-100 border-slate-200",
-          headline: "自動化で工数は軽くなるが成果が伸び悩み",
-          metrics: [
-            { name: "投稿自動化", value: "○ 一部自動化", note: "テンプレ文章の生成" },
-            { name: "KPI改善", value: "△ 成果は自己責任", note: "戦略・導線設計は手動" },
-            { name: "ブランド表現", value: "× 一貫性に課題", note: "プロンプト依存" },
-          ],
-          pains: [
-            "運用の型が社内に蓄積しにくい",
-            "分析〜改善は担当者が全て実施",
-            "自社の魅力は伝わらない",
-          ],
-        },
-        {
-          label: "SNS運用代行",
-          tag: "丸投げ",
-          color: "bg-slate-100 border-slate-200",
-          headline: "成果は出るがコスト高・ノウハウが残らない",
-          metrics: [
-            { name: "投稿自動化", value: "— 人力対応", note: "スピードは担当次第" },
-            { name: "KPI改善", value: "○ 成果は期待可", note: "ただし施策が属人化" },
-            { name: "ブランド表現", value: "△ 担当交代でぶれ", note: "知識共有が課題" },
-          ],
-          pains: [
-            "月次レポートを見てもよくわからない",
-            "契約終了と同時にノウハウが失われる",
-            "追加施策ごとにコスト増",
-          ],
-        },
-        {
-          label: "Signal.",
-          tag: "ハイブリッド",
-          color: "bg-[#ff8a15]/10 border-[#ff8a15]/30",
-          headline: "AIと専任チームが成果と再現性を同時に実現",
-          metrics: [
-            { name: "投稿自動化", value: "◎ 90％自動化", note: "投稿ネタ・ハッシュタグ・改善をAI生成" },
-            { name: "目標から逆算", value: "◎ 逆算思考でKPI達成", note: "目標に沿った投稿をAIが提案" },
-            { name: "ブランド表現", value: "◎ 一貫性を学習", note: "NGワード設定＆伴走チェック" },
-          ],
-          pains: [
-            "月次レポートでSNS運用を可視化",
-            "ノウハウをカルテ化して社内へ共有",
-            "制作・投稿まで必要に応じて代行",
-          ],
-        },
-      ].map((option) => (
-        <div key={option.label} className={`rounded-2xl border ${option.color} p-6 sm:p-7 lg:p-8 space-y-5 shadow-sm`}> 
-          <div className="flex items-center justify-between">
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">{option.label}</div>
-            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/60 text-slate-600 border border-white/70">{option.tag}</span>
-          </div>
-          <h3 className="text-lg sm:text-xl font-semibold text-slate-900 leading-snug">
-            {option.headline}
-          </h3>
-        
-        <div className="space-y-3">
-            {option.metrics.map((metric) => (
-              <div key={metric.name} className="rounded-xl bg-white/70 border border-slate-200 px-4 py-3">
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-[0.18em]">{metric.name}</span>
-                  <span className="text-sm font-semibold text-slate-900">{metric.value}</span>
-          </div>
-                <p className="mt-1 text-xs text-slate-500 leading-relaxed">{metric.note}</p>
-          </div>
-            ))}
-      </div>
-
-          <div className="space-y-2">
-            {option.pains.map((item) => (
-              <div key={item} className="flex items-start gap-2 text-sm text-slate-600">
-                <span className="mt-1 w-2 h-2 rounded-full bg-[#ff8a15]" />
-                {item}
-          </div>
-            ))}
-        </div>
-          </div>
-      ))}
-      </div>
-
-    <div className="bg-[#ff8a15]/10 border border-[#ff8a15]/20 rounded-2xl px-6 sm:px-8 py-6 sm:py-8 text-center space-y-3">
-      <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-        Signal.は"AI活用のスピード"と"プロの伴走"の両立で、成果と再現性を同時に実現します。現状体制との比較や導入シミュレーションもお気軽にご相談ください。
-      </p>
-      <a href="/contact" className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-[#ff8a15] border border-[#ff8a15] rounded-lg bg-white hover:bg-[#ff8a15]/10 transition">
-        問い合わせ
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-      </a>
-          </div>
-        </div>
-</section>
+<AboutSignalSection />
 
 
 {/* ================== 数字で見るSignal. ================== */}
 <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
   <div className="max-w-7xl mx-auto">
     {/* ヘッダー */}
-    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+    <div className="text-center mb-12 lg:mb-16">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4">
         <span className="text-slate-900">数字で見る Signal<span className="text-[#ff8a15]">.</span></span>
       </h2>
@@ -418,301 +424,118 @@ export default function Home() {
       </p>
     </div>
 
-    {/* 統計カード */}
-    <div className="grid gap-6 lg:gap-8 grid-cols-1 mb-12 lg:mb-16">
-      {/* 90% 自動化 - メインカード */}
-      <div className="group relative">
-        <div className="bg-gradient-to-br from-[#ff8a15] to-orange-600 p-6 lg:p-10 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-          <div className="text-white space-y-8">
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-3 bg-white text-[#ff8a15] rounded-full px-5 py-2.5 text-sm font-semibold shadow-lg shadow-[#ff8a15]/30 ring-2 ring-white/40">
-                <svg className="w-5 h-5 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                </svg>
-                SNS運用の90%をAIが代行
-              </div>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
-                あなたは"投稿ボタン"を押すだけ
-              </h3>
-              <div className="space-y-3 text-base lg:text-lg text-white/90 leading-relaxed">
-                <p>企画・原稿作成・ハッシュタグ選定・投稿分析まで、Signal.が自動で実行</p>
-                <p>AIが分析データを学習し、次回の戦略を提案します</p>
-              </div>
-              <div className="flex items-center gap-3 bg-white text-[#000000] rounded-lg px-4 py-3 text-sm font-medium shadow-sm">
-                <svg className="w-5 h-5 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                分析データをAIが整理し、次の一手となる改善案を提案。あなたは判断と実行に集中できます。
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h4 className="text-lg font-semibold tracking-wide uppercase text-white/80">自動化できる領域</h4>
-                <span className="text-sm text-white/70">従来との比較</span>
-            </div>
-            
-              {/* 表形式（デスクトップ） */}
-              <div className="hidden md:grid grid-cols-3 gap-2 bg-white text-slate-900 rounded-none overflow-hidden text-sm shadow-sm border border-slate-100">
-                <div className="bg-slate-50 px-4 py-3 font-semibold text-slate-600">項目</div>
-                <div className="bg-slate-50 px-4 py-3 font-semibold text-slate-600">従来</div>
-                <div className="bg-slate-50 px-4 py-3 font-semibold text-slate-600">Signal.</div>
+    {/* 統計 - 円グラフ形式 */}
+    <div className="space-y-12 lg:space-y-16">
+      {/* 上段: 2つ */}
+      <div className="grid gap-8 lg:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-items-center">
+        {/* 90% 自動化 */}
+        <StatCircle 
+          value={90} 
+          unit="%" 
+          title="SNS運用を自動化"
+          subtitle="あなたは「投稿ボタン」を押すだけ"
+          percentage={90}
+          showPercentage={false}
+        />
 
-                <div className="px-4 py-4 border-t border-slate-100 font-semibold">企画</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-slate-600">手作業でテーマ出し</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-[#ff8a15] font-semibold">AIがSNSの目的・事業ジャンルから最適テーマを提案</div>
-
-                <div className="px-4 py-4 border-t border-slate-100 font-semibold">投稿文</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-slate-600">担当者がライティング</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-[#ff8a15] font-semibold">AIがトーンとブランド設定を反映して自動生成</div>
-
-                <div className="px-4 py-4 border-t border-slate-100 font-semibold">ハッシュタグ</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-slate-600">担当者が調査</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-[#ff8a15] font-semibold">投稿テーマと親和性の高いハッシュタグをデータから選び抜いて提示</div>
-
-                <div className="px-4 py-4 border-t border-slate-100 font-semibold">分析</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-slate-600">毎回スプレッドシート手入力</div>
-                <div className="px-4 py-4 border-t border-slate-100 text-[#ff8a15] font-semibold">AIが自動で伸びた投稿を解析し、次の改善策を出力</div>
-              </div>
-              
-              {/* カード形式（モバイル） */}
-              <div className="md:hidden space-y-3">
-                {[
-                  {
-                    title: "企画",
-                    legacy: "手作業でテーマ出し",
-                    signal: "AIが目的・ジャンルから最適テーマを提案",
-                  },
-                  {
-                    title: "投稿文",
-                    legacy: "担当者がライティング",
-                    signal: "AIがトーンとブランド設定を反映して自動生成",
-                  },
-                  {
-                    title: "ハッシュタグ",
-                    legacy: "担当者が調査",
-                    signal: "AIがトレンドと一致率から自動選定",
-                  },
-                  {
-                    title: "分析",
-                    legacy: "毎回スプレッドシート手入力",
-                    signal: "AIが自動で伸びた投稿を解析し、次の改善策を出力",
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="bg-white text-slate-900 rounded-none p-4 space-y-3 shadow-sm border border-slate-100">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-semibold text-slate-600 tracking-wide uppercase">{item.title}</span>
-                      <span className="text-xs bg-slate-100 px-2 py-1 rounded-full text-slate-500">自動化領域</span>
-              </div>
-                    <div className="space-y-2">
-                      <div>
-                        <div className="text-xs font-semibold text-slate-500 uppercase">従来</div>
-                        <p className="text-sm text-slate-600">{item.legacy}</p>
-                      </div>
-                      <div className="border-t border-slate-100 pt-2">
-                        <div className="text-xs font-semibold text-[#ff8a15] uppercase">Signal.</div>
-                        <p className="text-sm text-slate-900">{item.signal}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
+        {/* 5分 - 時間短縮 */}
+        <StatCircle 
+          value={5} 
+          unit="分" 
+          title="1投稿あたりの運用時間"
+          subtitle="従来: 30-60分 → Signal.: 5分"
+          percentage={83}
+          showPercentage={false}
+        />
       </div>
 
-    {/* 下段の統計カード */}
-    <div className="grid gap-6 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-      {/* 5分 - 時間短縮 */}
-      <div className="group relative">
-        <div className="bg-white p-6 lg:p-8 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-[#ff8a15]/10 rounded-lg flex items-center justify-center mx-auto mb-4 lg:mb-6">
-              <svg className="w-6 h-6 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-              </svg>
-            </div>
-            
-            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">
-              5<span className="text-2xl lg:text-3xl text-slate-600">分</span>
-            </div>
-            
-            <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-3">1投稿あたりの運用時間</h3>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              AIが自動提案するため、投稿準備時間を大幅短縮
-            </p>
-            
-            {/* 比較ボックス */}
-            <div className="text-left space-y-3">
-              <div className="bg-slate-50 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来の運用時間</h4>
-                <div className="text-xl lg:text-2xl font-bold text-slate-600 line-through">30-60分</div>
-                <p className="text-xs text-slate-500 mt-1">ネタ探し・構成・画像選定</p>
-              </div>
-              
-              <div className="bg-[#ff8a15]/5 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-[#ff8a15] mb-2">Signal.での運用時間</h4>
-                <div className="text-xl lg:text-2xl font-bold text-[#ff8a15]">5分</div>
-                <p className="text-xs text-slate-600 mt-1">AI提案を確認・指示通りに撮影するのみ</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      {/* 下段: 3つ */}
+      <div className="grid gap-8 lg:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        {/* 0 ネタ切れ */}
+        <StatCircle 
+          value={0} 
+          unit="" 
+          title="ネタ切れ"
+          subtitle="AIが無限に投稿テーマを提案"
+          percentage={0}
+          showPercentage={false}
+        />
 
-      {/* 0 ネタ切れ */}
-      <div className="group relative">
-        <div className="bg-white p-6 lg:p-8 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-[#ff8a15]/10 rounded-lg flex items-center justify-center mx-auto mb-4 lg:mb-6">
-              <svg className="w-6 h-6 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </div>
-            
-            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">0</div>
-            
-            <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-3">ネタ切れ</h3>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              AIが無限に投稿テーマを提案
-            </p>
-            
-            {/* 比較ボックス */}
-            <div className="text-left space-y-3">
-              <div className="bg-slate-50 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来のネタ探し</h4>
-                <div className="text-xl lg:text-2xl font-bold text-slate-600">毎日悩む</div>
-                <p className="text-xs text-slate-500 mt-1">アイデア枯渇・時間浪費</p>
-              </div>
-              
-              <div className="bg-[#ff8a15]/5 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-[#ff8a15] mb-2">Signal.でのネタ探し</h4>
-                <div className="text-xl lg:text-2xl font-bold text-[#ff8a15]">0回</div>
-                <p className="text-xs text-slate-600 mt-1">AIが自動で無限提案</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        {/* 4時間短縮 */}
+        <StatCircle 
+          value={4} 
+          unit="時間" 
+          title="撮影準備短縮"
+          subtitle="従来: 5-8時間 → Signal.: 1時間"
+          percentage={50}
+          showPercentage={false}
+        />
 
-      {/* 4時間短縮 */}
-      <div className="group relative">
-        <div className="bg-white p-6 lg:p-8 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-[#ff8a15]/10 rounded-lg flex items-center justify-center mx-auto mb-4 lg:mb-6">
-              <svg className="w-6 h-6 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-              </svg>
-            </div>
-            
-            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">
-              4<span className="text-2xl lg:text-3xl text-slate-600">時間</span>
-            </div>
-            
-            <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-3">撮影準備短縮</h3>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              AIが絵コンテとサムネイルを自動生成
-            </p>
-            
-            {/* 比較ボックス */}
-            <div className="text-left space-y-3">
-              <div className="bg-slate-50 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来の撮影準備</h4>
-                <div className="text-xl lg:text-2xl font-bold text-slate-600">5-8時間</div>
-                <p className="text-xs text-slate-500 mt-1">企画・絵コンテ・準備</p>
-              </div>
-              
-              <div className="bg-[#ff8a15]/5 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-[#ff8a15] mb-2">Signal.での撮影準備</h4>
-                <div className="text-xl lg:text-2xl font-bold text-[#ff8a15]">1時間</div>
-                <p className="text-xs text-slate-600 mt-1">AIが自動で動画内容生成</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 30+ 分析項目 */}
-      <div className="group relative">
-        <div className="bg-white p-6 lg:p-8 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-[#ff8a15]/10 rounded-lg flex items-center justify-center mx-auto mb-4 lg:mb-6">
-              <svg className="w-6 h-6 text-[#ff8a15]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-              </svg>
-            </div>
-            
-            <div className="text-5xl lg:text-6xl font-black text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">
-              10<span className="text-2xl lg:text-3xl text-slate-600">+</span>
-            </div>
-            
-            <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-3">自動分析項目</h3>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              AIが多角的にデータを分析・提案
-            </p>
-            
-            {/* 比較ボックス */}
-            <div className="text-left space-y-3">
-              <div className="bg-slate-50 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-slate-800 mb-2">従来の分析</h4>
-                <div className="text-xl lg:text-2xl font-bold text-slate-600">3-5項目</div>
-                <p className="text-xs text-slate-500 mt-1">手動集計・限定的</p>
-              </div>
-              
-              <div className="bg-[#ff8a15]/5 rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-[#ff8a15] mb-2">Signal.での分析</h4>
-                <div className="text-xl lg:text-2xl font-bold text-[#ff8a15]">10+項目</div>
-                <p className="text-xs text-slate-600 mt-1">AIが自動で多角的分析</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* 10+ 分析項目 */}
+        <StatCircle 
+          value={10} 
+          unit="+" 
+          title="自動分析項目"
+          subtitle="従来: 3-5項目 → Signal.: 10+項目"
+          percentage={100}
+          showPercentage={false}
+        />
       </div>
     </div>
   </div>
 </section>
-<div className="w-full border-t border-gray-300 my-4"></div>
 
 
 
 {/* ================== 導入フロー ================== */}
-<section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-slate-50 border-t border-slate-200/60">
+<section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-white">
   <div className="max-w-7xl mx-auto space-y-12">
     <div className="text-center space-y-4">
       <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#ff8a15] rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] shadow-sm">
         Flow
       </div>
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
-        Signal<span className="text-[#ff8a15]">.</span>導入までの4ステップ
+        Signal<span className="text-[#ff8a15]">.</span>導入までの5ステップ
       </h2>
       
     </div>
 
-    <div className="relative mt-6">
-      <div className="absolute left-6 top-0 bottom-0 border-l-2 border-dashed border-[#ff8a15]/40 lg:left-1/2" aria-hidden="true" />
-      <div className="flex flex-col gap-10 lg:gap-14">
-        {flowSteps.map((item, index) => (
-          <div
-            key={item.number}
-            className={`relative flex flex-col gap-3 lg:flex-row lg:items-start lg:gap-8 ${
-              index % 2 === 0 ? 'lg:flex-row-reverse' : ''
-            }`}
-          >
-            <div className="flex items-start gap-4 lg:gap-6">
-              <div className="relative">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ff8a15] text-white font-bold shadow-lg lg:h-14 lg:w-14">
+    <div className="mt-8 lg:mt-12">
+      <div className="space-y-6 lg:space-y-8">
+        {/* 上段: 2つ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-6">
+          {flowSteps.slice(0, 2).map((item) => (
+            <div
+              key={item.number}
+              className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 lg:p-6 hover:shadow-md transition-shadow flex flex-col"
+            >
+              <div className="flex flex-col items-center text-center mb-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ff8a15] text-white font-bold shadow-lg mb-4 lg:h-16 lg:w-16">
                   {item.number}
                 </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">{item.title}</h3>
               </div>
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6 lg:p-7 max-w-xl">
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900">{item.title}</h3>
-                <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">{item.caption}</p>
-              </div>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed text-center flex-1">{item.caption}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        {/* 下段: 3つ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6">
+          {flowSteps.slice(2, 5).map((item) => (
+            <div
+              key={item.number}
+              className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 lg:p-6 hover:shadow-md transition-shadow flex flex-col"
+            >
+              <div className="flex flex-col items-center text-center mb-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ff8a15] text-white font-bold shadow-lg mb-4 lg:h-16 lg:w-16">
+                  {item.number}
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">{item.title}</h3>
+              </div>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed text-center flex-1">{item.caption}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
 
@@ -839,24 +662,23 @@ export default function Home() {
 </section>
 
 {/* ================== Value Gap ================== */}
-<section className="py-14 sm:py-18 lg:py-20 px-4 sm:px-6 bg-slate-50 border-t border-slate-200/60">
+<section className="py-14 sm:py-18 lg:py-20 px-4 sm:px-6 bg-white">
   <div className="max-w-7xl mx-auto space-y-8">
     <div className="text-center space-y-3">
       <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff8a15]/10 text-[#ff8a15] rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.22em]">
         Value Gap
       </div>
       <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900">
-        ツール任せと伴走設計では、成果までの距離が変わります
+        Signal<span className="text-[#ff8a15]">.</span>と他社ツールの違い
       </h2>
       <p className="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
-        「AIを入れたのに運用が回らない」──そんな声に応えるために、Signal.が生まれました。<br />
-        Signal.は、ツール単体では拾いきれない戦略・制作・改善までを伴走チームとAIで完結させます。
+        「AIを入れたのに運用が回らない」──そんな声に応えるために、Signal<span className="text-[#ff8a15]">.</span>が生まれました。<br />
+        Signal<span className="text-[#ff8a15]">.</span>は、ツール単体では拾いきれない戦略・制作・改善までを伴走チームとAIで完結させます。
       </p>
     </div>
 
     <div className="overflow-x-auto">
-      <div className="relative min-w-[860px] rounded-[32px] bg-gradient-to-br from-[#ffe8d3] via-white to-[#fff5ec] p-[3px] shadow-[0_40px_80px_-45px_rgba(255,138,21,0.55)]">
-        <div className="rounded-[30px] bg-white overflow-hidden border border-white/60">
+      <div className="relative min-w-[860px] rounded-[32px] bg-white overflow-hidden border border-slate-200">
           <div className="grid grid-cols-[180px_repeat(3,minmax(0,1fr))]">
             <div className="bg-slate-900/95 text-white px-6 sm:px-7 py-6 sm:py-7 text-sm sm:text-base font-semibold tracking-[0.18em] uppercase flex items-center justify-center shadow-inner">
               比較項目
@@ -928,7 +750,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
       </div>
     </div>
 

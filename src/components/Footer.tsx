@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-[#ff8a15] mb-4">Service</h4>
             <ul className="space-y-2">
-              <li><Link href="/features" className="hover:text-[#ff8a15] transition">Signal.の機能</Link></li>
+              <li><Link href="/features" className="hover:text-[#ff8a15] transition">Signal.の特徴</Link></li>
               <li><Link href="/faq" className="hover:text-[#ff8a15] transition">よくある質問</Link></li>
               <Link href="/diagnosis" className="text-gray-600 hover:text-[#ff8a15]">SNS無料診断</Link>
             </ul>
