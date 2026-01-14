@@ -555,9 +555,7 @@ export default function Home() {
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
         目的に合わせて選べる3つのプラン
       </h2>
-      <p className="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
-        その他にも様々なプランをご用意しております。詳しくはお問い合わせください。
-      </p>
+      
     </div>
 
     <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8">
@@ -578,36 +576,45 @@ export default function Home() {
     <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {[
         {
-          name: "Signal. 改善伴走プラン",
-          price: "¥60,000 / 月",
-          description: "自社で運用はできているが伸び悩む方へ",
+          name: "ベーシックプラン",
+          price: "¥15,000 / 月",
+          description: "お試し感覚で始められる、投稿ネタ提案プラン",
           recommended: false,
           features: [
-            "過去投稿データをSignal.が分解し、伸び悩み要因と改善テーマを可視化",
-            "企画・ネタだし・ハッシュタグ選定・投稿分析までSignal.がサポート",
-            "専任スタッフとのミーティング",
+            "AIによる投稿ネタ提案",
+            "ハッシュタグ自動生成",
+            "簡易的なスケジュール管理",
           ],
         },
         {
-          name: "Signal. スタンダード（月4投稿代行）",
-          price: "¥120,000 / 月",
-          description: "SNS運用にばらつきがある方へ",
+          name: "スタンダードプラン",
+          price: "¥30,000 / 月",
+          description: "投稿ネタ提案に加えて、軽い分析機能も利用可能",
+          recommended: false,
+          features: [
+            "AIによる投稿ネタ提案",
+            "ハッシュタグ自動生成",
+            "投稿文の自動生成",
+            "投稿パフォーマンスの軽い分析",
+            "簡易的なスケジュール管理",
+          ],
+        },
+        {
+          name: "プロプラン",
+          price: "¥60,000 / 月",
+          description: "Signal.の全機能をフル活用できるプラン",
           recommended: true,
           features: [
-            "Signal.プラン",
-            "月4本の投稿を構成・撮影指示・投稿までワンストップで制作代行",
-            "月1ミーティングでSNS運用をサポート",
-          ],
-        },
-        {
-          name: "Signal. フルサポート（投稿代行＋動画制作）",
-          price: "¥180,000 / 月〜",
-          description: "これからSNSに力を入れたい方へ",
-          recommended: false,
-          features: [
-            "スタンダードの内容に加え、初期コンセプト設計〜導線整備までを支援",
-            "ショート動画・静止画の撮影ディレクション／編集をまるっと対応",
-            "SNS立ち上げ研修や運用体制構築を伴走（要望に応じて広告連携）",
+            "Signal.全機能利用可能",
+            "AIによる投稿ネタ提案",
+            "詳細な投稿パフォーマンス分析",
+            "KPI設定・目標シュミレーション",
+            "PDCAサイクルによる継続改善",
+            "過去投稿データの詳細分析",
+            "成功・失敗パターンの自動抽出",
+            "ブランド設定・口調・世界観の反映",
+            "コメント返信アシスト",
+            "専任スタッフサポート",
           ],
         },
       ].map((plan) => (
@@ -643,20 +650,34 @@ export default function Home() {
                 </li>
             ))}
               </ul>
-
-          <div className="pt-2">
-            <a
-              href="/contact"
-              className={`inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition ${plan.recommended ? 'bg-white text-[#ff8a15] hover:bg-white/90' : 'bg-[#ff8a15] text-white hover:bg-orange-600'}`}
-            >
-              プランの詳細を相談する
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-            </div>
           </div>
       ))}
+        </div>
+      </div>
+
+      {/* その他のプラン */}
+      <div className="mt-12">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div className="text-center space-y-4">
+            <h3 className="text-lg sm:text-xl font-semibold text-slate-900">
+              その他のプランもご用意しております
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              運用代行や編集代行など、ご予算に応じた様々なプランをご用意しております。<br />
+              詳しくはお問い合わせください。
+            </p>
+            <div className="pt-4">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#ff8a15] rounded-lg hover:bg-orange-600 transition"
+              >
+                お問い合わせ
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 </section>
