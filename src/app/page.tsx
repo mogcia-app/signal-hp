@@ -427,7 +427,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1400px]">
           <div className="text-center">
             <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">FEATURES</p>
-            <h2 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">Signal.が選ばれる理由</h2>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
+              Signal<span className="text-[#ff8a15]">.</span>が選ばれる理由
+            </h2>
           </div>
 
           <div className="mt-10">
