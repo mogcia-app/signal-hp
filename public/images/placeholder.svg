@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#E2E8F0"/>
+  <rect x="20" y="20" width="1560" height="860" stroke="#94A3B8" stroke-width="8" stroke-dasharray="16 16"/>
+  <path d="M640 560L760 430L860 530L980 400L1160 620H440L640 560Z" fill="#CBD5E1"/>
+  <circle cx="560" cy="300" r="60" fill="#CBD5E1"/>
+  <text x="800" y="730" text-anchor="middle" fill="#475569" font-size="56" font-family="Arial, sans-serif" font-weight="700">
+    IMAGE PLACEHOLDER
+  </text>
+</svg>

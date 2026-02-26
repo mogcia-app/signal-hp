@@ -3,80 +3,61 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const links = [
+  { href: "/#service", label: "サービス" },
+  { href: "/#features", label: "機能" },
+  { href: "/#pricing", label: "料金" },
+  { href: "/#faq", label: "よくある質問" },
+];
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full flex justify-between items-center py-4 sm:py-5 px-4 sm:px-6 lg:px-8 shadow-sm bg-white z-50">
-      {/* ロゴ */}
-      <Link href="/" className="text-xl sm:text-2xl font-bold text-gray-900 hover:opacity-80 transition">
-        Signal<span className="text-[#ff8a15]">.</span>
-      </Link>
-
-      {/* PC用メニュー */}
-      <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-        <Link href="/features" className="text-sm lg:text-base text-gray-700 hover:text-[#ff8a15] transition font-medium">
-          Signal.の特徴
-        </Link>
-        <Link href="/faq" className="text-sm lg:text-base text-gray-700 hover:text-[#ff8a15] transition font-medium">
-          よくある質問
-        </Link>
-        <Link href="/diagnosis" className="text-sm lg:text-base text-gray-700 hover:text-[#ff8a15] transition font-medium">
-          SNS無料診断
-        </Link>
-        <Link
-          href="/contact"
-          className="bg-[#ff8a15] text-white px-5 lg:px-6 py-2.5 lg:py-3 hover:bg-orange-600 transition font-bold text-sm lg:text-base"
-        >
-          お問い合わせ
-        </Link>
-      </nav>
-
-      {/* スマホ用ハンバーガー */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden focus:outline-none flex flex-col gap-1.5 p-2"
-        aria-label="メニューを開く"
-      >
-        <div className={`w-6 h-0.5 bg-[#ff8a15] transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
-        <div className={`w-6 h-0.5 bg-[#ff8a15] transition-opacity ${isOpen ? 'opacity-0' : ''}`}></div>
-        <div className={`w-6 h-0.5 bg-[#ff8a15] transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
-      </button>
-
-      {/* スマホメニュー */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 p-6 space-y-4 md:hidden animate-in slide-in-from-top-2">
-          <Link 
-            href="/features" 
-            onClick={() => setIsOpen(false)}
-            className="block text-gray-700 hover:text-[#ff8a15] transition font-medium py-2"
-          >
-            Signal.の特徴
-          </Link>
-          <Link 
-            href="/faq" 
-            onClick={() => setIsOpen(false)}
-            className="block text-gray-700 hover:text-[#ff8a15] transition font-medium py-2"
-          >
-            よくある質問
-          </Link>
-          <Link 
-            href="/diagnosis" 
-            onClick={() => setIsOpen(false)}
-            className="block text-gray-700 hover:text-[#ff8a15] transition font-medium py-2"
-          >
-            SNS無料診断
-          </Link>
-          <Link
-            href="/contact"
-            onClick={() => setIsOpen(false)}
-            className="block text-center bg-[#ff8a15] text-white px-4 py-3 hover:bg-orange-600 transition font-bold mt-4"
-          >
-            お問い合わせ
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-200 bg-white">
+      <div className="mx-auto flex h-[54px] max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:px-16">
+        <div>
+          <Link href="/" className="text-[20px] font-semibold tracking-tight text-black transition hover:opacity-80">
+          Signal<span className="text-[#ff8a15]">.</span>
           </Link>
         </div>
-      )}
 
+        <nav className="hidden items-center gap-7 md:flex">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className="text-sm font-semibold text-slate-700 transition hover:text-[#ff8a15] whitespace-nowrap">
+              {link.label}
+            </Link>
+          ))}
+          <Link href="/contact" className="bg-[#ff8a15] px-5 py-2 text-sm font-bold text-white transition hover:bg-[#e47910]">
+            お問い合わせ
+          </Link>
+        </nav>
+
+        <button onClick={() => setIsOpen(!isOpen)} className="flex flex-col gap-1.5 p-2 md:hidden" aria-label="メニューを開く">
+          <span className={`h-0.5 w-6 bg-[#ff8a15] transition ${isOpen ? "translate-y-2 rotate-45" : ""}`} />
+          <span className={`h-0.5 w-6 bg-[#ff8a15] transition ${isOpen ? "opacity-0" : ""}`} />
+          <span className={`h-0.5 w-6 bg-[#ff8a15] transition ${isOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+        </button>
+      </div>
+
+      {isOpen && (
+        <div className="border-t border-slate-200 bg-white px-5 py-5 md:hidden sm:px-8">
+          <nav className="space-y-3">
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)} className="block py-1 text-sm font-semibold text-slate-700">
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="mt-2 inline-flex bg-[#ff8a15] px-5 py-2.5 text-sm font-bold text-white"
+            >
+              お問い合わせ
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

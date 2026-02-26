@@ -1,77 +1,62 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 text-gray-700 text-sm">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-
-        {/* 左ロゴ・紹介 */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+    <footer className="border-t border-[#efdfc7] bg-[#fffaf2]">
+      <div className="mx-auto grid max-w-[1400px] gap-10 px-5 py-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr_1fr] lg:items-start lg:px-16">
+        <div className="max-w-[420px]">
+          <Link href="/" className="text-[24px] font-semibold tracking-tight text-slate-900 transition hover:opacity-80">
             Signal<span className="text-[#ff8a15]">.</span>
-          </h2>
-          <p className="text-[10px] mb-4">
-            オリジナルAIが逆算思考で戦略を専用設計。<br />
-            一貫性を持ったPDCAで御社の強みを最大限に活かし、
-            SNSを次の成長へつなげます。
+          </Link>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600">
+            Instagram運用の振り返りと改善をつなぎ、次のアクションまで迷わず進めるためのSNS運用支援サービスです。
           </p>
-          <div className="flex space-x-4 text-xs mt-6">
-            <Link href="/privacy" className="hover:text-[#ff8a15] transition">
-              プライバシーポリシー
-            </Link>
-            <Link href="/terms" className="hover:text-[#ff8a15] transition">
-              利用規約
-            </Link>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold tracking-[0.12em] text-slate-500">SITE MAP</p>
+          <div className="mt-3 space-y-2 text-sm font-semibold text-slate-700">
+            <Link href="/#service" className="block transition hover:text-[#ff8a15]">サービス</Link>
+            <Link href="/#features" className="block transition hover:text-[#ff8a15]">機能</Link>
+            <Link href="/#pricing" className="block transition hover:text-[#ff8a15]">料金</Link>
+            <Link href="/#faq" className="block transition hover:text-[#ff8a15]">よくある質問</Link>
           </div>
         </div>
 
-        {/* 右側3カラム */}
-        <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
-          
-          <div>
-            <h4 className="font-bold text-[#ff8a15] mb-4">Service</h4>
-            <ul className="space-y-2">
-              <li><Link href="/features" className="hover:text-[#ff8a15] transition">Signal.の特徴</Link></li>
-              <li><Link href="/faq" className="hover:text-[#ff8a15] transition">よくある質問</Link></li>
-              <Link href="/diagnosis" className="text-gray-600 hover:text-[#ff8a15]">SNS無料診断</Link>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-[#ff8a15] mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://www.mogcia.net/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#ff8a15] transition"
-                >
-                  運営会社
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            {/*<h4 className="font-bold text-[#ff8a15] mb-4">Campaigns</h4>*/}
-            {/*<ul className="space-y-2">
-              <li><Link href="/partners" className="hover:text-[#ff8a15] transition">パートナー制度</Link></li>
-            </ul>*/}
-            <h4 className="font-bold text-[#ff8a15] mt-6 mb-3">お問い合わせ</h4>
-            <p className="text-xs mb-1">平日 10:00〜17:00</p>
-            <p className="text-xs mb-3">翌営業日にご連絡いたします。</p>
-            <p className="text-xs mb-3">
-              TEL: <a href="tel:092-517-9804" className="hover:text-[#ff8a15] transition">092-517-9804</a>
+        <div>
+          <p className="text-xs font-semibold tracking-[0.12em] text-slate-500">CONTACT</p>
+          <Link href="/contact" className="mt-3 inline-flex bg-[#ff8a15] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e47910]">
+            お問い合わせ
+          </Link>
+          <div className="mt-4 space-y-1 text-sm leading-relaxed text-slate-600">
+            <p>平日 10:00〜17:00</p>
+            <p>翌営業日にご連絡いたします。</p>
+            <p>
+              <span className="font-medium text-slate-700">TEL:</span>{" "}
+              <a href="tel:0925179804" className="transition hover:text-[#ff8a15]">
+                092-517-9804
+              </a>
             </p>
-            <a href="mailto:info@signalapp.jp" className="hover:text-[#ff8a15] text-xs transition">info@signalapp.jp</a>
+            <p>
+              <a href="mailto:info@signalapp.jp" className="font-medium text-slate-700 transition hover:text-[#ff8a15]">
+                info@signalapp.jp
+              </a>
+            </p>
           </div>
-
         </div>
       </div>
 
-      <div className="border-t border-gray-100 py-6 text-center text-gray-400 text-xs">
-        © 2025 Signal. All rights reserved.
+      <div className="border-t border-[#efdfc7]">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-3 px-5 py-4 text-xs text-slate-500 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-16">
+          <p>© 2025 Signal. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link href="https://www.mogcia.net/" target="_blank" rel="noopener noreferrer" className="transition hover:text-[#ff8a15]">
+              運営会社
+            </Link>
+            <Link href="/privacy" className="transition hover:text-[#ff8a15]">プライバシーポリシー</Link>
+            <Link href="/terms" className="transition hover:text-[#ff8a15]">利用規約</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

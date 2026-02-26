@@ -1,801 +1,638 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import AboutSignalSection from '@/components/AboutSignalSection'
-import { useEffect, useState } from 'react'
+import Image from "next/image";
+import { useState } from "react";
 
-// 円グラフコンポーネント
-function CircularProgress({ value, size = 200, strokeWidth = 15 }: { value: number; size?: number; strokeWidth?: number }) {
-  const [animatedValue, setAnimatedValue] = useState(0)
-  const radius = (size - strokeWidth) / 2
-  const circumference = 2 * Math.PI * radius
-  const offset = circumference - (animatedValue / 100) * circumference
+type TargetCard = {
+  title: string;
+  desc: string;
+  mediaType?: "image" | "video";
+  mediaSrc?: string;
+};
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimatedValue(value)
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [value])
+const targets: TargetCard[] = [
+  {
+    title: "SNSを売上・集客につなげたい",
+    desc: "Instagramを事業成長に活かしたい中小企業・店舗・D2Cブランドに最適です",
+    mediaType: "image",
+    mediaSrc: "/images/w1.png",
+  },
+  {
+    title: "少人数でも運用の質を落としたくない",
+    desc: "1〜3名体制でも、改善の優先順位が明確になり、安定した運用が続けられます",
+    mediaType: "image",
+    mediaSrc: "/images/w4.png",
+  },
+  {
+    title: "複数アカウントの改善を効率化したい",
+    desc: "アカウントの目的別に学習したAIが運用をサポートするので、アカウントごとの改善もスムーズです",
+    mediaType: "image",
+    mediaSrc: "/images/w3.png",
+  },
+  {
+    title: "振り返りと改善を習慣化したい",
+    desc: "投稿して終わりになりがちな運用でも、次の一手まで自然につながります",
+    mediaType: "image",
+    mediaSrc: "/images/w2.png",
+  },
+];
 
-  return (
-    <svg width={size} height={size} className="transform -rotate-90">
-      {/* 背景円 */}
-      <circle
-        cx={size / 2}
-        cy={size / 2}
-        r={radius}
-        fill="none"
-        stroke="rgba(255, 255, 255, 0.2)"
-        strokeWidth={strokeWidth}
-      />
-      {/* プログレス円 */}
-      <circle
-        cx={size / 2}
-        cy={size / 2}
-        r={radius}
-        fill="none"
-        stroke="white"
-        strokeWidth={strokeWidth}
-        strokeLinecap="round"
-        strokeDasharray={circumference}
-        strokeDashoffset={offset}
-        className="transition-all duration-2000 ease-out"
-      />
-    </svg>
-  )
-}
 
-// 統計円グラフコンポーネント
-function StatCircle({ 
-  value, 
-  unit, 
-  title, 
-  subtitle, 
-  percentage, 
-  showPercentage = true 
-}: { 
-  value: number; 
-  unit: string; 
-  title: string; 
-  subtitle: string; 
-  percentage: number;
-  showPercentage?: boolean;
-}) {
-  const [animatedValue, setAnimatedValue] = useState(0)
-  const size = 160
-  const strokeWidth = 10
-  const radius = (size - strokeWidth) / 2
-  const circumference = 2 * Math.PI * radius
-  const offset = circumference - (animatedValue / 100) * circumference
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimatedValue(percentage)
-    }, 200)
-    return () => clearTimeout(timer)
-  }, [percentage])
+const effectCards = [
+  {
+    no: "1",
+    title: "振り返り時間を短縮",
+    body: "投稿ごとの分析データをまとめて数値化し、振り返りにかかる時間を短くします。",
+    mediaType: "video",
+    mediaSrc: "/images/s1.mp4",
+  },
+  {
+    no: "2",
+    title: "次の施策がすぐ決まる",
+    body: "分析結果をもとに、次に打つ施策をAIが提案。スムーズな改善が可能です。",
+    mediaType: "video",
+    mediaSrc: "/images/s3.mp4",
+  },
+  {
+    no: "3",
+    title: "SNS運用を仕組み化",
+    body: "投稿から振り返りまでの流れを整え、誰が担当しても継続できる運用体制をつくれます",
+    mediaType: "video",
+    mediaSrc: "/images/s2.mp4",
+  },
+  {
+    no: "4",
+    title: "良い投稿を再現しやすい",
+    body: "反応の良かった投稿パターンをすぐに反映。AIで再現しやすい状態を作れます。",
+    mediaType: "video",
+    mediaSrc: "/images/s4.mp4",
+  },
+];
 
-  return (
-    <div className="flex flex-col items-center justify-center p-8">
-      <div className="relative mb-6">
-        <svg width={size} height={size} className="transform -rotate-90">
-          {/* 背景円 */}
-          <circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            fill="none"
-            stroke="#e2e8f0"
-            strokeWidth={strokeWidth}
-          />
-          {/* プログレス円 */}
-          <circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            fill="none"
-            stroke="#ff8a15"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeDasharray={circumference}
-            strokeDashoffset={offset}
-            className="transition-all duration-2000 ease-out"
-          />
-        </svg>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <div className="flex items-baseline justify-center gap-1">
-              <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#ff8a15]">{value}</span>
-              {unit && <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-700">{unit}</span>}
-            </div>
-            {showPercentage && (
-              <div className="text-base font-semibold text-slate-500 mt-1">{percentage}%</div>
-            )}
-          </div>
-        </div>
-      </div>
-      <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-2 text-center">{title}</h3>
-      <p className="text-sm text-slate-600 text-center">{subtitle}</p>
-    </div>
-  )
-}
+const painPoints = [
+  {
+    icon: "/images/003.svg",
+    title: "SNS運用が続かない",
+    desc: "投稿準備から振り返りまで手作業が多く、日々の業務に追われて運用が止まりがち",
+  },
+  {
+    icon: "/images/9780.svg",
+    title: "何を分析すればいいか分からない",
+    desc: "どの数字を見ればよいか分からず、投稿後の振り返りが感覚頼りになってしまう",
+  },
+  {
+    icon: "/images/ai-card3.svg",
+    title: "運用が属人化してしまう",
+    desc: "担当者ごとに判断基準が異なり、チームで同じ品質を保ちながら運用しにくい",
+  },
+];
+
+const whatsCards = [
+  { no: "1", title: "AIが学び続ける仕組み", desc: "使うほどアカウントの傾向を学習し、提案が自社に最適化。運用するほど精度が高まります", mediaType: "image", mediaSrc: "/images/lpsig1.png" },
+  { no: "2", title: "多角的で深い分析", desc: "10項目以上を自動分析し、どの投稿がどのKPIに貢献したかを一目で把握できます", mediaType: "video", mediaSrc: "/images/ai14.mp4" },
+  { no: "3", title: "PDCAで継続改善", desc: "振り返りから来月の施策提案まで自動で連携。毎月の運用改善を止めずに回せます", mediaType: "video", mediaSrc: "/images/ai15.mp4" },
+  { no: "4", title: "具体的な投稿案を提示", desc: "そのまま使える投稿ハッシュタグを生成。もう投稿ネタに悩むことはありません", mediaType: "video", mediaSrc: "/images/ai13.mp4" },
+  { no: "5", title: "次の一手が見える化", desc: "投稿後の分析で終わらず、次にすべきアクションまで具体的に提案します", mediaType: "video", mediaSrc: "/images/ai12.mp4" },
+];
+
+const featureReasons = [
+  {
+    label: "REASON 01",
+    title: "運用計画から投稿文作成まで1ページで完結",
+    body: "月初に方針を決めるだけで終わらず、週間の投稿テーマ設計、日々の投稿文作成、ハッシュタグの最適化、今月の成果までを同じ画面で管理できます。複数のページを行き来する必要がないため、作業の抜け漏れや確認ミスを減らしながら、運用の流れを止めずに回せる状態をつくれます。",
+    mediaType: "image",
+    mediaSrc: "/images/top01.png",
+  },
+  {
+    label: "REASON 02",
+    title: "投稿データと画像内容をまとめて分析",
+    body: "いいね・保存・リーチなどの投稿データだけを見るのではなく、実際に使った画像の構図や見せ方、テキスト量、トーンの傾向までまとめて確認できます。数字とクリエイティブを切り離さずに振り返れるので、なぜ反応が良かったのか、どこを直せば次に改善できるのかを具体的に整理しやすくなります。",
+    mediaType: "image",
+    mediaSrc: "/images/f2.png",
+  },
+  {
+    label: "REASON 03",
+    title: "月次の振り返りが次につながる",
+   body: "月次レポートはAI自動生成。その月に見えた傾向や課題を次月の具体施策にそのまま反映できるため、振り返りと実行が分断されません。毎月の学びを確実に次の運用へ反映し、止まりにくい改善サイクルを継続できます。",
+    mediaType: "image",
+    mediaSrc: "/images/f3.png",
+  },
+];
+
+const moreFeatureCards = [
+  { category: "投稿", title: "分析データの振り返り", mediaType: "image", mediaSrc: "/images/m1.png" },
+  { category: "分析", title: "KPIに寄与した投稿一覧", mediaType: "image", mediaSrc: "/images/m2.png" },
+  { category: "相談", title: "AIチャットで気軽に相談", mediaType: "image", mediaSrc: "/images/m7.png" },
+  { category: "改善", title: "投稿別の改善提案", mediaType: "image", mediaSrc: "/images/m3.png" },
+  { category: "レポート", title: "月次レポート自動生成", mediaType: "image", mediaSrc: "/images/m.png" },
+  { category: "学習", title: "成功パターンの蓄積", mediaType: "image", mediaSrc: "/images/m5.png" },
+  { category: "運用", title: "アカウント管理の一元化", mediaType: "image", mediaSrc: "/images/m6.png" },
+  { category: "計画", title: "投稿テーマ自動作成", mediaType: "image", mediaSrc: "/images/m8.png" },
+];
+
+const plans = [
+  {
+    name: "スタンダードプラン",
+    posting: "月4回の投稿",
+    monthly: "15,000円",
+    operation: "40,000円",
+    editing: "20,000円",
+  },
+  {
+    name: "ベーシックプラン",
+    posting: "月8回の投稿",
+    monthly: "30,000円",
+    operation: "80,000円",
+    editing: "40,000円",
+  },
+  {
+    name: "プロ",
+    posting: "無制限",
+    monthly: "60,000円",
+    operation: "要相談",
+    editing: "要相談",
+  },
+];
+
+const faqs = [
+  {
+    q: "どこまで自動化できますか？",
+    a: "投稿と分析データの入力を起点に、要因整理・改善提案・次アクション設計までを自動化できます。投稿作業そのものは手動運用です。",
+  },
+  {
+    q: "対応しているSNSは何ですか？",
+    a: "現在はInstagram運用に特化しています。運用改善に必要な分析・振り返り・提案フローを一貫して支援します。",
+  },
+  {
+    q: "導入までどれくらいかかりますか？",
+    a: "お問い合わせ後、ヒアリングと初期設定を行い、最短で数日以内に運用開始できます。体制や目的に合わせて導入手順を調整します。",
+  },
+  {
+    q: "料金はどう決まりますか？",
+    a: "基本は月額15,000円からで、詳細は運用内容に応じてご案内します。まずはお問い合わせ時に現状の運用体制をお聞かせください。",
+  },
+  {
+    q: "導入後のサポートはありますか？",
+    a: "はい。運用中の不明点や活用相談に対応しながら、継続的に改善サイクルを回せるようサポートします。",
+  },
+  {
+    q: "完全自動運用ですか？",
+    a: "投稿作業自体は手動で行っていただきますが、入力後のデータ整理・示唆抽出・改善提案・次月計画の設計までをAIが自動で支援します。運用判断にかかる工数を大幅に削減できます。"
+  },
+  {
+    q: "対応しているSNSは何ですか？",
+    a: "現在はInstagram運用に特化しています。今後は他SNSへの対応も順次拡張予定です。"
+  },
+  {
+    q: "専門知識がなくても使えますか？",
+    a: "はい。専門知識不要で運用可能です。分析結果は自動で整理され、次に取るべきアクションまで提示されます。"
+  },
+  {
+    q: "設定やデータ入力は難しいですか？",
+    a: "基本的な投稿データの入力のみで利用開始できます。複雑な分析設定や専門的な操作は不要です。"
+  }
+];
+
+const onboardingFlow = [
+  { step: "01", title: "お問い合わせ", desc: "運用状況とご相談内容を確認します。", mediaType: "image", mediaSrc: "/images/g1.png" },
+  { step: "02", title: "初回ヒアリング", desc: "目的・体制・課題を整理します。", mediaType: "image", mediaSrc: "/images/g2.png" },
+  { step: "03", title: "初期設定", desc: "運用方針とアカウント情報を設定します。", mediaType: "image", mediaSrc: "/images/g3.png" },
+  { step: "04", title: "運用開始", desc: "投稿と分析入力を起点に改善を開始します。", mediaType: "image", mediaSrc: "/images/g4.png" },
+  { step: "05", title: "サポート", desc: "ご不明点等ございましたらご気軽にご連絡ください", mediaType: "image", mediaSrc: "/images/g5.png" },
+];
 
 export default function Home() {
-  const comparisonColumns = [
-    {
-      key: 'signal',
-      title: 'SNS運用の90%自動化',
-      subtitle: '月額 60,000円',
-      footnote: '専任チームのサポート込み',
-      badge: 'Signal.',
-      highlight: true,
-    },
-    {
-      key: 'tool',
-      title: '一般的なAI投稿ツール',
-      subtitle: '月額 50,000円',
-      footnote: 'サポート・運用代行なし',
-      highlight: false,
-    },
-    {
-      key: 'cheap',
-      title: '自動投稿ツール',
-      subtitle: '月額 10,000円',
-      footnote: 'テンプレ配信・自動生成のみ',
-      highlight: false,
-    },
-  ] as const
+  const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
+  const activeFeature = featureReasons[activeFeatureIndex] || featureReasons[0];
 
-  const indicatorStyles: Record<string, string> = {
-    '◎': 'bg-[#ff8a15] text-white',
-    '○': 'bg-[#ff8a15]/20 text-[#ff8a15]',
-    '△': 'bg-amber-100 text-amber-600',
-    '×': 'bg-slate-200 text-slate-500',
-    default: 'bg-slate-200 text-slate-500',
-  }
+  const renderWhatsCardMedia = (card: { no?: string; title: string; mediaType?: string; mediaSrc?: string }, className = "h-full w-full") => {
+    if (card.mediaType === "video" && card.mediaSrc) {
+      return (
+        <video className={`${className} object-cover object-center`} autoPlay muted loop playsInline>
+          <source src={card.mediaSrc} type="video/mp4" />
+        </video>
+      );
+    }
 
-  const comparisonRows = [
-    {
-      label: 'AI利用回数（上限）',
-      signal: { indicator: '◎', detail: '全AI機能を上限なしで利用可能' },
-      tool: { indicator: '△', detail: '月50回までなど制限あり' },
-      cheap: { indicator: '×', detail: '基本機能のみ利用可' },
-    },
-    {
-      label: 'AI学習・カスタマイズ',
-      signal: { indicator: '◎', detail: 'アカウント固有のトーン・NG構成を学習' },
-      tool: { indicator: '○', detail: '一般モデルを利用。個別学習なし' },
-      cheap: { indicator: '×', detail: 'テンプレ固定' },
-    },
-    {
-      label: '戦略・施策提案',
-      signal: { indicator: '◎', detail: '分析データに基づきAIが提案' },
-      tool: { indicator: '△', detail: '分析機能のみ、提案はなし' },
-      cheap: { indicator: '×', detail: '分析機能なし' },
-    },
-    {
-      label: '制作・投稿支援',
-      signal: { indicator: '◎', detail: '投稿文生成に加えて、画像・動画の作り方を具体的にアドバイス' },
-      tool: { indicator: '○', detail: '投稿文・ハッシュタグ生成まで対応。撮影・編集は自前' },
-      cheap: { indicator: '×', detail: '自動テンプレ生成' },
-    },
-    {
-      label: '運用サポート体制',
-      signal: { indicator: '◎', detail: '毎月のミーティングで課題と次の一手を明確化' },
-      tool: { indicator: '△', detail: 'メール／チャット対応のみ' },
-      cheap: { indicator: '×', detail: 'サポートなし' },
-    },
-    {
-      label: '成果の持続性',
-      signal: { indicator: '◎', detail: 'PDCAが自動回り、成果が出続ける構造' },
-      tool: { indicator: '○', detail: '改善は自社運用に依存' },
-      cheap: { indicator: '×', detail: '成果検証なし' },
-    },
-  ] as const
-
-  const flowSteps = [
-    {
-      number: '01',
-      title: 'お問い合わせ',
-      caption: '翌営業日以内にご連絡いたします。',
-    },
-    {
-      number: '02',
-      title: '初回打ち合わせ',
-      caption: '現状のSNS運用状況と課題をヒアリング。',
-    },
-    {
-      number: '03',
-      title: 'AIカスタマイズ',
-      caption: '御社専用AIと運用テンプレを構築。',
-    },
-    {
-      number: '04',
-      title: 'ツール引き渡し',
-      caption: '使い方説明を行い、初期運用をスタート。',
-    },
-    {
-      number: '05',
-      title: '月1ミーティングで伴走',
-      caption: '日々の相談にも即対応。',
-    },
-  ]
+    return (
+      <Image
+        src={card.mediaSrc || "/images/placeholder.svg"}
+        alt={`${card.title}のアイコン`}
+        width={640}
+        height={360}
+        className={`${className} object-contain`}
+      />
+    );
+  };
 
   return (
-    <div className="bg-white min-h-screen">
-      <Header />
-
-{/* ================== SEOキーワードセクション（非表示） ================== */}
-<section className="sr-only">
-  SNS運用・AIマーケティングならSignal。
-  Instagram、TikTok、X（旧Twitter）、YouTubeを活用し、
-  KPI逆算型PDCAで集客・売上アップを実現。
-  ECやギフト、高単価商品のブランド構築、
-  中小企業・スタートアップのSNS戦略まで
-  Signalがトータルでサポートします。
-  Signal, SNS運用, Instagram, TikTok, X, Twitter, YouTube, AIマーケティング,
-  SNS分析, 保存率, いいね率, KPI, PDCA, ブランディング, EC, ギフト, 小売, 高単価商品,
-  スタートアップ支援, 中小企業, SNS広告, 投稿戦略, AI診断, AI分析, コンテンツマーケティング,
-  フォロワー増加, 自動化, SNSコンサル, SNSデータ分析, SNS改善, SNSトレンド, mogcia, MOGCIA, MOGCIA Coffee
-</section>
-
-
-
-
-{/* ================== ファーストビュー ================== */}
-<section 
-  className="relative w-full min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] lg:min-h-[85vh] flex items-center overflow-hidden border-b border-slate-200 pt-[4.5rem] pb-6 sm:pt-[5.5rem] sm:pb-8 md:pb-10 lg:pt-[6.5rem] lg:pb-12"
-  style={{
-    backgroundImage: 'url(/images/Signal.002.svg)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center bottom',
-    backgroundRepeat: 'no-repeat',
-  }}
->
-  <div className="relative z-10 w-full">
-    <div className="flex flex-col items-start justify-center px-4 sm:px-6 md:pl-12 lg:pl-16 xl:pl-24 2xl:pl-32">
-
-      {/* === テキスト === */}
-      <div className="relative z-20 space-y-3 sm:space-y-4 md:space-y-5 text-left max-w-lg w-full">
-
-        {/* === タイトル === */}
-        <h1 className="text-[28px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] font-black tracking-tight leading-tight text-white drop-shadow-lg">
-          Signal.
-        </h1>
-
-        {/* === サブタイトル === */}
-        <h2 className="text-[16px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[40px] font-black tracking-tight leading-tight text-white drop-shadow-lg">
-          SNS運用の90％を自動化
-        </h2>
-
-        {/* === サブコピー === */}
-        <p className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed font-medium drop-shadow-md">
-        ノウハウ不要で、続けられるSNS運用を<br />
-        AIが学習して、負担のない投稿サイクルを実現
-        </p>
-
-        {/* === CTA === */}
-        <div className="pt-4 sm:pt-5 md:pt-6 lg:pt-7 flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-white text-[#ff8a15] border-2 border-white text-xs sm:text-sm md:text-base font-bold rounded-lg shadow-xl hover:bg-slate-50 hover:border-slate-200 transition-all duration-300 w-fit sm:w-auto"
-          >
-            問い合わせをする
-            
-          </a>
-
-          <a
-            href="/features"
-            className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-white text-slate-900 text-xs sm:text-sm md:text-base font-bold rounded-lg hover:bg-slate-50 transition-all duration-300 w-fit sm:w-auto"
-          >
-            サービス概要を見る
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-{/* ================== こんなお悩みありませんか？ ================== */}
-<section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 bg-gradient-to-br from-slate-50 via-white to-orange-50/30 relative overflow-hidden">
-  
-  <div className="relative max-w-5xl mx-auto">
-    <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-      <div className="flex flex-col items-center">
-        <h2 className="text-xl sm:text-[28px] lg:text-[30px] font-semibold tracking-tight text-slate-900 mb-4 sm:mb-6 leading-tight text-center px-2">
-          こんなお悩みありませんか？
-        </h2>
-        <p className="max-w-3xl text-sm sm:text-base text-slate-600 leading-relaxed">
-        SNS運用で、多くの企業様が共通して抱える課題があります<br />
-        代表的なものを、以下にまとめました
-        </p>
-      </div>
-    </div>
-    
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
-      {/* 1. 投稿が伸びない */}
-      <div className="flex flex-col items-center">
-        <div className="h-40 sm:h-48 flex items-center justify-center mb-4 sm:mb-6">
-          <img src="/images/flag.svg" alt="投稿が伸びない" className="h-[140px] sm:h-[180px] w-auto object-contain" />
-        </div>
-        <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-slate-800 text-center">
-          勝ちパターンが見えない
-        </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-center">
-          過去投稿の何が刺さったのか分析できず、<br className="hidden sm:block" />
-          次の一手が感覚頼りになってしまう
-        </p>
-      </div>
-
-      {/* 2. 売上に繋がらない */}
-      <div className="flex flex-col items-center">
-        <div className="h-40 sm:h-48 flex items-center justify-center mb-4 sm:mb-6">
-          <img src="/images/chart.svg" alt="売上に繋がらない" className="h-[130px] sm:h-[160px] w-auto object-contain" />
-        </div>
-        <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-slate-800 text-center">
-          成果に結びつかない
-        </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-center">
-          フォロワーは増えても売上や来店に<br className="hidden sm:block" />
-          つながる導線が描けていない
-        </p>
-      </div>
-
-      {/* 3. SNSノウハウ・担当がいない */}
-      <div className="flex flex-col items-center">
-        <div className="h-40 sm:h-48 flex items-center justify-center mb-4 sm:mb-6">
-          <img src="/images/003.svg" alt="SNS担当がいない" className="h-[110px] sm:h-[130px] w-auto object-contain" />
-        </div>
-        <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-slate-800 text-center">
-          ノウハウが分散している
-        </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-center">
-          担当者の属人的な判断に依存し<br className="hidden sm:block" />
-          ノウハウが組織に蓄積されない
-        </p>
-      </div>
-
-      {/* 4. AIを使っても成果が出ない */}
-      <div className="flex flex-col items-center">
-        <div className="h-40 sm:h-48 flex items-center justify-center mb-4 sm:mb-6">
-          <img src="/images/ai.svg" alt="AIを使っても成果が出ない" className="h-[130px] sm:h-[160px] w-auto object-contain" />
-        </div>
-        <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-slate-800 text-center">
-          AIが現場に馴染まない
-        </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-center">
-          汎用AIを試したもののブランドとの<br className="hidden sm:block" />
-          一貫性や精度が合わず定着しない
-        </p>
-      </div>
-
-      {/* 5. 強みが伝わらない */}
-      <div className="flex flex-col items-center">
-        <div className="h-40 sm:h-48 flex items-center justify-center mb-4 sm:mb-6">
-          <img src="/images/9780.svg" alt="強みが伝わらない" className="h-[130px] sm:h-[160px] w-auto object-contain" />
-        </div>
-        <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-slate-800 text-center">
-          ブランドらしさが伝わらない
-        </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-center">
-          実店舗やサービスの魅力を表現する<br className="hidden sm:block" />
-          言葉やビジュアルに落とし込めない
-        </p>
-      </div>
-
-      {/* 6. 運用に手が回らない */}
-      <div className="flex flex-col items-center">
-        <div className="h-40 sm:h-48 flex items-center justify-center mb-4 sm:mb-6">
-          <img src="/images/004.svg" alt="運用に手が回らない" className="h-[130px] sm:h-[160px] w-auto object-contain" />
-        </div>
-        <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-slate-800 text-center">
-          改善サイクルが回らない
-        </h3>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-center">
-          日々の業務に追われて分析が後回し<br className="hidden sm:block" />
-          プランが作りっぱなしになる
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<AboutSignalSection />
-
-
-{/* ================== 数字で見るSignal. ================== */}
-<section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
-  <div className="max-w-7xl mx-auto">
-    {/* ヘッダー */}
-    <div className="text-center mb-12 lg:mb-16">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4">
-        <span className="text-slate-900">数字で見る Signal<span className="text-[#ff8a15]">.</span></span>
-      </h2>
-      <p className="text-slate-600 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-2">
-        数字が証明する、Signal.の実力
-      </p>
-    </div>
-
-    {/* 統計 - 円グラフ形式 */}
-    <div className="space-y-12 lg:space-y-16">
-      {/* 上段: 2つ */}
-      <div className="grid gap-8 lg:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 justify-items-center">
-        {/* 90% 自動化 */}
-        <StatCircle 
-          value={90} 
-          unit="%" 
-          title="SNS運用を自動化"
-          subtitle="あなたは「投稿ボタン」を押すだけ"
-          percentage={90}
-          showPercentage={false}
-        />
-
-        {/* 5分 - 時間短縮 */}
-        <StatCircle 
-          value={5} 
-          unit="分" 
-          title="1投稿あたりの運用時間"
-          subtitle="従来: 30-60分 → Signal.: 5分"
-          percentage={83}
-          showPercentage={false}
-        />
-      </div>
-
-      {/* 下段: 3つ */}
-      <div className="grid gap-8 lg:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
-        {/* 0 ネタ切れ */}
-        <StatCircle 
-          value={0} 
-          unit="" 
-          title="ネタ切れ"
-          subtitle="AIが無限に投稿テーマを提案"
-          percentage={0}
-          showPercentage={false}
-        />
-
-        {/* 4時間短縮 */}
-        <StatCircle 
-          value={4} 
-          unit="時間" 
-          title="撮影準備短縮"
-          subtitle="従来: 5-8時間 → Signal.: 1時間"
-          percentage={50}
-          showPercentage={false}
-        />
-
-        {/* 10+ 分析項目 */}
-        <StatCircle 
-          value={10} 
-          unit="+" 
-          title="自動分析項目"
-          subtitle="従来: 3-5項目 → Signal.: 10+項目"
-          percentage={100}
-          showPercentage={false}
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-{/* ================== 導入フロー ================== */}
-<section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-white">
-  <div className="max-w-7xl mx-auto space-y-12">
-    <div className="text-center space-y-4">
-      <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#ff8a15] rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] shadow-sm">
-        Flow
-      </div>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
-        Signal<span className="text-[#ff8a15]">.</span>導入までの5ステップ
-      </h2>
-      
-    </div>
-
-    <div className="mt-8 lg:mt-12">
-      <div className="space-y-6 lg:space-y-8">
-        {/* 上段: 2つ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-6">
-          {flowSteps.slice(0, 2).map((item) => (
-            <div
-              key={item.number}
-              className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 lg:p-6 hover:shadow-md transition-shadow flex flex-col"
-            >
-              <div className="flex flex-col items-center text-center mb-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ff8a15] text-white font-bold shadow-lg mb-4 lg:h-16 lg:w-16">
-                  {item.number}
-                </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">{item.title}</h3>
-              </div>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed text-center flex-1">{item.caption}</p>
-            </div>
-          ))}
-        </div>
-        {/* 下段: 3つ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6">
-          {flowSteps.slice(2, 5).map((item) => (
-            <div
-              key={item.number}
-              className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 lg:p-6 hover:shadow-md transition-shadow flex flex-col"
-            >
-              <div className="flex flex-col items-center text-center mb-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ff8a15] text-white font-bold shadow-lg mb-4 lg:h-16 lg:w-16">
-                  {item.number}
-                </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">{item.title}</h3>
-              </div>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed text-center flex-1">{item.caption}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    
-  </div>
-</section>
-
-
-
-{/* ================== 料金プラン ================== */}
-<section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-white">
-  <div className="max-w-7xl mx-auto space-y-12">
-    <div className="text-center space-y-4">
-      <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff8a15]/10 text-[#ff8a15] rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.22em]">
-        Pricing
-          </div>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
-        目的に合わせて選べる3つのプラン
-      </h2>
-      
-    </div>
-
-    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8">
-          <div className="flex-1">
-        <h3 className="text-lg font-semibold text-slate-900 mb-1">スモールスタート向けサポート</h3>
-        <p className="text-sm text-slate-600">
-          アカウント開設支援（¥15,000）ではプロフィール設計・導線整備・初期投稿設計までを伴走します。これからSNSを始める企業様に最適です。
-        </p>
-            </div>
-      <a href="/contact" className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-[#ff8a15] border border-[#ff8a15] rounded-lg hover:bg-[#ff8a15]/10 transition">
-        詳しく相談する
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
-          </div>
-
-    <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {[
-        {
-          name: "ベーシックプラン",
-          price: "¥15,000 / 月",
-          description: "お試し感覚で始められる、投稿ネタ提案プラン",
-          recommended: false,
-          features: [
-            "AIによる投稿ネタ提案",
-            "ハッシュタグ自動生成",
-            "簡易的なスケジュール管理",
-          ],
-        },
-        {
-          name: "スタンダードプラン",
-          price: "¥30,000 / 月",
-          description: "投稿ネタ提案に加えて、軽い分析機能も利用可能",
-          recommended: false,
-          features: [
-            "AIによる投稿ネタ提案",
-            "ハッシュタグ自動生成",
-            "投稿文の自動生成",
-            "投稿パフォーマンスの軽い分析",
-            "簡易的なスケジュール管理",
-          ],
-        },
-        {
-          name: "プロプラン",
-          price: "¥60,000 / 月",
-          description: "Signal.の全機能をフル活用できるプラン",
-          recommended: true,
-          features: [
-            "Signal.全機能利用可能",
-            "AIによる投稿ネタ提案",
-            "詳細な投稿パフォーマンス分析",
-            "KPI設定・目標シュミレーション",
-            "PDCAサイクルによる継続改善",
-            "過去投稿データの詳細分析",
-            "成功・失敗パターンの自動抽出",
-            "ブランド設定・口調・世界観の反映",
-            "コメント返信アシスト",
-            "専任スタッフサポート",
-          ],
-        },
-      ].map((plan) => (
-        <div
-          key={plan.name}
-          className={`relative rounded-2xl border ${plan.recommended ? 'border-[#ff8a15] bg-gradient-to-br from-[#ff8a15] to-orange-600 text-white shadow-xl' : 'border-slate-200 bg-white shadow-sm'} p-6 sm:p-8 flex flex-col gap-5`}
-        >
-          {plan.recommended && (
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <div className="bg-white text-[#ff8a15] px-4 py-1 rounded-full text-xs font-semibold shadow">
-                人気No.1
-        </div>
-      </div>
-          )}
-
-          <div className="space-y-2">
-            <h3 className={`text-xl font-bold ${plan.recommended ? 'text-white' : 'text-slate-900'}`}>{plan.name}</h3>
-            <p className={`text-sm ${plan.recommended ? 'text-white/80' : 'text-slate-600'}`}>{plan.description}</p>
-            </div>
-
-          <div>
-            <div className={`text-2xl sm:text-3xl font-extrabold ${plan.recommended ? 'text-white' : 'text-slate-900'}`}>{plan.price}</div>
-            <div className={`text-xs sm:text-sm ${plan.recommended ? 'text-white/70' : 'text-slate-500'}`}>最低契約期間：12ヶ月</div>
-          </div>
-
-          <ul className="space-y-3 text-sm">
-            {plan.features.map((feature) => (
-              <li key={feature} className="flex items-start gap-3">
-                <span className={`mt-1 inline-flex w-5 h-5 items-center justify-center rounded-full ${plan.recommended ? 'bg-white/20 text-white' : 'bg-[#ff8a15]/10 text-[#ff8a15]'}`}>
-                  ✓
-                </span>
-                <span className={plan.recommended ? 'text-white/90 leading-relaxed' : 'text-slate-700 leading-relaxed'}>{feature}</span>
-                </li>
-            ))}
-              </ul>
-          </div>
-      ))}
-        </div>
-      </div>
-
-      {/* その他のプラン */}
-      <div className="mt-12">
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
-          <div className="text-center space-y-4">
-            <h3 className="text-lg sm:text-xl font-semibold text-slate-900">
-              その他のプランもご用意しております
-            </h3>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-              運用代行や編集代行など、ご予算に応じた様々なプランをご用意しております。<br />
-              詳しくはお問い合わせください。
+    <div className="bg-white text-slate-900">
+      <section id="demo" className="px-5 pb-16 pt-28 sm:px-8 lg:px-16">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="lg:pl-28 xl:pl-36">
+            <p className="text-[20px] font-semibold tracking-[0.08em] text-slate-900 sm:text-[20px]">
+              あなた専属のSNS AI秘書
             </p>
-            <div className="pt-4">
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#ff8a15] rounded-lg hover:bg-orange-600 transition"
-              >
-                お問い合わせ
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+
+            <h1 className="mt-5 text-6xl font-semibold leading-[1.08] tracking-tight sm:text-6xl lg:text-[68px]">
+              Signal<span className="text-[#ff8a15]">.</span>
+            </h1>
+
+            <p className="mt-5 max-w-[520px] text-base leading-[1.9] text-slate-600 sm:text-[17px]">
+            SNS運用の次の一手を AIが自動で提案<br />
+            分析も投稿アイデアも全部おまかせ もう悩まないSNS運用へ
+            </p>
+
+            <div className="mt-8">
+              <a href="/contact" className="inline-flex border border-[#ff8a15] bg-[#ff8a15] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#ea7e12]">
+                今すぐ問い合わせをする→
               </a>
             </div>
           </div>
-        </div>
-      </div>
-</section>
 
-{/* ================== Value Gap ================== */}
-<section className="py-14 sm:py-18 lg:py-20 px-4 sm:px-6 bg-white">
-  <div className="max-w-7xl mx-auto space-y-8">
-    <div className="text-center space-y-3">
-      <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff8a15]/10 text-[#ff8a15] rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.22em]">
-        Value Gap
-      </div>
-      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900">
-        Signal<span className="text-[#ff8a15]">.</span>と他社ツールの違い
-      </h2>
-      <p className="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
-        「AIを入れたのに運用が回らない」──そんな声に応えるために、Signal<span className="text-[#ff8a15]">.</span>が生まれました。<br />
-        Signal<span className="text-[#ff8a15]">.</span>は、ツール単体では拾いきれない戦略・制作・改善までを伴走チームとAIで完結させます。
-      </p>
-    </div>
-
-    <div className="overflow-x-auto">
-      <div className="relative min-w-[860px] rounded-[32px] bg-white overflow-hidden border border-slate-200">
-          <div className="grid grid-cols-[180px_repeat(3,minmax(0,1fr))]">
-            <div className="bg-slate-900/95 text-white px-6 sm:px-7 py-6 sm:py-7 text-sm sm:text-base font-semibold tracking-[0.18em] uppercase flex items-center justify-center shadow-inner">
-              比較項目
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl">
+              <Image src="/images/top01.png" alt="ヒーロー画像" width={1600} height={900} className="h-[300px] w-full object-cover lg:h-[380px]" />
             </div>
-            {comparisonColumns.map((column) => (
-              <div
-                key={column.key}
-                className={`px-6 sm:px-7 py-6 sm:py-7 border-l ${
-                  column.highlight
-                    ? 'relative bg-gradient-to-br from-[#ffe0c5] via-[#fff0e2] to-white text-slate-900 border-[#ffcfa8] shadow-[0_24px_46px_-30px_rgba(255,138,21,0.5)]'
-                    : 'bg-slate-900 text-white/90 border-slate-800/80'
-                }`}
-              >
-                {column.highlight && (
-                  <span className="absolute inset-y-0 right-0 w-[6px] bg-[#ff8a15]" aria-hidden="true" />
-                )}
-                <div className="flex items-center gap-2">
-                  {column.highlight && (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-white text-[#ff8a15] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] shadow-sm">
-                      {column.badge}
-                    </span>
-                  )}
-                  <span className="text-base sm:text-lg font-bold">{column.title}</span>
+           
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px] bg-white px-6 py-8 sm:px-8 sm:py-10">
+          <div className="text-center">
+            <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">ISSUES</p>
+            <p className="mt-2 text-sm font-semibold text-slate-500 sm:text-base">Instagram運用で</p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">こんなお悩みありませんか？</h2>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {painPoints.map((item) => (
+              <article key={item.title} className="bg-[#fffaf2] p-5 text-left">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-14 w-14 items-center justify-center">
+                    <Image src={item.icon} alt={`${item.title}のアイコン`} width={140} height={140} className="h-full w-full object-contain" />
+                  </div>
+                  <h3 className="text-lg font-semibold leading-tight text-slate-900">{item.title}</h3>
                 </div>
-                <p className={`mt-2 text-sm font-semibold ${column.highlight ? 'text-[#ff7115]' : 'text-white'}`}>
-                  {column.subtitle}
-                </p>
-                {column.footnote && (
-                  <p className={`mt-1 text-xs ${column.highlight ? 'text-slate-600' : 'text-white/70'}`}>
-                    {column.footnote}
-                  </p>
-                )}
-              </div>
+                <p className="mt-4 text-sm leading-relaxed text-slate-700">{item.desc}</p>
+              </article>
             ))}
           </div>
-          <div className="divide-y divide-slate-200 bg-white/95 backdrop-blur-[2px]">
-            {comparisonRows.map((row) => (
-              <div key={row.label} className="grid grid-cols-[180px_repeat(3,minmax(0,1fr))]">
-                <div className="bg-[#f4f6fb] px-6 sm:px-7 py-5 sm:py-6 text-sm sm:text-base font-semibold text-slate-700/90">
-                  {row.label}
-                </div>
-                {comparisonColumns.map((column) => {
-                  const cell = row[column.key]
-                  const indicatorClass = indicatorStyles[cell?.indicator ?? 'default'] ?? indicatorStyles.default
-                  return (
-                    <div
-                      key={column.key}
-                      className={`px-6 sm:px-7 py-5 sm:py-6 border-l border-slate-200 ${
-                        column.highlight ? 'bg-[#fff7ef]' : 'bg-white'
-                      }`}
-                    >
-                      <div className="flex items-start gap-3">
-                        <span
-                          className={`inline-flex h-7 w-7 items-center justify-center rounded-full text-sm font-semibold shadow-sm ${indicatorClass}`}
-                        >
-                          {cell?.indicator}
-                        </span>
-                        <p
-                          className={`text-sm leading-relaxed ${
-                            column.highlight ? 'text-slate-700' : 'text-slate-600'
-                          }`}
-                        >
-                          {cell?.detail}
-                        </p>
-                      </div>
+         
+        </div>
+      </section>
+
+      
+      <section className="bg-white mt-10 px-5 pb-8 pt-6 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1700px] text-center">
+          <p className="text-[30px] font-bold tracking-tight sm:text-[30px]">
+            <span className="text-[#ff8a15]">what&apos;s </span>
+            <span className="text-slate-900">Signal</span>
+            <span className="text-[#ff8a15]">.</span>
+          </p>
+          <h2 className="mt-3 text-[24px] font-semibold text-slate-900 sm:text-[24px]">あなた専属のSNS AI秘書</h2>
+          
+          <div className="mx-auto mt-5 max-w-4xl space-y-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+            <p>SNSの運用計画や運用戦略・投稿案・分析改善までを自動化するSNS運用特化AIです</p>
+            <p>運用目的に合わせた提案で、誰でもノウハウ不要で一定のクオリティーを保ったSNS運用を実現します</p>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-6xl px-5 py-3 sm:px-8 sm:py-4">
+            {whatsCards.map((card, idx) => (
+              <article key={card.title} className={`${idx !== whatsCards.length - 1 ? "border-b border-[#eadbc4]" : ""}`}>
+                <div className="grid items-center gap-4 py-5 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8 md:py-7">
+                  <div className={`mx-auto w-full overflow-hidden rounded-sm bg-white ${card.no === "01" ? "h-[90px] max-w-[170px] md:h-24 md:max-w-[190px]" : "h-[72px] max-w-[140px] md:h-20"}`}>
+                    {renderWhatsCardMedia(card)}
+                  </div>
+                  <div className="text-left">
+                    <div className="flex items-center gap-3">
+                      <p className="text-[20px] font-semibold leading-none text-[#ff8a15]">{card.no}</p>
+                      <h3 className="text-[20px] font-semibold leading-tight text-slate-900">{card.title}</h3>
                     </div>
-                  )
-                })}
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600 md:text-base">{card.desc}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div>
+            <p className="text-sm font-semibold text-slate-900">企業のSNS運用、もう迷わない</p>
+            <h2 className="mt-4 text-4xl font-semibold leading-[1.08] text-slate-900 sm:text-4xl">
+              <span className="marker-swipe block">手探り運用から続けられる運用へ</span>
+             
+            </h2>
+            <div className="mt-8 space-y-4 text-sm leading-relaxed text-slate-900 sm:text-base">
+  <p>
+    SNS運用は、投稿を作るだけでは終わりません。テーマの設計、投稿後の反応確認、数字の読み取り、次回への改善まで、
+    毎回判断することが多く、担当者ごとの経験値に依存しやすい業務です。忙しい日々の中で「何から見直せばいいか」が
+    曖昧になると、更新頻度も改善速度も落ちてしまいます。
+  </p>
+  <p>
+    <span className="font-bold text-slate-900">Signal<span className="text-[#ff8a15]">.</span></span>は、投稿結果の整理から改善アクションの提案までを一つの流れでつなぎ、運用の迷いを減らします。
+    チーム内で判断基準をそろえながら、無理なく回せる運用サイクルをつくることで、属人化しないSNS運用を支えます。
+  </p>
+
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-xl">
+            <Image src="/images/A_01_office_environment1.png" alt="ビジョン画像" width={1400} height={900} className="h-[260px] w-full object-contain lg:h-[400px]" />
+          </div>
+        </div>
+      </section>
+
+
+      <section id="service" className="bg-white px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">INSIGHTS</p>
+          <h2 className="mt-2 text-3xl font-semibold text-slate-900">
+            Signal<span className="text-[#ff8a15]">.</span>で得られる効果
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
+          投稿して終わり、数字は見るだけ――
+          そんな運用から、改善が回り続ける運用へ
+          </p>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {effectCards.map((card) => (
+              <article key={card.title} className="relative overflow-visible border border-[#efdfc7] bg-[#fdf6ea] pt-7 min-h-[360px]">
+                <span className="absolute left-1/2 top-0 inline-flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#ff8a15] text-base font-bold text-white">
+                  {card.no}
+                </span>
+                <div className="bg-[#ff8a15] px-4 py-3 text-center text-xl font-bold text-white">{card.title}</div>
+                <div className="space-y-5 px-5 py-6 text-center">
+                  <div className="mx-auto flex h-56 w-56 items-center justify-center rounded-md border-2 border-dashed border-[#e8d7bd] bg-[#fffaf2] sm:h-60 sm:w-60">
+                    {card.mediaType === "video" && card.mediaSrc ? (
+                      <video className="h-full w-full object-cover" autoPlay muted loop playsInline>
+                        <source src={card.mediaSrc} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <Image src="/images/placeholder.svg" alt={`${card.title}の説明画像`} width={320} height={180} className="h-full w-full object-contain p-2" />
+                    )}
+                  </div>
+                  <p className="text-sm leading-relaxed text-slate-700">{card.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          
+        </div>
+      </section>
+
+      <section id="target" className="px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">FOR WHO</p>
+          <h2 className="mt-2 text-3xl font-semibold leading-tight text-slate-900">こんな企業・担当者に</h2>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
+            SNS運用を止めずに回したい企業・担当者へ<br />少人数体制でもSNS運用が継続できる体制をつくれます
+          </p>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {targets.map((target) => (
+              <article key={target.title} className="overflow-hidden border border-slate-200 bg-white md:aspect-square">
+                <div className="flex h-40 items-center justify-center border-b border-slate-200 md:h-[70%]">
+                  {target.mediaType === "video" && target.mediaSrc ? (
+                    <video className="h-full w-full object-cover object-center" autoPlay muted loop playsInline>
+                      <source src={target.mediaSrc} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image
+                      src={target.mediaSrc || "/images/placeholder.svg"}
+                      alt={`${target.title}のイメージ`}
+                      width={900}
+                      height={600}
+                      className="h-[90%] w-[90%] object-contain"
+                    />
+                  )}
+                </div>
+                <div className="px-4 py-4 md:h-[30%]">
+                  <h3 className="text-xl font-semibold leading-snug text-slate-900">{target.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{target.desc}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="features" className="px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <div className="text-center">
+            <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">FEATURES</p>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">Signal.が選ばれる理由</h2>
+          </div>
+
+          <div className="mt-10">
+            <p className="mb-3 text-xs font-medium tracking-[0.08em] text-slate-500">気になる理由をタップして内容を切り替え</p>
+            <div className="grid gap-2 sm:grid-cols-3">
+              {featureReasons.map((item, index) => (
+                <button
+                  key={item.title}
+                  type="button"
+                  onClick={() => setActiveFeatureIndex(index)}
+                  className={`rounded-md border px-4 py-3 text-left transition-colors ${
+                    activeFeatureIndex === index
+                      ? "border-[#ff8a15] bg-[#fff4e8] shadow-[inset_0_0_0_1px_#ff8a15]"
+                      : "border-slate-300 bg-slate-50 hover:border-slate-400 hover:bg-white"
+                  }`}
+                >
+                  <p className={`text-[11px] font-semibold tracking-[0.14em] ${activeFeatureIndex === index ? "text-[#ff8a15]" : "text-slate-500"}`}>{item.label}</p>
+                  <p className={`mt-1 text-base leading-tight ${activeFeatureIndex === index ? "font-semibold text-slate-900" : "font-medium text-slate-700"}`}>{item.title}</p>
+                </button>
+              ))}
+            </div>
+
+            <article className="mt-3 grid items-center gap-6 border border-slate-200 bg-white p-6 lg:grid-cols-2 lg:gap-10 lg:p-8">
+              <div>
+                <p className="text-xs font-semibold tracking-[0.14em] text-[#ff8a15]">{activeFeature.label}</p>
+                <h3 className="mt-2 text-2xl font-semibold leading-tight text-slate-900">{activeFeature.title}</h3>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">{activeFeature.body}</p>
+              </div>
+              <div>
+                <div className="mx-auto w-full max-w-[460px] overflow-hidden rounded-lg">
+                  {activeFeature.mediaType === "video" && activeFeature.mediaSrc ? (
+                    <video className="h-full w-full object-contain" autoPlay muted loop playsInline>
+                      <source src={activeFeature.mediaSrc} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image
+                      src={activeFeature.mediaSrc || "/images/home.png"}
+                      alt={`${activeFeature.title}の画面イメージ`}
+                      width={1600}
+                      height={1000}
+                      className="h-full w-full object-contain"
+                    />
+                  )}
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 px-5 pb-10 pt-6 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <div className="text-center">
+            <p className="text-2xl font-semibold text-slate-900 sm:text-3xl">他にもこんな機能があります</p>
+          </div>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-2">
+            {["投稿管理", "分析", "改善", "レポート", "学習", "運用", "相談", "計画"].map((chip) => (
+              <span key={chip} className="rounded-full bg-white px-4 py-1.5 text-xs font-semibold text-slate-600">
+                {chip}
+              </span>
+            ))}
+          </div>
+
+          <div className="more-features-marquee mt-5">
+            <div className="more-features-track">
+              {[...moreFeatureCards, ...moreFeatureCards].map((item, idx) => (
+                <article key={`${item.title}-${idx}`} className="more-feature-card">
+                  <div className="more-feature-image">
+                    <Image src={item.mediaSrc || "/images/placeholder.svg"} alt={`${item.title}の機能画像`} width={360} height={240} className="h-full w-full object-cover" />
+                  </div>
+                  <p className="mt-3 text-xs font-semibold text-[#ff8a15]">{item.category}</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-800">{item.title}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" className="px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">PRICE</p>
+          <h2 className="mt-2 text-3xl font-semibold text-slate-900">料金プラン</h2>
+          <div className="mt-8 overflow-x-auto border border-[#efdfc7] bg-white">
+            <table className="min-w-[900px] w-full border-collapse text-left">
+              <thead>
+                <tr className="bg-[#fff4e8]">
+                  <th className="border border-[#efdfc7] px-4 py-3 text-base font-semibold text-slate-900">プラン</th>
+                  <th className="border border-[#efdfc7] px-4 py-3 text-base font-semibold text-slate-900">月額</th>
+                  <th className="border border-[#efdfc7] px-4 py-3 text-base font-semibold text-slate-900">運用代行</th>
+                  <th className="border border-[#efdfc7] px-4 py-3 text-base font-semibold text-slate-900">編集代行</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-[#fffaf2]">
+                  <td className="border border-[#efdfc7] px-4 py-3 text-sm text-slate-700">単価</td>
+                  <td className="border border-[#efdfc7] px-4 py-3 text-sm text-slate-700">-</td>
+                  <td className="border border-[#efdfc7] px-4 py-3 text-sm text-slate-700">1投稿 10,000円</td>
+                  <td className="border border-[#efdfc7] px-4 py-3 text-sm text-slate-700">1編集 5,000円</td>
+                </tr>
+                {plans.map((plan) => (
+                  <tr key={plan.name}>
+                    <td className="border border-[#efdfc7] px-4 py-4 text-lg font-medium text-slate-900">{plan.name}</td>
+                    <td className="border border-[#efdfc7] px-4 py-4 text-2xl font-semibold text-slate-900">{plan.monthly}</td>
+                    <td className="border border-[#efdfc7] px-4 py-4 text-2xl font-semibold text-slate-900">{plan.operation}</td>
+                    <td className="border border-[#efdfc7] px-4 py-4 text-2xl font-semibold text-slate-900">{plan.editing}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+         
+          <div className="mt-5">
+            <a href="/contact" className="inline-flex bg-[#ff8a15] px-6 py-3 text-sm font-semibold text-white hover:bg-[#ea7e12]">
+              料金について問い合わせる
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="flow" className="px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <div className="text-center">
+            <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">FLOW</p>
+            <h2 className="mt-2 text-3xl font-semibold text-slate-900">導入までのフロー</h2>
+          </div>
+          <div className="mx-auto mt-8 max-w-4xl space-y-3">
+            {onboardingFlow.map((item, index) => (
+              <div key={item.step}>
+                <article className="grid gap-4 rounded-2xl border border-slate-200 bg-white p-4 sm:grid-cols-[120px_1fr] sm:items-center sm:p-6">
+                  <div className="sm:border-r sm:border-slate-200 sm:pr-5">
+                    <p className="text-xs font-semibold tracking-[0.16em] text-slate-500">STEP</p>
+                    <p className="mt-1 text-4xl font-semibold text-slate-900">{item.step}</p>
+                  </div>
+                  <div className="grid gap-3 sm:grid-cols-[88px_1fr] sm:items-center">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-lg border-2 border-dashed border-slate-300 bg-white">
+                      {item.mediaType === "video" && item.mediaSrc ? (
+                        <video className="h-full w-full object-cover object-center" autoPlay muted loop playsInline>
+                          <source src={item.mediaSrc} type="video/mp4" />
+                        </video>
+                      ) : (
+                        <Image src={item.mediaSrc || "/images/placeholder.svg"} alt={`${item.title}のアイコン`} width={80} height={80} className="h-12 w-12 object-contain" />
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-600">{item.desc}</p>
+                    </div>
+                  </div>
+                </article>
+                {index < onboardingFlow.length - 1 && (
+                  <div className="py-1 text-center text-[#ff8a15]">▼</div>
+                )}
               </div>
             ))}
           </div>
-      </div>
+        </div>
+      </section>
+
+      <section id="faq" className="bg-slate-50 px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1400px]">
+          <p className="text-6xl font-bold tracking-tight text-[#ff8a15] sm:text-7xl">FAQ</p>
+          <h2 className="mt-3 text-3xl font-semibold text-slate-900">よくある質問</h2>
+          <p className="mt-4 text-sm leading-relaxed text-slate-600">
+            Signal.導入にあたってよくいただく質問をまとめています。気になる項目をクリックしてご確認ください。
+          </p>
+
+          <div className="mt-10 border-t border-slate-200">
+            {faqs.map((item, index) => (
+              <details key={`${item.q}-${index}`} className="group border-b border-slate-200">
+                <summary className="flex cursor-pointer list-none items-center gap-4 py-5">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-sm bg-[#ff8a15] text-xs font-bold text-white">
+                    Q
+                  </span>
+                  <span className="text-base font-semibold text-slate-800">{item.q}</span>
+                  <span className="ml-auto text-xl text-[#ff8a15] transition-transform group-open:rotate-180">⌄</span>
+                </summary>
+                <div className="pb-5 pl-10 pr-2">
+                  <p className="text-sm leading-relaxed text-slate-600">A. {item.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="px-5 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1100px] border border-[#efdfc7] bg-white px-6 py-8 sm:px-8 sm:py-10">
+          <div className="grid gap-6 sm:grid-cols-[1fr_auto] sm:items-end">
+            <div>
+              <p className="text-xs font-semibold tracking-[0.12em] text-[#ff8a15]">CONTACT</p>
+              <h2 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
+                Signal<span className="text-[#ff8a15]">.</span>に相談する
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600">
+                料金・機能・導入フローを、現在の運用体制に合わせてご案内します。まずはお気軽にご相談ください。
+              </p>
+            </div>
+            <a href="/contact" className="inline-flex border border-[#ff8a15] bg-white px-8 py-3 text-sm font-semibold text-[#ff8a15] hover:bg-[#fff4e8]">
+              お問い合わせへ
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 text-center space-y-3">
-      <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-        AIだけに任せない。人の知見とAIの力で、成果を出し続ける仕組みを<br />
-        「迷いながら進むSNS運用」から、「一緒に成長する運用」へ
-      </p>
-      <a
-        href="/contact"
-        className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-[#ff8a15] border border-[#ff8a15] rounded-lg bg-white hover:bg-[#ff8a15]/10 transition"
-      >
-        問い合わせ
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-
-
-{/* ================== 料金比較 ================== */}
-    </div>
-  )
+  );
 }

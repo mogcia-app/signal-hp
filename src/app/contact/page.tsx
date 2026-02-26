@@ -1,52 +1,47 @@
 "use client";
+import Image from "next/image";
 import Script from "next/script";
 
 export default function ContactPage() {
+  const fieldClass =
+    "w-full border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 sm:text-base focus:border-[#ff8a15] focus:ring-2 focus:ring-[#ff8a15]/20 transition-colors";
+
   return (
     <>
-    <section className="w-full bg-gray-50 py-20 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="px-4 pb-8 pt-24 sm:px-8 sm:pt-28 lg:px-16">
+      <div className="mx-auto grid w-full max-w-[1400px] gap-8 border border-[#efdfc7] bg-[#fffaf2] px-5 py-8 md:grid-cols-2 md:items-center md:gap-10 md:px-8 md:py-10 lg:px-10">
         <div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+          <p className="text-sm font-semibold tracking-[0.08em] text-[#ff8a15]">CONTACT</p>
+          <h1 className="mt-2 text-3xl font-semibold text-slate-900 sm:text-5xl">
             お問い合わせ
           </h1>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            ご不明な点があれば、どんな些細なことでもお気軽にお問い合わせください。
-            専任スタッフが御社の状況を丁寧にヒアリングし、最適な導入方法や活用法をご提案いたします。
+          <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:mt-5 sm:text-lg">
+            料金・機能・導入フローなど、気になる点はお気軽にお問い合わせください。
+            現在の運用状況をお伺いしながら、最適な活用方法をご案内します。
           </p>
-          <div className="flex items-center space-x-4 text-sm text-gray-500">
-            <div className="flex items-center">
-              <svg className="w-4 h-4 text-[#ff8a15] mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              無料相談実施中
-            </div>
-            <div className="flex items-center">
-              <svg className="w-4 h-4 text-[#ff8a15] mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              24時間以内に返信
-            </div>
-          </div>
+         
         </div>
 
-        <div className="flex justify-center">
-          <img
-            src="/images/1006.svg"
+        <div className="flex justify-center md:justify-end">
+          <Image
+            src="/images/n1.png"
             alt="お問い合わせイメージ"
-            className="w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] max-w-full h-auto"
+            width={420}
+            height={420}
+            className="h-auto w-[200px] max-w-full sm:w-[300px] md:w-[350px] lg:w-[400px]"
           />
         </div>
       </div>
     </section>
 
-      <main className="max-w-2xl mx-auto p-8 bg-white">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-          <h2 className="text-2xl font-bold mb-8 text-gray-900 text-center">
+      <main className="px-4 pb-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[860px] border border-slate-200 bg-white p-5 sm:p-8">
+          <h2 className="text-center text-xl font-semibold text-slate-900 sm:text-2xl">
             お問い合わせフォーム
           </h2>
+         
           <form
-            className="formrun space-y-6"
+            className="formrun mt-6 space-y-5 sm:mt-8 sm:space-y-6"
             action="https://form.run/api/v1/r/575mkrql9bi4nj5njblfa6e6"
             method="post"
           >
@@ -59,7 +54,7 @@ export default function ContactPage() {
     name="お名前"
     type="text"
     data-formrun-required
-    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#ff8a15]/20 focus:border-[#ff8a15] transition-colors"
+    className={fieldClass}
   />
   <div data-formrun-show-if-error="お名前" className="text-red-600 text-sm mt-1">
     お名前を入力してください
@@ -75,7 +70,7 @@ export default function ContactPage() {
     name="企業名"
     type="text"
     data-formrun-required
-    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#ff8a15]/20 focus:border-[#ff8a15] transition-colors"
+    className={fieldClass}
   />
   <div data-formrun-show-if-error="企業名" className="text-red-600 text-sm mt-1">
     企業名を入力してください
@@ -90,7 +85,7 @@ export default function ContactPage() {
   <input
     name="役職"
     type="text"
-    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#ff8a15]/20 focus:border-[#ff8a15] transition-colors"
+    className={fieldClass}
   />
 </div>
 
@@ -102,7 +97,7 @@ export default function ContactPage() {
   <select
     name="お問い合わせ種別"
     data-formrun-required
-    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#ff8a15]/20 focus:border-[#ff8a15] transition-colors"
+    className={fieldClass}
   >
     <option value="">選択してください</option>
     <option value="ツールについて質問">オンライン相談</option>
@@ -119,13 +114,13 @@ export default function ContactPage() {
 {/* 公式SNSアカウント */}
 <div>
   <label className="block mb-2 font-medium text-gray-700">
-    公式SNSアカウント <span className="text-gray-500">[任意]</span>
+    SNSアカウント <span className="text-gray-500">[任意]</span>
   </label>
   <input
-    name="公式SNSアカウント"
+    name="SNSアカウント"
     type="text"
     placeholder="@"
-    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#ff8a15]/20 focus:border-[#ff8a15] transition-colors"
+    className={fieldClass}
   />
 </div>
 
@@ -137,7 +132,7 @@ export default function ContactPage() {
   <select
     name="流入経路"
     data-formrun-required
-    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#ff8a15]/20 focus:border-[#ff8a15] transition-colors"
+    className={fieldClass}
   >
     <option value="">選択してください</option>
     <option value="Google検索">Google検索</option>
@@ -158,7 +153,7 @@ export default function ContactPage() {
   <textarea
     name="お問い合わせ内容"
     data-formrun-required
-    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#ff8a15]/20 focus:border-[#ff8a15] transition-colors resize-none"
+    className={`${fieldClass} resize-none`}
     rows={5}
   ></textarea>
   <div data-formrun-show-if-error="お問い合わせ内容" className="text-red-600 text-sm mt-1">
@@ -168,14 +163,14 @@ export default function ContactPage() {
 
 {/* ロボット確認 */}
 <div>
-  <label className="inline-flex items-center">
+  <label className="flex items-start gap-3">
     <input
       type="checkbox"
       name="私はロボットではありません"
       data-formrun-required
-      className="mr-3 w-4 h-4 text-[#ff8a15] bg-gray-100 border-gray-300 rounded focus:ring-[#ff8a15] focus:ring-2"
+      className="mt-0.5 h-4 w-4 shrink-0 rounded border-gray-300 bg-gray-100 text-[#ff8a15] focus:ring-2 focus:ring-[#ff8a15]"
     />
-    <span className="text-gray-700">私はロボットではありません <span className="text-red-500 font-semibold">[必須]</span></span>
+    <span className="text-sm leading-relaxed text-gray-700">私はロボットではありません <span className="text-red-500 font-semibold">[必須]</span></span>
   </label>
   <div data-formrun-show-if-error="私はロボットではありません" className="text-red-600 text-sm mt-1">
     確認にチェックを入れてください
@@ -205,12 +200,12 @@ export default function ContactPage() {
           </div>
 
           {/* 送信ボタン */}
-          <div className="text-center pt-6">
+          <div className="pt-6 text-center">
             <button
               type="submit"
               data-formrun-error-text="未入力の項目があります"
               data-formrun-submitting-text="送信中..."
-              className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-lg"
+              className="w-full bg-[#ff8a15] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#ea7e12] sm:w-auto"
             >
               送信
             </button>
