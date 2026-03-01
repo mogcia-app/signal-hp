@@ -253,7 +253,13 @@ export default function Home() {
 
           <div className="relative">
             <div className="overflow-hidden rounded-2xl">
-              <Image src="/images/top01.png" alt="ヒーロー画像" width={1600} height={900} className="h-[300px] w-full object-cover lg:h-[380px]" />
+              <Image
+                src="/images/top01.png"
+                alt="ヒーロー画像"
+                width={1600}
+                height={900}
+                className="mx-auto h-[260px] w-[92%] object-contain sm:h-[300px] sm:w-full lg:h-[380px]"
+              />
             </div>
            
           </div>
@@ -325,8 +331,10 @@ export default function Home() {
           <div>
             <p className="text-sm font-semibold text-slate-900">企業のSNS運用、もう迷わない</p>
             <h2 className="mt-4 text-4xl font-semibold leading-[1.08] text-slate-900 sm:text-4xl">
-              <span className="marker-swipe block">手探り運用から続けられる運用へ</span>
-             
+              <span className="text-3xl sm:text-3xl">手探り運用から</span>
+              <span className="mt-2 inline-block bg-[#fff1de] px-3 py-1 text-[#ff8a15]">
+                続けられる運用へ
+              </span>
             </h2>
             <div className="mt-8 space-y-4 text-sm leading-relaxed text-slate-900 sm:text-base">
   <p>
