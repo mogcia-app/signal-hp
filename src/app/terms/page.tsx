@@ -56,6 +56,12 @@ export default function TermsPage() {
         </p>
 
         <p className="mt-8 text-sm text-gray-500">制定日：2025年7月9日</p>
+        <p className="text-sm text-gray-500">
+          サービス名：Signal.
+          <br />運営会社：株式会社MOGCIA
+          <br />運営会社サイト：https://www.mogcia.net/
+          <br />お問い合わせ：info@mogcia.jp
+        </p>
       </div>
     </div>
   );

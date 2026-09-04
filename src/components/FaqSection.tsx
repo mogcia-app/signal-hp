@@ -8,13 +8,13 @@ export default function FaqSection() {
   const faqs = [
     {
       category: "service",
-      question: "サービスについての質問",
-      answer: "SNSデータを解析し、最適な戦略を提案します。",
+      question: "どこまで自動化できますか？",
+      answer: "Instagramプロフェッショナルアカウントを接続すると、投稿情報やパフォーマンスデータをSignal.上で確認できます。また、Signal.から投稿および予約投稿を行えます。投稿内容と公開日時は、お客様自身で確認・設定していただきます。",
     },
     {
       category: "price",
       question: "料金についての質問",
-      answer: "月額プラン制で、SNSごとに追加も可能です。",
+      answer: "月額プラン制で、必要に応じて投稿作成や運用支援などの代行サービスもご案内します。",
     },
     {
       category: "security",
@@ -23,8 +23,8 @@ export default function FaqSection() {
     },
     {
       category: "service",
-      question: "導入後のサポートは？",
-      answer: "専任の担当が定期的にフォローします。",
+      question: "Instagramとの接続や設定は難しいですか？",
+      answer: "お客様自身が管理するInstagramプロフェッショナルアカウントを接続して利用します。接続後は、対象アカウントの投稿情報やパフォーマンスデータをSignal.上で確認できます。",
     },
   ];
 

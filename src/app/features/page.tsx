@@ -43,10 +43,10 @@ export default function FeaturesPage() {
       Signal<span className="text-[#ff8a15]">.</span>の特徴を5つまとめました
     </h2>
     <p className="text-lg sm:text-xl text-slate-600 mb-6">
-      戦略立案から運用改善まで、AIとデータでSNS運用を完全サポート
+      Instagram連携から投稿・予約投稿、運用改善まで、AIとデータでSNS運用をサポート
     </p>
     <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-      Signal<span className="text-[#ff8a15]">.</span>は、単なるAIツールではありません。常に学習を続けるAI、PDCAサイクルによる継続改善、クライアントに最適化された具体的な投稿案、多角的で深いデータ分析、そして高いカスタマイズ性。これら5つの特徴が組み合わさることで、御社のSNS運用を効率化し、成果を最大化します。
+      Signal<span className="text-[#ff8a15]">.</span>は、単なるAIツールではありません。常に学習を続けるAI、PDCAサイクルによる継続改善、クライアントに最適化された具体的な投稿案、多角的で深いデータ分析、Instagramアカウント連携、そして投稿・予約投稿。これらの特徴が組み合わさることで、御社のSNS運用を効率化し、成果を最大化します。
     </p>
   </div>
 </section>
@@ -231,12 +231,11 @@ export default function FeaturesPage() {
       <div className="text-left max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl mt-4">
         <div className="text-sm sm:text-base lg:text-lg text-slate-900 leading-loose space-y-8">
           <p>
-            Signal.は投稿データを多角的に分析し、単なる数字ではなく、具体的な改善策まで提示
+            接続したInstagramアカウントから取得した投稿情報や、リーチ、閲覧、いいね、コメント、保存、シェアなどの実績をまとめて確認・分析できます
           </p>
           <p>
-            過去30件の投稿を個別に解析し、成功パターンや改善ポイントを自動で検出<br />
-            KPIやリーチ、保存、エンゲージメント、フォロワー増加など74項目以上の指標を<br />
-            統合して分析するためどの投稿がどのKPIに寄与しているか一瞬で把握可能です
+            投稿単位の成果をもとに、成功パターンや改善ポイントを整理<br />
+            分析結果をもとに、今後のコンテンツ改善を支援します
           </p>
           <p>
             また月次レポートでは、フィードやリールの統計、オーディエンス属性まで詳細に把握できます<br />
@@ -301,6 +300,43 @@ export default function FeaturesPage() {
   </div>
 </section>
 
+{/* ================== Instagram連携 ================== */}
+<section className="w-full py-16 px-6 bg-white">
+  <div className="max-w-7xl mx-auto">
+    <div className="max-w-3xl">
+      <p className="text-[#ff8a15] font-bold mb-2 text-sm uppercase">INSTAGRAM INTEGRATION</p>
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
+        Instagramアカウント連携
+      </h2>
+      <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+        お客様自身が管理するInstagramプロフェッショナルアカウントを接続し、投稿の管理やパフォーマンスの確認をSignal.上で行えます。
+      </p>
+    </div>
+    <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+      {["Instagramアカウント接続", "投稿一覧の確認", "投稿・予約投稿", "アカウント・投稿分析"].map((item) => (
+        <div key={item} className="p-4 bg-white shadow-sm border border-gray-200">
+          <h4 className="font-bold text-gray-900">{item}</h4>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* ================== 投稿機能 ================== */}
+<section className="w-full py-16 px-6 bg-[#fffaf2]">
+  <div className="max-w-7xl mx-auto">
+    <div className="max-w-3xl">
+      <p className="text-[#ff8a15] font-bold mb-2 text-sm uppercase">PUBLISHING</p>
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
+        投稿・予約投稿
+      </h2>
+      <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+        Signal.からInstagramへの投稿や予約投稿を行えます。投稿内容と公開日時を設定し、お客様自身の操作で公開できます。
+      </p>
+    </div>
+  </div>
+</section>
+
 {/* 他にもこんな機能があります */}
   <section className="w-full py-16 px-6 bg-white">
   <div className="max-w-7xl mx-auto text-center">
@@ -308,6 +344,18 @@ export default function FeaturesPage() {
       他にもこんな基本機能があります
     </h3>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">Instagramアカウント接続</h4>
+        <p className="text-gray-600 text-sm">お客様自身が管理するInstagramプロフェッショナルアカウントを接続できます</p>
+      </div>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">投稿・予約投稿</h4>
+        <p className="text-gray-600 text-sm">投稿内容と公開日時を設定し、お客様自身の操作で公開できます</p>
+      </div>
+      <div className="p-4 bg-white shadow-sm border border-gray-200">
+        <h4 className="font-bold text-gray-900 mb-2">アカウント・投稿分析</h4>
+        <p className="text-gray-600 text-sm">投稿情報やパフォーマンスデータをまとめて確認できます</p>
+      </div>
       <div className="p-4 bg-white shadow-sm border border-gray-200">
         <h4 className="font-bold text-gray-900 mb-2">投稿文AI生成</h4>
         <p className="text-gray-600 text-sm">ボタンひとつでAIが投稿文・ハッシュタグを生成してくれます</p>

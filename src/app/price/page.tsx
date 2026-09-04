@@ -42,6 +42,9 @@ export default function PricePage() {
     <p className="text-gray-600 text-base mb-10">
       事業規模や運用体制に合わせて最適なプランをご提案します。
     </p>
+    <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-gray-600">
+      Signal.では、Instagram運用を支援するシステムの提供に加えて、ご希望のお客様には投稿作成や運用支援などの代行サービスも提供しています。
+    </p>
 
     <div className="grid gap-8 md:grid-cols-3">
 

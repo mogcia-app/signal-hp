@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 import Script from "next/script";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || "https://signalapp.com";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || "https://www.sgnalapp.com";
 const SITE_NAME = "Signal.";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
@@ -17,7 +17,7 @@ export const metadata = {
     default: `${SITE_NAME}｜あなた専属のSNS AI秘書`,
   },
   description:
-    "Instagram運用で止まりやすい振り返りと改善を、Signal.が実務レベルで支援。投稿と分析結果の入力をもとに、AIが次アクションまで提案します。",
+    "Instagramプロフェッショナルアカウントを接続し、投稿管理、投稿・予約投稿、分析、改善提案までSignal.が支援します。",
   alternates: {
     canonical: "/",
   },
@@ -31,7 +31,7 @@ export const metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME}｜あなた専属のSNS AI秘書`,
     description:
-      "Instagram運用のPDCAを、投稿・分析入力を起点にAIが継続支援。改善提案と次月アクションに接続できます。",
+      "Instagram連携、投稿・予約投稿、分析、改善提案まで、Signal.がSNS運用を支援します。",
     images: [
       {
         url: "/ogp.png",
@@ -45,7 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME}｜あなた専属のSNS AI秘書`,
     description:
-      "Instagram運用で止まりやすい振り返りと改善を、Signal.が実務レベルで支援。",
+      "Instagram連携、投稿・予約投稿、分析、改善提案まで、Signal.がSNS運用を支援します。",
     images: ["/ogp.png"],
   },
   robots: {

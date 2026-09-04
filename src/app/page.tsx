@@ -107,12 +107,26 @@ const featureReasons = [
   {
     label: "REASON 02",
     title: "投稿データと画像内容をまとめて分析",
-    body: "いいね・保存・リーチなどの投稿データだけを見るのではなく、実際に使った画像の構図や見せ方、テキスト量、トーンの傾向までまとめて確認できます。数字とクリエイティブを切り離さずに振り返れるので、なぜ反応が良かったのか、どこを直せば次に改善できるのかを具体的に整理しやすくなります。",
+    body: "接続したInstagramアカウントから取得した投稿情報や、リーチ、閲覧、いいね、コメント、保存、シェアなどの実績をまとめて確認・分析できます。分析結果をもとに、今後のコンテンツ改善を支援します。",
     mediaType: "image",
     mediaSrc: "/images/f2.png",
   },
   {
     label: "REASON 03",
+    title: "Instagramアカウント連携",
+    body: "お客様自身が管理するInstagramプロフェッショナルアカウントを接続し、投稿の管理やパフォーマンスの確認をSignal.上で行えます。",
+    mediaType: "image",
+    mediaSrc: "/images/m6.png",
+  },
+  {
+    label: "REASON 04",
+    title: "投稿・予約投稿",
+    body: "Signal.からInstagramへの投稿や予約投稿を行えます。投稿内容と公開日時を設定し、お客様自身の操作で公開できます。",
+    mediaType: "image",
+    mediaSrc: "/images/m8.png",
+  },
+  {
+    label: "REASON 05",
     title: "月次の振り返りが次につながる",
    body: "月次レポートはAI自動生成。その月に見えた傾向や課題を次月の具体施策にそのまま反映できるため、振り返りと実行が分断されません。毎月の学びを確実に次の運用へ反映し、止まりにくい改善サイクルを継続できます。",
     mediaType: "image",
@@ -121,6 +135,10 @@ const featureReasons = [
 ];
 
 const moreFeatureCards = [
+  { category: "連携", title: "Instagramアカウント接続", mediaType: "image", mediaSrc: "/images/m6.png" },
+  { category: "投稿", title: "投稿一覧の確認", mediaType: "image", mediaSrc: "/images/m2.png" },
+  { category: "投稿", title: "投稿・予約投稿", mediaType: "image", mediaSrc: "/images/m8.png" },
+  { category: "分析", title: "アカウント・投稿分析", mediaType: "image", mediaSrc: "/images/m1.png" },
   { category: "投稿", title: "分析データの振り返り", mediaType: "image", mediaSrc: "/images/m1.png" },
   { category: "分析", title: "KPIに寄与した投稿一覧", mediaType: "image", mediaSrc: "/images/m2.png" },
   { category: "相談", title: "AIチャットで気軽に相談", mediaType: "image", mediaSrc: "/images/m7.png" },
@@ -158,7 +176,7 @@ const plans = [
 const faqs = [
   {
     q: "どこまで自動化できますか？",
-    a: "投稿と分析データの入力を起点に、要因整理・改善提案・次アクション設計までを自動化できます。投稿作業そのものは手動運用です。",
+    a: "Instagramプロフェッショナルアカウントを接続すると、投稿情報やパフォーマンスデータをSignal.上で確認できます。また、Signal.から投稿および予約投稿を行えます。投稿内容と公開日時は、お客様自身で確認・設定していただきます。",
   },
   {
     q: "対応しているSNSは何ですか？",
@@ -178,7 +196,7 @@ const faqs = [
   },
   {
     q: "完全自動運用ですか？",
-    a: "投稿作業自体は手動で行っていただきますが、入力後のデータ整理・示唆抽出・改善提案・次月計画の設計までをAIが自動で支援します。運用判断にかかる工数を大幅に削減できます。"
+    a: "投稿内容や公開日時はお客様自身で確認・設定していただきます。Signal.は、接続したInstagramアカウントの投稿情報やパフォーマンスデータの確認、分析、投稿・予約投稿の実行を支援します。"
   },
   {
     q: "対応しているSNSは何ですか？",
@@ -189,8 +207,8 @@ const faqs = [
     a: "はい。専門知識不要で運用可能です。分析結果は自動で整理され、次に取るべきアクションまで提示されます。"
   },
   {
-    q: "設定やデータ入力は難しいですか？",
-    a: "基本的な投稿データの入力のみで利用開始できます。複雑な分析設定や専門的な操作は不要です。"
+    q: "Instagramとの接続や設定は難しいですか？",
+    a: "お客様自身が管理するInstagramプロフェッショナルアカウントを接続して利用します。接続後は、対象アカウントの投稿情報やパフォーマンスデータをSignal.上で確認できます。"
   }
 ];
 
@@ -442,7 +460,7 @@ export default function Home() {
 
           <div className="mt-10">
             <p className="mb-3 text-xs font-medium tracking-[0.08em] text-slate-500">気になる理由をタップして内容を切り替え</p>
-            <div className="grid gap-2 sm:grid-cols-3">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
               {featureReasons.map((item, index) => (
                 <button
                   key={item.title}
@@ -495,7 +513,7 @@ export default function Home() {
           </div>
 
           <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {["投稿管理", "分析", "改善", "レポート", "学習", "運用", "相談", "計画"].map((chip) => (
+            {["Instagramアカウント接続", "投稿一覧の確認", "投稿・予約投稿", "アカウント・投稿分析", "改善", "レポート", "学習", "相談"].map((chip) => (
               <span key={chip} className="rounded-full bg-white px-4 py-1.5 text-xs font-semibold text-slate-600">
                 {chip}
               </span>
@@ -522,6 +540,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1400px]">
           <p className="text-5xl font-bold tracking-tight text-[#ff8a15] sm:text-6xl">PRICE</p>
           <h2 className="mt-2 text-3xl font-semibold text-slate-900">料金プラン</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
+            Signal.では、Instagram運用を支援するシステムの提供に加えて、ご希望のお客様には投稿作成や運用支援などの代行サービスも提供しています。
+          </p>
           <div className="mt-8 overflow-x-auto border border-[#efdfc7] bg-white">
             <table className="min-w-[900px] w-full border-collapse text-left">
               <thead>

@@ -11,6 +11,9 @@ export default function Footer() {
           <p className="mt-3 text-sm leading-relaxed text-slate-600">
             Instagram運用の振り返りと改善をつなぎ、次のアクションまで迷わず進めるためのSNS運用支援サービスです。
           </p>
+          <p className="mt-3 text-xs leading-relaxed text-slate-500">
+            運営会社：株式会社MOGCIA
+          </p>
         </div>
 
         <div>
@@ -38,8 +41,8 @@ export default function Footer() {
               </a>
             </p>
             <p>
-              <a href="mailto:info@signalapp.jp" className="font-medium text-slate-700 transition hover:text-[#ff8a15]">
-                info@signalapp.jp
+              <a href="mailto:info@mogcia.jp" className="font-medium text-slate-700 transition hover:text-[#ff8a15]">
+                info@mogcia.jp
               </a>
             </p>
           </div>
@@ -49,12 +52,13 @@ export default function Footer() {
       <div className="border-t border-[#efdfc7]">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-3 px-5 py-4 text-xs text-slate-500 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-16">
           <p>© 2025 Signal. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <Link href="https://www.mogcia.net/" target="_blank" rel="noopener noreferrer" className="transition hover:text-[#ff8a15]">
               運営会社
             </Link>
             <Link href="/privacy" className="transition hover:text-[#ff8a15]">プライバシーポリシー</Link>
             <Link href="/terms" className="transition hover:text-[#ff8a15]">利用規約</Link>
+            <Link href="/data-deletion" className="transition hover:text-[#ff8a15]">データ削除</Link>
           </div>
         </div>
       </div>
