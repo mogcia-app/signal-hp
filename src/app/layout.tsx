@@ -5,8 +5,7 @@ import Footer from "@/components/Footer";
 import type { ReactNode } from "react";
 import Script from "next/script";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || "https://www.sgnalapp.com";
+const SITE_URL = "https://www.signalapp.jp";
 const SITE_NAME = "Signal.";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.sgnalapp.com/</loc>
+    <loc>https://www.signalapp.jp/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/contact</loc>
+    <loc>https://www.signalapp.jp/contact</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/thankyou</loc>
+    <loc>https://www.signalapp.jp/thankyou</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/price</loc>
+    <loc>https://www.signalapp.jp/price</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/faq</loc>
+    <loc>https://www.signalapp.jp/faq</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/partners</loc>
+    <loc>https://www.signalapp.jp/partners</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/terms</loc>
+    <loc>https://www.signalapp.jp/terms</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/privacy</loc>
+    <loc>https://www.signalapp.jp/privacy</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.sgnalapp.com/data-deletion</loc>
+    <loc>https://www.signalapp.jp/data-deletion</loc>
     <priority>0.3</priority>
   </url>
 </urlset>
