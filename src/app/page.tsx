@@ -216,7 +216,7 @@ const onboardingFlow = [
   { step: "01", title: "お問い合わせ", desc: "運用状況とご相談内容を確認します。", mediaType: "image", mediaSrc: "/images/g1.png" },
   { step: "02", title: "初回ヒアリング", desc: "目的・体制・課題を整理します。", mediaType: "image", mediaSrc: "/images/g2.png" },
   { step: "03", title: "初期設定", desc: "運用方針とアカウント情報を設定します。", mediaType: "image", mediaSrc: "/images/g3.png" },
-  { step: "04", title: "運用開始", desc: "投稿と分析入力を起点に改善を開始します。", mediaType: "image", mediaSrc: "/images/g4.png" },
+  { step: "04", title: "運用開始", desc: "Instagramアカウントを接続し、投稿管理と分析を開始します。", mediaType: "image", mediaSrc: "/images/g4.png" },
   { step: "05", title: "サポート", desc: "ご不明点等ございましたらご気軽にご連絡ください", mediaType: "image", mediaSrc: "/images/g5.png" },
 ];
 

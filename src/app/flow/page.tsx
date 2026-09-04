@@ -95,7 +95,7 @@ export default function PageName() {
               { step: "01", title: "お問い合わせ", desc: "フォームからお気軽に。翌営業日にご連絡します。", icon: "📞" },
               { step: "02", title: "ヒアリング", desc: "運用状況を詳しくヒアリング。", icon: "💬" },
               { step: "03", title: "カスタマイズ", desc: "御社SNSに合わせツールを専用設計。", icon: "⚙️" },
-              { step: "04", title: "導入開始", desc: "計画設定・操作レクチャーでスムーズに。", icon: "🚀" },
+              { step: "04", title: "導入開始", desc: "Instagramアカウント接続と操作レクチャーでスムーズに。", icon: "🚀" },
               { step: "05", title: "運用サポート", desc: "改善レポート・次のアクションも継続提案。", icon: "📈" },
             ].map((item, idx) => (
               <div key={idx} className="group relative">
@@ -183,7 +183,7 @@ export default function PageName() {
               {
                 num: "5",
                 title: "初期設定・操作レクチャー",
-                text: "御社データを設定した後、管理画面の使い方やPDCAサイクルの進め方を丁寧にレクチャーいたします。",
+                text: "お客様自身が管理するInstagramプロフェッショナルアカウントを接続した後、管理画面の使い方やPDCAサイクルの進め方を丁寧にレクチャーいたします。",
                 icon: "🎓",
                 color: "from-teal-500 to-teal-600"
               },
